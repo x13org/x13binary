@@ -32,6 +32,15 @@ fi
 sysname=$(${R_HOME}/bin/Rscript -e 'cat(Sys.info()["sysname"])')
 if [ ${sysname} == "Linux" ]; then
     platform="linux"
+    arch=$(uname -m)
+    if [ "${arch}" = "x86_64" ]; then
+        flavour="64"
+    elif [ "${arch}" = "i686" ]; then
+        flavour="32"
+    else
+        echo "Unknown architecture: ${arch}. Exiting."
+        exit -1
+    fi
 elif [ ${sysname} == "Darwin" ]; then
     platform="osx"
 else
@@ -61,7 +70,8 @@ cwd=$(pwd)
 ## On Linux, download binary
 if [ ${platform} == "linux" ]; then
     cd inst/bin
-    download https://github.com/x13org/x13prebuilt/raw/master/linux/x13ashtml
+    download https://github.com/x13org/x13prebuilt/raw/master/linux/${flavour}/x13ashtml
+    chmod 0775 x13ashtml
     echo "*** downloaded Linux binary"
     cd ${cwd}
 elif [ if [ ${platform} == "osx" ]; then

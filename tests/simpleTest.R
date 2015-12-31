@@ -1,4 +1,4 @@
 
 library(x13binary)
 
-CheckBinary()
+checkX13binary()

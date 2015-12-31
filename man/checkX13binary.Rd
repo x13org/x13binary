@@ -1,10 +1,10 @@
-\name{CheckBinary}
-\alias{CheckBinary}
+\name{checkX13binary}
+\alias{checkX13binary}
 \title{
   Test Run of X-13ARIMA-SEATS
 }
 \usage{
-  CheckBinary()
+  checkX13binary()
 }
 \description{
   Performs a test run of X-13ARIMA-SEATS. Fails if no output is produced.
@@ -15,6 +15,6 @@
   Maintainer: Dirk Eddelbuettel <edd@debian.org>
 }
 \examples{
-  CheckBinary()
+  checkX13binary()
 }
 

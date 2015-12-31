@@ -74,11 +74,13 @@ if [ ${platform} == "linux" ]; then
     chmod 0775 x13ashtml
     echo "*** downloaded Linux binary"
     cd ${cwd}
-elif [ if [ ${platform} == "osx" ]; then
+elif [ ${platform} == "osx" ]; then
     cd inst
-    rm bin
     download https://github.com/x13org/x13prebuilt/raw/master/osx/x13ashtml.tar.gz
-    tar xfz x13ashtml.tar.gz
+    tar -zxvf x13ashtml.tar.gz
+    cp -r x13ashtml/bin .
+    cp -r x13ashtml/lib .
+    rm -r x13ashtml
     rm x13ashtml.tar.gz
     cd ${cwd}
 fi

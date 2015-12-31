@@ -1,4 +1,4 @@
-CheckBinary <- function(){
+checkX13binary <- function(){
   if (.Platform$OS.type == "windows"){    
     x13.bin <- file.path(path.package("x13binary"), "bin", "x13ashtml.exe")
   } else {

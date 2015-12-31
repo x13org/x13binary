@@ -2,8 +2,8 @@ Package: x13binary
 Type: Package
 Title: Provide the 'x13ashtml' Seasonal Adjustment Binary 
 Version: 0.0.1
-Date: 2015-12-30
-Author: Dirk Eddelbuettel
+Date: 2015-12-31
+Author: Dirk Eddelbuettel and Christoph Sax
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: The US Census provides a seasonal adjustment program now
  called 'X-13ARIMA-SEATS' building on both earlier Census programs called

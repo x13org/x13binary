@@ -46,9 +46,11 @@ elif [ ${sysname} == "Darwin" ]; then
 else
     platform=${sysname}
     echo "Unusual platform: ${sysname}"
-    echo "Currently unsupported. Work needed."
-    exit -1
-    ## TODO: just build from source
+    echo "For this platform, there are currently no binaries of X-13ARIMA-SEATS"
+    echo "available. If you have binaries or building scripts, you are invited"
+    echo "to contribute to the project."
+    echo "Visit: https://github.com/x13org/x13prebuilt"
+    exit 0
 fi
 
 ## helper function to not rely on curl which at least on OS X fails to follow redirects

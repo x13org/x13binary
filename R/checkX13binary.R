@@ -2,6 +2,10 @@ checkX13binary <- function(){
   if (.Platform$OS.type == "windows"){    
     x13.bin <- file.path(path.package("x13binary"), "bin", "x13ashtml.exe")
   } else {
+    if (!Sys.info()["sysname"] %in% c("Darwin", "Linux")){
+      return(message("Unusual platform: ", Sys.info()["sysname"], 
+                     "\nFor this platform, there are currently no binaries of X-13ARIMA-SEATS."))
+    }
     x13.bin <- file.path(path.package("x13binary"), "bin", "x13ashtml")
   }
   tdir <- tempdir()

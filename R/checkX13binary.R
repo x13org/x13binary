@@ -1,10 +1,11 @@
-checkX13binary <- function(){
+checkX13binary <- function(fail.on.unusual.platform = FALSE, verbose = TRUE){
   if (.Platform$OS.type == "windows"){    
     x13.bin <- system.file("bin", "x13ashtml.exe", package="x13binary")
   } else {
     if (!Sys.info()["sysname"] %in% c("Darwin", "Linux")){
-      return(message("Unusual platform: ", Sys.info()["sysname"], 
-                     "\nFor this platform, there are currently no binaries of X-13ARIMA-SEATS."))
+      ifelse(fail.on.unusual.platform, stop, packageStartupMessage)("Unusual platform: ", Sys.info()["sysname"], 
+                       "\nFor this platform, there are currently no binaries of X-13ARIMA-SEATS.")
+      return(invisible(FALSE))
     }
     x13.bin <- system.file("bin", "x13ashtml", package="x13binary")
   }
@@ -23,13 +24,29 @@ checkX13binary <- function(){
            "\n\n")
     }
   } else {
-    sout <- system(paste(x13.bin, file.path(tdir, "Testairline")))
-    if (sout != 0) {
-      stop("Call to X-13 had non zero exit status")
+    sout <- system(paste(x13.bin, file.path(tdir, "Testairline")), intern = TRUE)
+    if (isTRUE(attr(sout,"status") != 0)){
+      stop("When running\n\n  ", x13.bin, 
+           "\n\nCommand Prompt returned the following message:\n\n", 
+           sout,
+           "\n\n")
+    }
+    # drop error if output contains the word ERROR
+    # (This does not necessarily lead to a non zero exit status)
+    if (inherits(sout, "character")){
+      if (any(grepl("ERROR", sout))){
+        stop("When running\n\n  ", x13.bin, 
+             "\n\nCommand Prompt returned the following message:\n\n", 
+             sout,
+             "\n\n")
+      }
     }
   }
   if (!file.exists(file.path(tdir, "Testairline.html"))){
     stop("X-13 has run but has not produced Testairline.html")
   }
-  message("X-13 has run successfully")
+  if (verbose){
+    packageStartupMessage("x13binary is working properly")
+  }
+  invisible(TRUE)
 }

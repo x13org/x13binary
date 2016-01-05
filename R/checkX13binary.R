@@ -1,15 +1,18 @@
 checkX13binary <- function(){
   if (.Platform$OS.type == "windows"){    
-    x13.bin <- file.path(system.file("bin", package="x13binary"), "x13ashtml.exe")
+    x13.bin <- system.file("bin", "x13ashtml.exe", package="x13binary")
   } else {
     if (!Sys.info()["sysname"] %in% c("Darwin", "Linux")){
       return(message("Unusual platform: ", Sys.info()["sysname"], 
                      "\nFor this platform, there are currently no binaries of X-13ARIMA-SEATS."))
     }
-    x13.bin <- file.path(system.file("bin", package="x13binary"), "x13ashtml")
+    x13.bin <- system.file("bin", "x13ashtml", package="x13binary")
+  }
+  if (x13.bin == ""){
+    stop("X-13 binary file not found")
   }
   tdir <- tempdir()
-  file.copy(file.path(system.file("testdata", package="x13binary"), "Testairline.spc"), tdir)
+  file.copy(system.file("testdata", "Testairline.spc", package="x13binary"), tdir)
   if (.Platform$OS.type == "windows") {
     # shell() gives a more verbose output on windows
     sout <- shell(paste(x13.bin, file.path(tdir, "Testairline")), intern = TRUE)

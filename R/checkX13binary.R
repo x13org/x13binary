@@ -1,52 +1,63 @@
-checkX13binary <- function(fail.on.unusual.platform = FALSE, verbose = TRUE){
-  if (.Platform$OS.type == "windows"){    
-    x13.bin <- system.file("bin", "x13ashtml.exe", package="x13binary")
-  } else {
-    if (!Sys.info()["sysname"] %in% c("Darwin", "Linux")){
-      ifelse(fail.on.unusual.platform, stop, packageStartupMessage)("Unusual platform: ", Sys.info()["sysname"], 
-                       "\nFor this platform, there are currently no binaries of X-13ARIMA-SEATS.")
-      return(invisible(FALSE))
+checkX13binary <- function(fail.unsupported = FALSE, verbose = TRUE){
+
+  if (supportedPlatform()){
+    if (.Platform$OS.type == "windows"){    
+      x13.bin <- system.file("bin", "x13ashtml.exe", package="x13binary")
+    } else {
+      x13.bin <- system.file("bin", "x13ashtml", package="x13binary")
     }
-    x13.bin <- system.file("bin", "x13ashtml", package="x13binary")
-  }
-  if (x13.bin == ""){
-    stop("X-13 binary file not found")
-  }
-  tdir <- tempdir()
-  file.copy(system.file("testdata", "Testairline.spc", package="x13binary"), tdir)
-  if (.Platform$OS.type == "windows") {
-    # shell() gives a more verbose output on windows
-    sout <- shell(paste(x13.bin, file.path(tdir, "Testairline")), intern = TRUE)
-    if (isTRUE(attr(sout,"status") != 0)){
-      stop("When running\n\n  ", x13.bin, 
-           "\n\nCommand Prompt returned the following message:\n\n", 
-           paste(strwrap(sout, indent = 2, exdent = 2), collapse = "\n"),
-           "\n\n")
+    if (x13.bin == ""){
+      stop("X-13 binary file not found")
     }
-  } else {
-    sout <- system(paste(x13.bin, file.path(tdir, "Testairline")), intern = TRUE)
-    if (isTRUE(attr(sout,"status") != 0)){
-      stop("When running\n\n  ", x13.bin, 
-           "\n\nCommand Prompt returned the following message:\n\n", 
-           sout,
-           "\n\n")
-    }
-    # drop error if output contains the word ERROR
-    # (This does not necessarily lead to a non zero exit status)
-    if (inherits(sout, "character")){
-      if (any(grepl("ERROR", sout))){
+
+    tdir <- tempdir()
+    file.copy(system.file("testdata", "Testairline.spc", package="x13binary"), tdir)
+    if (.Platform$OS.type == "windows") {
+      # shell() gives a more verbose output on windows
+      sout <- shell(paste(x13.bin, file.path(tdir, "Testairline")), intern = TRUE)
+      if (isTRUE(attr(sout,"status") != 0)){
         stop("When running\n\n  ", x13.bin, 
              "\n\nCommand Prompt returned the following message:\n\n", 
+             paste(strwrap(sout, indent = 2, exdent = 2), collapse = "\n"),
+             "\n\n")
+      }
+    } else {
+      sout <- system(paste(x13.bin, file.path(tdir, "Testairline")), intern = TRUE)
+      if (isTRUE(attr(sout,"status") != 0)){
+        stop("When running\n\n  ", x13.bin, 
+             "\n\nthe system returned the following message:\n\n", 
              sout,
              "\n\n")
       }
+      # drop error if output contains the word ERROR
+      # (This does not necessarily lead to a non zero exit status)
+      if (inherits(sout, "character")){
+        if (any(grepl("ERROR", sout))){
+          stop("When running\n\n  ", x13.bin, 
+               "\n\nthe system returned the following message:\n\n", 
+               sout,
+               "\n\n")
+        }
+      }
     }
-  }
-  if (!file.exists(file.path(tdir, "Testairline.html"))){
-    stop("X-13 has run but has not produced Testairline.html")
+    if (!file.exists(file.path(tdir, "Testairline.html"))){
+      stop("X-13 has run but has not produced Testairline.html")
+    }
+    if (verbose){
+      packageStartupMessage("x13binary is working properly")
+    }
+
+  } else {
+    ifelse(fail.unsupported, stop, packageStartupMessage)(
+      "Unsupported platform: ", Sys.info()["sysname"], Sys.info()["release"],
+      "\nFor this platform, there are currently no binaries of X-13ARIMA-SEATS.")
+    return(invisible(FALSE))
   }
   if (verbose){
     packageStartupMessage("x13binary is working properly")
   }
   invisible(TRUE)
 }
+
+
+

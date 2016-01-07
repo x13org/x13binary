@@ -11,4 +11,4 @@ Description: The US Census provides a seasonal adjustment program now
  offers both source and binary versions.
  .
  This package integrates these for use by other R packages. 
-License: GPL (>= 2)
+License: file LICENSE

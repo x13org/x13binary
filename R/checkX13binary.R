@@ -1,3 +1,14 @@
+#' Check if X-13ARIMA-SEATS Runs Properly
+#' 
+#' Performs a test run of X-13ARIMA-SEATS. Fails if no output is produced.
+#' 
+#' @param fail.unsupported  logical, whether beeing on an unsupported platform
+#'   leads to an error.
+#' @param verbose  logical, should a message be returned on success?
+#' @examples
+#' checkX13binary()
+#' 
+#' @export
 checkX13binary <- function(fail.unsupported = FALSE, verbose = TRUE){
 
   if (supportedPlatform()){

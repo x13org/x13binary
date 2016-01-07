@@ -1,3 +1,11 @@
+#' Test Platform Support
+#' 
+#' Returns \code{TRUE} is the platform is supported, \code{FALSE} otherwise.
+#'  
+#' @examples
+#' supportedPlatform()
+#' 
+#' @export
 supportedPlatform <- function(){
 
   z <- FALSE  # in case we missed something

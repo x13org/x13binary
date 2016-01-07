@@ -53,9 +53,7 @@ checkX13binary <- function(fail.unsupported = FALSE, verbose = TRUE){
       "\nFor this platform, there are currently no binaries of X-13ARIMA-SEATS.")
     return(invisible(FALSE))
   }
-  if (verbose){
-    packageStartupMessage("x13binary is working properly")
-  }
+
   invisible(TRUE)
 }
 

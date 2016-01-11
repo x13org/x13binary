@@ -3,7 +3,7 @@ cwd=$(pwd)
 cd inst
 
 r_script="${R_HOME}/bin${R_ARCH_BIN}/Rscript"
-set_internet2=`"${r_script}" -e "cat(ifelse(compareVersion(paste(R.Version()['major'], R.Version()['minor'], sep = "."), '3.2.2') > 0, '', 'setInternet2()'))"`
+set_internet2=`"${r_script}" -e "cat(ifelse(compareVersion(paste(R.Version()['major'], R.Version()['minor'], sep = '.'), '3.2.2') > 0, '', 'setInternet2()'))"`
 
 "${r_script}" -e "${set_internet2}" "download.file('https://github.com/x13org/x13prebuilt/raw/master/windows/x13ashtml.zip', 'x13ashtml.zip', quiet = TRUE, mode = \"wb\")"
 unzip -u x13ashtml.zip

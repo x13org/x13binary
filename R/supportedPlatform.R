@@ -6,6 +6,7 @@
 #' supportedPlatform()
 #' 
 #' @export
+#' @import utils
 supportedPlatform <- function(){
 
   z <- FALSE  # in case we missed something

@@ -3,3 +3,4 @@
 export(checkX13binary)
 export(supportedPlatform)
 export(x13path)
+import(utils)

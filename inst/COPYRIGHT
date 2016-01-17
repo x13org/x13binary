@@ -1,0 +1,54 @@
+
+Overall license:
+================
+The actual X-13ARIMA-SEATS binary is provided under these terms
+
+  License Information and Disclaimer
+
+  This Software was created by U.S. Government employees and therefore is not
+  subject to copyright in the United States (17 U.S.C. §105). The United
+  States/Department of Commerce reserves all rights to seek and obtain
+  copyright protection in countries other than the United States. The
+  Software is provided to the User and those who may take by, through or
+  under it, “as is,” without any warranty (whether express or implied) or
+  representation whatsoever, including but not limited to any warranty of
+  merchantability. The Software is taken hereunder without any right to
+  support or to any improvements, extensions, or modifications.
+
+  User, on behalf of itself and all others who take by, through or under it,
+  hereby and forever waives, releases and discharges the United
+  States/Department of Commerce and all its instrumentalities from any and
+  all liabilities and obligations in connection with the use, application,
+  sale or conveyance of the Software. The User agrees this term should be
+  given the broadest interpretation possible in favor of the release of the
+  United States/Department of Commerce under applicable law.
+
+  User shall indemnify and hold harmless the United States/Commerce and its
+  instrumentalities from all claims, liabilities, demands, damages, expenses,
+  and losses arising from or in connection with User's use, application, sale
+  or conveyance of the Software, including those who take by, through or
+  under User whether or not User was directly involved. This provision will
+  survive termination of this Agreement and will include any and all claims
+  or liabilities arising under intellectual property rights, such as patents,
+  copyrights, trademarks, and trade secrets.
+
+  The construction, validity, performance, and effect of this Agreement for
+  all purposes will be governed by Federal law of the United States.
+
+The integration into an R package has been provided by Dirk Eddelbuettel and
+Christoph Sax, and is licensed under the terms of the GNU GPL, version 2 or
+later, just like R itself.
+
+Details:
+========
+
+Files: *
+Copyright: 2015 - 2016  Dirk Eddelbuettel and Christoph Sax
+License: GPL (>= 2)
+
+Files: inst/bin/x13*:
+Copyright: This Software was created by U.S. Government employees and therefore is not
+  subject to copyright in the United States (17 U.S.C. §105). The United
+  States/Department of Commerce reserves all rights to seek and obtain
+  copyright protection in countries other than the United States.
+License: See above, and https://www.census.gov/srd/www/x13as/

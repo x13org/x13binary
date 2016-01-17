@@ -2,7 +2,7 @@ Package: x13binary
 Type: Package
 Title: Provide the 'x13ashtml' Seasonal Adjustment Binary
 Version: 0.1.0
-Date: 2016-01-11
+Date: 2016-01-17
 Author: Dirk Eddelbuettel and Christoph Sax
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: The US Census provides a seasonal adjustment program now
@@ -11,4 +11,5 @@ Description: The US Census provides a seasonal adjustment program now
  offers both source and binary versions -- which this package integrates
  for use by other R packages.
 License: file LICENSE
+Copyright: file inst/COPYRIGHT
 RoxygenNote: 5.0.1

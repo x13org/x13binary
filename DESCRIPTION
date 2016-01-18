@@ -2,7 +2,7 @@ Package: x13binary
 Type: Package
 Title: Provide the 'x13ashtml' Seasonal Adjustment Binary
 Version: 0.1.0
-Date: 2016-01-17
+Date: 2016-01-18
 Author: Dirk Eddelbuettel and Christoph Sax
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: The US Census provides a seasonal adjustment program now

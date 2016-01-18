@@ -1,9 +1,10 @@
-The x13binary package contains only code that is copyright by Dirk
-Eddelbuettel and Christoph Sax, and released under the terms of the
-GNU General Public License, Version 2 or later ("GPL (>= 2)".
+The x13binary source package contains only code that is copyright by Dirk
+Eddelbuettel and Christoph Sax, and released under the terms of the GNU
+General Public License, Version 2 or later ("GPL (>= 2)".
 
-The x13binary package installs the appropriate binary of x13ashtml, the
-X-13ARIMA-SEATS program by the US Census Bureau.  Its website at
+Using these sources and building an install-ready binary package of x13binary
+then adds the corresponding binary of x13ashtml, the X-13ARIMA-SEATS program
+by the US Census Bureau.  Its website at 
                 https://www.census.gov/srd/www/x13as/
 carries thec following statement
 

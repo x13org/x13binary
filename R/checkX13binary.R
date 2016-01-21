@@ -52,7 +52,17 @@ checkX13binary <- function(fail.unsupported = FALSE, verbose = TRUE){
       }
     }
     if (!file.exists(file.path(tdir, "Testairline.html"))){
-      stop("X-13 has run but has not produced Testairline.html")
+      if (inherits(sout, "character")){
+        stop("X-13 has not produced Testairline.html.\n", 
+             "When running\n\n  ", x13.bin, 
+             "\n\nthe system returned the following message:\n\n", 
+             sout,
+             "\n\n")
+      } else {
+        stop("X-13 has not produced Testairline.html.\n", 
+             "When running\n\n  ", x13.bin, 
+             "\n\nthe system has returned no message.\n\n")
+      }
     }
     if (verbose){
       packageStartupMessage("x13binary is working properly")

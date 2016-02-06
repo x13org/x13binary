@@ -29,8 +29,11 @@ checkX13binary <- function(fail.unsupported = FALSE, verbose = TRUE){
       owd <- getwd()
       setwd(tdir)
       # shell() gives a more verbose output on windows
-      sout <- shell(paste0("\"", x13.bin, "\" ", "\"", file.path(tdir, "Testairline"), "\""), intern = TRUE)
+      str <- paste0("\"", normalizePath(x13.bin), "\"", " ", 
+                    "\"", normalizePath(paste0(tdir, "\\\\", "Testairline")))
+      sout <- shell(str, intern = TRUE)
       setwd(owd)
+
       if (isTRUE(attr(sout,"status") != 0)){
         stop("When running\n\n  ", x13.bin, 
              "\n\nCommand Prompt returned the following message:\n\n", 

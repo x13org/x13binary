@@ -25,7 +25,7 @@ checkX13binary <- function(fail.unsupported = FALSE, verbose = TRUE){
     file.copy(system.file("testdata", "Testairline.spc", package="x13binary"), tdir)
     if (.Platform$OS.type == "windows") {
       # shell() gives a more verbose output on windows
-      sout <- shell(paste0("\"", x13.bin, "\" ", "\"", file.path(tdir, "Testairline")), "\"", intern = TRUE)
+      sout <- shell(paste0("\"", x13.bin, "\" ", "\"", file.path(tdir, "Testairline"), "\""), intern = TRUE)
       if (isTRUE(attr(sout,"status") != 0)){
         stop("When running\n\n  ", x13.bin, 
              "\n\nCommand Prompt returned the following message:\n\n", 

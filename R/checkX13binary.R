@@ -29,9 +29,8 @@ checkX13binary <- function(fail.unsupported = FALSE, verbose = TRUE){
       owd <- getwd()
       setwd(tdir)
       # shell() gives a more verbose output on windows
-      str <- paste0("\"", normalizePath(x13.bin), "\"", " ", 
-                    "\"", paste0(normalizePath(tdir), "\\", "Testairline"), "\"")
-      sout <- shell(str, intern = TRUE)
+      sout <- shell(paste0("\"", normalizePath(x13.bin), "\"", " Testairline"), 
+                    intern = TRUE)
       setwd(owd)
 
       if (isTRUE(attr(sout,"status") != 0)){

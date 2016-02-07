@@ -34,13 +34,12 @@ checkX13binary <- function(fail.unsupported = FALSE, verbose = TRUE){
       setwd(owd)
 
       if (isTRUE(attr(sout,"status") != 0)){
-
-        message("CONFUSED")
-        packageStartupMessage("When running\n\n  ", x13.bin, 
+        packageStartupMessage("Rerunning with full console output:")
+        shell(paste0("\"", normalizePath(x13.bin), "\"", " Testairline"))
+        stop("When running\n\n  ", x13.bin, 
              "\n\nCommand Prompt returned the following message:\n\n", 
              paste(strwrap(sout, indent = 2, exdent = 2), collapse = "\n"),
-             "\n\nRerunning with full console output:\n\n")
-        shell(paste0("\"", normalizePath(x13.bin), "\"", " Testairline"))
+             "\n\n")
       }
     } else {
       sout <- system(paste(x13.bin, file.path(tdir, "Testairline")), intern = TRUE)

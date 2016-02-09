@@ -24,9 +24,21 @@ checkX13binary <- function(fail.unsupported = FALSE, verbose = TRUE){
     tdir <- tempdir()
     file.copy(system.file("testdata", "Testairline.spc", package="x13binary"), tdir)
     if (.Platform$OS.type == "windows") {
+
+      # change wd on win as X-13 writes `fort.6` to it
+      owd <- getwd()
+      on.exit(setwd(owd))
+      setwd(tdir)
+
       # shell() gives a more verbose output on windows
-      sout <- shell(paste(x13.bin, file.path(tdir, "Testairline")), intern = TRUE)
+      sout <- shell(paste0("\"", normalizePath(x13.bin), "\"", " Testairline"), 
+                    intern = TRUE)
+
       if (isTRUE(attr(sout,"status") != 0)){
+        if (verbose){
+          packageStartupMessage("Rerunning with full console output:")
+          shell(paste0("\"", normalizePath(x13.bin), "\"", " Testairline"))
+        }
         stop("When running\n\n  ", x13.bin, 
              "\n\nCommand Prompt returned the following message:\n\n", 
              paste(strwrap(sout, indent = 2, exdent = 2), collapse = "\n"),

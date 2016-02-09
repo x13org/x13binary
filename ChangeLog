@@ -1,3 +1,10 @@
+2016-01-21  Christoph Sax  <christoph.sax@gmail.com>
+
+  * checkX13binary.R: 
+    - more verbose output on Win
+    - temporarily change working directory for X-13 run on Win
+    - command in quotes on Win (to make it work with whitespaces in filenames)
+
 2016-01-21  Dirk Eddelbuettel  <edd@debian.org>
 
 	* README.md: Add CRAN version and download badges, as well as an

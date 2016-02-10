@@ -1,9 +1,14 @@
-2016-01-21  Christoph Sax  <christoph.sax@gmail.com>
+2016-02-10  Dirk Eddelbuettel  <edd@debian.org>
 
-  * checkX13binary.R: 
-    - more verbose output on Win
-    - temporarily change working directory for X-13 run on Win
-    - command in quotes on Win (to make it work with whitespaces in filenames)
+	* DESCRIPTION (Version): Release 0.1.1
+
+2016-02-07  Christoph Sax  <christoph.sax@gmail.com>
+
+	* checkX13binary.R:
+	- more verbose output on Win
+	- temporarily change working directory for X-13 run on Win
+	- command in quotes on Win (to make it work with whitespaces in
+	filenames)
 
 2016-01-21  Dirk Eddelbuettel  <edd@debian.org>
 

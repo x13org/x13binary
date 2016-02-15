@@ -1,2 +1,3 @@
 .travis.yml
+^appveyor\.yml$
 ^inst/bin/x13as*

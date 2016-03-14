@@ -1,3 +1,17 @@
+2016-03-13  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version): Release 0.1.2
+
+2016-03-08  Christoph Sax  <christoph.sax@gmail.com>
+
+	* configure: Adjusted path for new x13prebuilt layout
+	* configure.win: Idem
+
+2016-02-15  Christoph Sax  <christoph.sax@gmail.com>
+
+	* appveyor.yml: Added AppVeyor support
+	* README.md: Added appveyor badge
+
 2016-02-10  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version): Release 0.1.1

@@ -11,14 +11,6 @@ for fully automated installation of a
 [X-13ARIMA-SEATS](https://www.census.gov/srd/www/x13as/) binary simply by
 adding `Depends: x13binary` to your R package.
 
-The current version of [x13binary](https://github.com/x13org/x13binary) uses
-**version 1.1, build 26** of of X-13, as can be verified by:
-
-```
-seasonal::udg(seasonal::seas(AirPassengers), c("version", "build"))
-```
-
-
 ### Installation
 
 As the package [is on CRAN](http://cran.r-project.org/package=x13binary),
@@ -34,6 +26,14 @@ This package as well as the corresponding
 [x13prebuilt](https://github.com/x13org/x13prebuilt) repository are
 operational for Windows, OS X (Darwin) and Linux (via using statically linked
 binaries).
+
+The current version of [x13binary](https://github.com/x13org/x13binary) uses
+**version 1.1, build 26** of of X-13, as can be verified by:
+
+```
+seasonal::udg(seasonal::seas(AirPassengers), c("version", "build"))
+```
+
 
 ### Author 
 

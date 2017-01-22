@@ -27,6 +27,14 @@ This package as well as the corresponding
 operational for Windows, OS X (Darwin) and Linux (via using statically linked
 binaries).
 
+The current version of [x13binary](https://github.com/x13org/x13binary) uses
+**version 1.1, build 26** of of X-13, as can be verified by:
+
+```
+seasonal::udg(seasonal::seas(AirPassengers), c("version", "build"))
+```
+
+
 ### Author 
 
 Dirk Eddelbuettel and Christoph Sax

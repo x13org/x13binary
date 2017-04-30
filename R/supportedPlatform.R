@@ -21,9 +21,9 @@ supportedPlatform <- function(){
     z <- TRUE
   }
 
-  # OS-X
+  # macOS
   if (Sys.info()["sysname"] %in% c("Darwin")){
-    # Darwin Version numbers for OS-X Versions 
+    # Darwin Version numbers for macOS/OS-X Versions 
     # https://en.wikipedia.org/wiki/Darwin_(operating_system)
     #     10  OS X Snow Leopard
     # 11.0.0  OS X Lion
@@ -36,7 +36,7 @@ supportedPlatform <- function(){
     # 15.0.0  OS X El Capitan
     # 15.2.0  
 
-    # OS-X needs to be at least Lion (this has been tested in early 2016)
+    # needs to be at least Lion (this has been tested in early 2016)
     z <- compareVersion(Sys.info()["release"], "11.0.0") >= 0
   }
 

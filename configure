@@ -74,7 +74,7 @@ cwd=$(pwd)
 ## On Linux, download binary
 if [ ${platform} == "linux" ]; then
     cd inst/bin
-    download https://github.com/x13org/x13prebuilt/raw/master/v1.1.26/linux/${flavour}/x13ashtml
+    download https://github.com/x13org/x13prebuilt/raw/master/v1.1.39/linux/${flavour}/x13ashtml
     chmod 0775 x13ashtml
     echo "*** downloaded Linux binary"
     cd ${cwd}

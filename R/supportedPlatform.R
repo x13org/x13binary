@@ -36,7 +36,7 @@ supportedPlatform <- function(){
     # 15.0.0  OS X El Capitan
     # 15.2.0  
 
-    # OS-X needs to be at least Lion (TODO try out)
+    # OS-X needs to be at least Lion (this has been tested in early 2016)
     z <- compareVersion(Sys.info()["release"], "11.0.0") >= 0
   }
 

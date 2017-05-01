@@ -1,3 +1,9 @@
+2017-04-30  Christoph Sax  <christoph.sax@gmail.com>
+
+	* configure, configure.win: Adjusted paths for build 39 (mac and win only)
+	* DESCRIPTION: New versioning scheme as discussed here:
+	  https://github.com/x13org/x13binary/issues/37
+
 2016-03-13  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version): Release 0.1.2

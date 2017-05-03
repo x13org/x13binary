@@ -1,10 +1,10 @@
-## x13binary [![Build Status](https://travis-ci.org/x13org/x13binary.svg)](https://travis-ci.org/x13org/x13binary) [![Build status](https://ci.appveyor.com/api/projects/status/tjwhvfj6l19sq48p?svg=true)](https://ci.appveyor.com/project/christophsax/x13binary) [![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) [![CRAN](http://www.r-pkg.org/badges/version/x13binary)](http://cran.rstudio.com/package=x13binary) [![Downloads](http://cranlogs.r-pkg.org/badges/x13binary?color=brightgreen)](https://cran.r-project.org/package=x13binary)
+## x13binary [![Build Status](https://travis-ci.org/x13org/x13binary.svg)](https://travis-ci.org/x13org/x13binary) [![Build status](https://ci.appveyor.com/api/projects/status/tjwhvfj6l19sq48p?svg=true)](https://ci.appveyor.com/project/christophsax/x13binary) [![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) [![CRAN](http://www.r-pkg.org/badges/version/x13binary)](https://cran.r-project.org/package=x13binary) [![Downloads](http://cranlogs.r-pkg.org/badges/x13binary?color=brightgreen)](https://cran.r-project.org/package=x13binary)
 
 X-13ARIMA-SEATS Binary for R
 
 ### About
 
-This package provides an installer for [R](http://www.r-project.org) to
+This package provides an installer for [R](https://www.r-project.org) to
 access prebuilt binaries of [X-13ARIMA-SEATS](https://www.census.gov/srd/www/x13as/) from the sibbling
 repository [x13prebuilt](https://github.com/x13org/x13prebuilt). This allows
 for fully automated installation of a

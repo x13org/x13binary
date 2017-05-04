@@ -1,15 +1,15 @@
 Package: x13binary
 Type: Package
 Title: Provide the 'x13ashtml' Seasonal Adjustment Binary
-Version: 1.1.39-0.1
-Date: 2016-05-03
+Version: 1.1.39-1
+Date: 2017-05-04
 Author: Dirk Eddelbuettel and Christoph Sax
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
-Description: The US Census provides a seasonal adjustment program now
- called 'X-13ARIMA-SEATS' building on both earlier Census programs called
- X-11 and X-12 as well as the SEATS program by the Bank of Spain. Census
- offers both source and binary versions -- which this package integrates
- for use by other R packages.
+Description: The US Census Bureau provides a seasonal adjustment program now
+ called 'X-13ARIMA-SEATS' building on both earlier programs called X-11 and
+ X-12 as well as the SEATS program by the Bank of Spain. The US Census Bureau
+ offers both source and binary versions -- which this package integrates for
+ use by other R packages.
 License: file LICENSE
 Copyright: file inst/COPYRIGHT
 RoxygenNote: 5.0.1

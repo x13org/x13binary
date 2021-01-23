@@ -1,6 +1,11 @@
-## x13binary [![Build Status](https://travis-ci.org/x13org/x13binary.svg)](https://travis-ci.org/x13org/x13binary) [![Build status](https://ci.appveyor.com/api/projects/status/tjwhvfj6l19sq48p?svg=true)](https://ci.appveyor.com/project/christophsax/x13binary) [![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) [![CRAN](http://www.r-pkg.org/badges/version/x13binary)](https://cran.r-project.org/package=x13binary) [![Downloads](http://cranlogs.r-pkg.org/badges/x13binary?color=brightgreen)](https://cran.r-project.org/package=x13binary)
+## x13binary: X-13ARIMA-SEATS Binary for R
 
-X-13ARIMA-SEATS Binary for R
+[![Build Status](https://travis-ci.org/x13org/x13binary.svg)](https://travis-ci.org/x13org/x13binary) 
+[![Build status](https://ci.appveyor.com/api/projects/status/tjwhvfj6l19sq48p?svg=true)](https://ci.appveyor.com/project/christophsax/x13binary) 
+[![CI](https://github.com/x13org/x13binary/workflows/ci/badge.svg)](https://github.com/x13org/x13binary/actions?query=workflow%3Aci)
+[![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) 
+[![CRAN](http://www.r-pkg.org/badges/version/x13binary)](https://cran.r-project.org/package=x13binary) 
+[![Downloads](http://cranlogs.r-pkg.org/badges/x13binary?color=brightgreen)](https://cran.r-project.org/package=x13binary)
 
 ### About
 

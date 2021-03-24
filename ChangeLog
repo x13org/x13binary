@@ -1,3 +1,8 @@
+2021-03-24  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/checkX13binary.R: Ensure tdir is truly a temporary directory
+	* configure: Minor changes for /bin/sh use
+
 2021-01-23  Dirk Eddelbuettel  <edd@debian.org>
 
         * .github/workflows/ci.yaml: Add CI runner using r-ci

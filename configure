@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 ## Emacs please make this -*- mode: shell-mode; -*-
 ##
 ##  configure -- Unix build preparation system
 ##
-##  Copyright (C) 2015  Dirk Eddelbuettel 
+##  Copyright (C) 2015 - 2021  Dirk Eddelbuettel
 ##
 ##  This file is part of x13binary
 ##
@@ -21,16 +21,15 @@
 ##  along with x13binary.  If not, see <http://www.gnu.org/licenses/>.
 
 ## Check that we are on Unix
-uname=$(type -P uname)
-if [ "${uname}" = "" ]; then
-    echo "You do not have uname so this is unlikely to be a Unix system. Exiting."
-    exit -1
+if ! [ -x $(command -v uname) ]; then
+    echo "You do not have 'uname' so this is unlikely to be a Unix system. Exiting."
+    exit 1
 fi
 
 ## Check for Linux or OSX
 : ${R_HOME=$(R RHOME)}
 sysname=$(${R_HOME}/bin/Rscript -e 'cat(Sys.info()["sysname"])')
-if [ ${sysname} == "Linux" ]; then
+if [ ${sysname} = "Linux" ]; then
     platform="linux"
     arch=$(uname -m)
     if [ "${arch}" = "x86_64" ]; then
@@ -41,9 +40,9 @@ if [ ${sysname} == "Linux" ]; then
         flavour="armv7l"
     else
         echo "Unknown architecture: ${arch}. Exiting."
-        exit -1
+        exit 2
     fi
-elif [ ${sysname} == "Darwin" ]; then
+elif [ ${sysname} = "Darwin" ]; then
     platform="mac"
 else
     platform=${sysname}
@@ -52,7 +51,7 @@ else
     echo "available. If you have binaries or building scripts, you are invited"
     echo "to contribute to the project."
     echo "Visit: https://github.com/x13org/x13prebuilt"
-    exit 0
+    exit 3
 fi
 
 ## helper function to not rely on curl which at least on OS X fails to follow redirects
@@ -61,7 +60,7 @@ download() {
     ## sadly, for Travis we cannot rely on R as it lacks libcurl
     libcurl=$(${R_HOME}/bin/Rscript -e 'cat(capabilities()[["libcurl"]])')
     ## so when we have libcurl in R, use it -- else fall back to curl
-    if [ ${libcurl} == "TRUE" ]; then
+    if [ ${libcurl} = "TRUE" ]; then
         file=$(basename ${url})
         ${R_HOME}/bin/Rscript -e "download.file(\"${url}\", \"${file}\", quiet=TRUE, method='libcurl')"
     else
@@ -72,13 +71,13 @@ download() {
 cwd=$(pwd)
 
 ## On Linux, download binary
-if [ ${platform} == "linux" ]; then
+if [ ${platform} = "linux" ]; then
     cd inst/bin
     download https://github.com/x13org/x13prebuilt/raw/master/v1.1.39/linux/${flavour}/x13ashtml
     chmod 0775 x13ashtml
     echo "*** downloaded Linux binary"
     cd ${cwd}
-elif [ ${platform} == "mac" ]; then
+elif [ ${platform} = "mac" ]; then
     cd inst
     download https://github.com/x13org/x13prebuilt/raw/master/v1.1.39/mac/x13ashtml.tar.gz
     tar -zxvf x13ashtml.tar.gz

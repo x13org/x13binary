@@ -1,5 +1,6 @@
 2021-03-30  Dirk Eddelbuettel  <edd@debian.org>
 
+	* R/checkX13binary.R: Use on.exit() for cleanup of tdir, reindented
 	* configure: Minor corrections for /bin/sh use on Solaris
 
 2021-03-24  Dirk Eddelbuettel  <edd@debian.org>

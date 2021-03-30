@@ -2,8 +2,8 @@
 % Please edit documentation in R/x13binary-package.R
 \docType{package}
 \name{x13binary-package}
-\alias{x13binary}
 \alias{x13binary-package}
+\alias{x13binary}
 \title{Provide the \sQuote{X13-ARIMA-SEATS} Seasonal Adjustment Program}
 \description{
 The US Census provides a seasonal adjustment program now called
@@ -12,11 +12,10 @@ The US Census provides a seasonal adjustment program now called
  source and binary versions. This package integrates these for use by other R 
  packages.
 }
-\author{
-Dirk Eddelbuettel \email{edd@debian.org} and Christoph Sax
-}
 \references{
 \url{https://www.census.gov/srd/www/x13as/}
 }
+\author{
+Dirk Eddelbuettel \email{edd@debian.org} and Christoph Sax
+}
 \keyword{package}
-

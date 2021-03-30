@@ -7,7 +7,7 @@
 checkX13binary(fail.unsupported = FALSE, verbose = TRUE)
 }
 \arguments{
-\item{fail.unsupported}{logical, whether beeing on an unsupported platform
+\item{fail.unsupported}{logical, whether being on an unsupported platform
 leads to an error.}
 
 \item{verbose}{logical, should a message be returned on success?}
@@ -19,4 +19,3 @@ Performs a test run of X-13ARIMA-SEATS. Fails if no output is produced.
 checkX13binary()
 
 }
-

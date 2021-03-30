@@ -14,4 +14,3 @@ package, or \code{""} if the platform is unsupported.
 x13path()
 
 }
-

@@ -13,4 +13,3 @@ Returns \code{TRUE} is the platform is supported, \code{FALSE} otherwise.
 supportedPlatform()
 
 }
-

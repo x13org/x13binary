@@ -21,17 +21,17 @@
 ##  along with x13binary.  If not, see <http://www.gnu.org/licenses/>.
 
 ## Check that we are on Unix
-if ! [ -x $(command -v uname) ]; then
+if ! [ -x `command -v uname` ]; then
     echo "You do not have 'uname' so this is unlikely to be a Unix system. Exiting."
     exit 1
 fi
 
 ## Check for Linux or OSX
-: ${R_HOME=$(R RHOME)}
-sysname=$(${R_HOME}/bin/Rscript -e 'cat(Sys.info()["sysname"])')
+: ${R_HOME=`R RHOME`}
+sysname=`${R_HOME}/bin/Rscript -e 'cat(Sys.info()["sysname"])'`
 if [ ${sysname} = "Linux" ]; then
     platform="linux"
-    arch=$(uname -m)
+    arch=`uname -m`
     if [ "${arch}" = "x86_64" ]; then
         flavour="64"
     elif [ "${arch}" = "i686" ]; then
@@ -58,17 +58,17 @@ fi
 download() {
     url=${1}
     ## sadly, for Travis we cannot rely on R as it lacks libcurl
-    libcurl=$(${R_HOME}/bin/Rscript -e 'cat(capabilities()[["libcurl"]])')
+    libcurl=`${R_HOME}/bin/Rscript -e 'cat(capabilities()[["libcurl"]])'`
     ## so when we have libcurl in R, use it -- else fall back to curl
     if [ ${libcurl} = "TRUE" ]; then
-        file=$(basename ${url})
+        file=`basename ${url}`
         ${R_HOME}/bin/Rscript -e "download.file(\"${url}\", \"${file}\", quiet=TRUE, method='libcurl')"
     else
         curl -s -k -L -O ${url}
     fi
 }
 
-cwd=$(pwd)
+cwd=`pwd`
 
 ## On Linux, download binary
 if [ ${platform} = "linux" ]; then

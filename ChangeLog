@@ -1,3 +1,8 @@
+2021-07-31  Christoph Sax  <christoph.sax@gmail.com>
+
+	* DESCRIPTION (Version, Date): Release 1.1.57-1 providing new Census
+	release X13-ARIMA-SEATS 1.1.57
+
 2021-03-30  Dirk Eddelbuettel  <edd@debian.org>
 
 	* R/checkX13binary.R: Use on.exit() for cleanup of tdir, reindented

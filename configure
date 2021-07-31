@@ -34,8 +34,6 @@ if [ ${sysname} = "Linux" ]; then
     arch=`uname -m`
     if [ "${arch}" = "x86_64" ]; then
         flavour="64"
-    elif [ "${arch}" = "i686" ]; then
-        flavour="32"
     elif [ "${arch}" = "armv7l" ]; then
         flavour="armv7l"
     else
@@ -47,9 +45,10 @@ elif [ ${sysname} = "Darwin" ]; then
 else
     platform=${sysname}
     echo "Unusual platform: ${sysname}"
-    echo "For this platform, there are currently no binaries of X-13ARIMA-SEATS"
-    echo "available. If you have binaries or building scripts, you are invited"
-    echo "to contribute to the project."
+    echo ""
+    echo "For this platform and release, there are currently no binaries of X-13ARIMA-SEATS available."
+    echo "If you have binaries or building scripts, you are invited to contribute to the project."
+    echo ""
     echo "Visit: https://github.com/x13org/x13prebuilt"
     exit 3
 fi

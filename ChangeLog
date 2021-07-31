@@ -1,3 +1,7 @@
+2021-07-31  Dirk Eddelbuettel  <edd@debian.org>
+
+	* configure: Updated for removed i686 / 32 bit Linux support
+
 2021-07-31  Christoph Sax  <christoph.sax@gmail.com>
 
 	* DESCRIPTION (Version, Date): Release 1.1.57-1 providing new Census

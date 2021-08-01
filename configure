@@ -20,7 +20,7 @@
 ##  You should have received a copy of the GNU General Public License
 ##  along with x13binary.  If not, see <http://www.gnu.org/licenses/>.
 
-set -eo pipefail
+set -e
 
 ## Check that we are on Unix
 if ! [ -x `command -v uname` ]; then

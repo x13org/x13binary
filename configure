@@ -20,6 +20,8 @@
 ##  You should have received a copy of the GNU General Public License
 ##  along with x13binary.  If not, see <http://www.gnu.org/licenses/>.
 
+set -eo pipefail
+
 ## Check that we are on Unix
 if ! [ -x `command -v uname` ]; then
     echo "You do not have 'uname' so this is unlikely to be a Unix system. Exiting."

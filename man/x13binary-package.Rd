@@ -13,7 +13,7 @@ The US Census provides a seasonal adjustment program now called
  packages.
 }
 \references{
-\url{https://www.census.gov/srd/www/x13as/}
+\url{https://www.census.gov/data/software/x13as.X-13ARIMA-SEATS.html}
 }
 \author{
 Dirk Eddelbuettel \email{edd@debian.org} and Christoph Sax

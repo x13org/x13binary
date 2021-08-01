@@ -10,7 +10,7 @@
 #' @aliases x13binary
 #' @docType package
 #' @author Dirk Eddelbuettel \email{edd@@debian.org} and Christoph Sax
-#' @references \url{https://www.census.gov/srd/www/x13as/}
+#' @references \url{https://www.census.gov/data/software/x13as.X-13ARIMA-SEATS.html}
 #' @keywords package
 NULL
 

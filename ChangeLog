@@ -1,11 +1,28 @@
+2021-08-01  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 1.1.57-1
+
+	* configure: Minor edits to messages, only use 'set -e'
+
+	* R/x13binary-package.R: Update Census URL for X-13ARIMA-SEATS
+	* man/x13binary-package.Rd: Ditto
+	* README.md: Ditto
+
+2021-08-01  Kirill Müller  <krlmlr+r@mailbox.org>
+
+	* configure: Support macOS sub-architectures, set fail modes
+
 2021-07-31  Dirk Eddelbuettel  <edd@debian.org>
 
 	* configure: Updated for removed i686 / 32 bit Linux support
 
 2021-07-31  Christoph Sax  <christoph.sax@gmail.com>
 
-	* DESCRIPTION (Version, Date): Release 1.1.57-1 providing new Census
-	release X13-ARIMA-SEATS 1.1.57
+	* configure: Use X13-ARIMA-SEATS 1.1.57 binaries via x13prebuilt
+	* configure.win: Idem
+	* README.md: Update for 1.1.57
+
+	* tests/simpleTest.R: Skip on aarch64
 
 2021-04-05  Dirk Eddelbuettel  <edd@debian.org>
 

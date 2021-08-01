@@ -39,7 +39,7 @@ if [ ${sysname} = "Linux" ]; then
     elif [ "${arch}" = "armv7l" ]; then
         flavour="armv7l"
     else
-        echo "Unknown architecture: ${arch}. Exiting."
+        echo "Unknown Linux architecture: ${arch}. Exiting."
         exit 2
     fi
 elif [ ${sysname} = "Darwin" ]; then
@@ -50,7 +50,7 @@ elif [ ${sysname} = "Darwin" ]; then
     elif [ "${arch}" = "arm64" ]; then
         flavour="arm64"
     else
-        echo "Unknown architecture: ${arch}. Exiting."
+        echo "Unknown Darwin (macOS) architecture: ${arch}. Exiting."
         exit 2
     fi
 else

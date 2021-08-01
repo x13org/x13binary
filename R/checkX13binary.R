@@ -21,7 +21,7 @@ checkX13binary <- function(fail.unsupported = FALSE, verbose = TRUE) {
             stop("X-13 binary file not found")
         }
 
-        dir.create(tdir <- tempfile())
+        dir.create(tdir <- tempfile(pattern="x13binary__", fileext="__dir"))
         on.exit(unlink(tdir, recursive=TRUE, force=TRUE))
         file.copy(system.file("testdata", "Testairline.spc", package="x13binary"), tdir)
         if (.Platform$OS.type == "windows") {

@@ -23,7 +23,7 @@
 set -e
 
 ## Check that we are on Unix
-if ! [ -x `command -v uname` ]; then
+if [ x`command -v uname` = x ]; then
     echo "You do not have 'uname' so this is unlikely to be a Unix system. Exiting."
     exit 1
 fi

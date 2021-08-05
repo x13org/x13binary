@@ -57,10 +57,12 @@ else
     platform=${sysname}
     echo "Unusual platform: ${sysname}"
     echo ""
-    echo "For this platform and release, there are currently no binaries of X-13ARIMA-SEATS available."
-    echo "If you have binaries or building scripts, you are invited to contribute to the project."
+    echo "For this platform and release, there are currently no binaries of X-13ARIMA-SEATS available. If"
+    echo "you have binaries or building scripts, you are invited to contribute to the project."
     echo ""
-    echo "Visit: https://github.com/x13org/x13prebuilt"
+    echo "Visit https://github.com/x13org/x13prebuilt for the repository of pre-made binaries, and see eg"
+    echo "https://github.com/x13org/x13binary/blob/master/inst/tools/build.sh for an earlier attempt."
+    echo ""
     exit 3
 fi
 

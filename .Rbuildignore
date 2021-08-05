@@ -3,3 +3,4 @@
 ^inst/bin/x13as*
 .*\.tar\.gz$
 ^\.github
+^inst/tools*

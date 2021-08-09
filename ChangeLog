@@ -1,3 +1,15 @@
+2021-08-05  Dirk Eddelbuettel  <edd@debian.org>
+
+	* configure: Expanded message when no matching binary found
+	* inst/tools/build.sh: Add (failed) SunOS build attempt to repo
+	* .Rbuildignore: Add build script to exclude from installed package
+
+2021-08-04  Dirk Eddelbuettel  <edd@debian.org>
+
+	* configure: Use simpler if statement to accomodate SunOS
+
+	* DESCRIPTION (Date, Version): Roll minor version
+
 2021-08-01  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 1.1.57-1

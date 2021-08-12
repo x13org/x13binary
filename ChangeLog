@@ -1,6 +1,15 @@
+2021-08-11  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 1.1.57-2
+
+2021-08-09  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION: Remove no longer needed 'StagedInstall: no'
+
 2021-08-05  Dirk Eddelbuettel  <edd@debian.org>
 
 	* configure: Expanded message when no matching binary found
+
 	* inst/tools/build.sh: Add (failed) SunOS build attempt to repo
 	* .Rbuildignore: Add build script to exclude from installed package
 

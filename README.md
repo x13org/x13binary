@@ -1,6 +1,5 @@
 ## x13binary: X-13ARIMA-SEATS Binary for R
 
-[![Build Status](https://travis-ci.org/x13org/x13binary.svg)](https://travis-ci.org/x13org/x13binary) 
 [![Build status](https://ci.appveyor.com/api/projects/status/tjwhvfj6l19sq48p?svg=true)](https://ci.appveyor.com/project/christophsax/x13binary) 
 [![CI](https://github.com/x13org/x13binary/workflows/ci/badge.svg)](https://github.com/x13org/x13binary/actions?query=workflow%3Aci)
 [![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) 

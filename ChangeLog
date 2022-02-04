@@ -1,3 +1,7 @@
+2022-02-04  Dirk Eddelbuettel  <edd@debian.org>
+
+	* configure: If X13_PATH points to an existing binary, do not download
+
 2022-01-25  Dirk Eddelbuettel  <edd@debian.org>
 
 	* README.md: Remove unused continuous integration artifact and badge

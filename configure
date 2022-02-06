@@ -82,7 +82,7 @@ download() {
 
 ## Check that X13_PATH does not already point at a binary
 if [ x${X13_PATH} != x ]; then
-    if test -x ${X13_PATH}; then
+    if test -d ${X13_PATH} && test -f ${X13_PATH}/x13ashtml; then
         echo "*** existing x13 binary found, not downloading"
         exit 0
     fi

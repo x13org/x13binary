@@ -1,6 +1,6 @@
 2022-02-06  Dirk Eddelbuettel  <edd@debian.org>
 
-	* DESCRIPTION (Version): Roll minor version and date
+	* DESCRIPTION (Version, Date): Release 1.1.57-3
 
 	* configure: Refined such that X13_PATH points to a directory
 	containing the desired 'x13ashtml' binary

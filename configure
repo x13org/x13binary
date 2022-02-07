@@ -3,7 +3,7 @@
 ##
 ##  configure -- Unix build preparation system
 ##
-##  Copyright (C) 2015 - 2021  Dirk Eddelbuettel
+##  Copyright (C) 2015 - 2022  Dirk Eddelbuettel
 ##
 ##  This file is part of x13binary
 ##
@@ -66,7 +66,7 @@ else
     exit 3
 fi
 
-## helper function to not rely on curl which at least on OS X fails to follow redirects
+## Helper function to not rely on curl which at least on OS X fails to follow redirects
 download() {
     url=${1}
     ## sadly, for Travis we cannot rely on R as it lacks libcurl
@@ -80,9 +80,16 @@ download() {
     fi
 }
 
-cwd=`pwd`
+## Check that X13_PATH does not already point at a binary
+if [ x${X13_PATH} != x ]; then
+    if test -d ${X13_PATH} && test -f ${X13_PATH}/x13ashtml; then
+        echo "*** existing x13 binary found, not downloading"
+        exit 0
+    fi
+fi
 
-## On Linux, download binary
+## On Linux or mac, download binary
+cwd=`pwd`
 if [ ${platform} = "linux" ]; then
     cd inst/bin
     download https://github.com/x13org/x13prebuilt/raw/master/v1.1.57/linux/${flavour}/x13ashtml

@@ -38,6 +38,8 @@ if [ ${sysname} = "Linux" ]; then
         flavour="64"
     elif [ "${arch}" = "armv7l" ]; then
         flavour="armv7l"
+    elif [ "${arch}" = "aarch64" ]; then
+        flavour="aarch64"
     else
         echo "Unknown Linux architecture: ${arch}. Exiting."
         exit 2
@@ -92,7 +94,18 @@ fi
 cwd=`pwd`
 if [ ${platform} = "linux" ]; then
     cd inst/bin
-    download https://github.com/x13org/x13prebuilt/raw/master/v1.1.57/linux/${flavour}/x13ashtml
+	if [ "${flavour}" = "aarch64" ]; then
+		download https://raw.githubusercontent.com/x13org/x13prebuilt/master/v1.1.57/linux/buildScript.sh
+		chmod +x buildScript.sh
+		MY_PATH=$( dirname "$0" )
+		MY_PATH=$( cd "${MY_PATH}" && pwd )
+	    echo 'cp x13asHTMLsv11b57 "'${MY_PATH}'/x13ashtml"' | tee -a buildScript.sh
+	    echo 'rm -rf /tmp/x13dir*' | tee -a buildScript.sh
+		./buildScript.sh
+	    cd "${MY_PATH}"
+	else
+        download https://github.com/x13org/x13prebuilt/raw/master/v1.1.57/linux/${flavour}/x13ashtml
+    fi
     chmod 0775 x13ashtml
     echo "*** downloaded Linux binary"
     cd ${cwd}

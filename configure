@@ -3,7 +3,7 @@
 ##
 ##  configure -- Unix build preparation system
 ##
-##  Copyright (C) 2015 - 2022  Dirk Eddelbuettel
+##  Copyright (C) 2015 - 2023  Dirk Eddelbuettel
 ##
 ##  This file is part of x13binary
 ##
@@ -74,7 +74,7 @@ download() {
     ## so when we have libcurl in R, use it -- else fall back to curl
     if [ ${libcurl} = "TRUE" ]; then
         file=`basename ${url}`
-        ${R_HOME}/bin/Rscript -e "download.file(\"${url}\", \"${file}\", quiet=TRUE, method='libcurl')"
+        ${R_HOME}/bin/Rscript -e "options(timeout = max(300, getOption(\"timeout\"))); download.file(\"${url}\", \"${file}\", quiet=TRUE)"
     else
         curl -s -k -L -O ${url}
     fi

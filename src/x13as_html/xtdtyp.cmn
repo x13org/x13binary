@@ -1,0 +1,9 @@
+c-----------------------------------------------------------------------
+      DOUBLE PRECISION Tdx11,Tdx11b,Xn,Xnstar,Xlpyr,Daybar,Kvec
+      DIMENSION Tdx11(PTD),Tdx11b(PTD),Kvec(PLEN),Xn(PLEN),Xlpyr(PLEN),
+     &          Xnstar(PLEN)
+c-----------------------------------------------------------------------
+      COMMON /cx11td / Tdx11,Tdx11b
+      COMMON /tdvec / Xn,Xnstar,Xlpyr,Daybar
+      COMMON /kvcmn / Kvec
+c-----------------------------------------------------------------------

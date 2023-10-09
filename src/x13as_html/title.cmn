@@ -1,0 +1,19 @@
+C-----------------------------------------------------------------------
+c     Newpag - character that sets new page
+c     Title  - Title printed on each page of output
+c     Serno  - Name of series 
+c     Ttlfmt - format for title
+C-----------------------------------------------------------------------
+      CHARACTER Title*(80),Serno*(64),Ttlfmt*(37)
+C-----------------------------------------------------------------------
+c     Ntitle - length of title vector
+c     Nser   - length of series name
+C-----------------------------------------------------------------------
+      INTEGER Ntitle,Nser
+C-----------------------------------------------------------------------
+      LOGICAL Prt1ps,Lcmpaq
+C-----------------------------------------------------------------------
+      COMMON /rote  / Ntitle,Nser,Prt1ps,Lcmpaq
+      COMMON /crote / Title,Serno,Ttlfmt
+C-----------------------------------------------------------------------
+

@@ -1,0 +1,12 @@
+c-----------------------------------------------------------------------
+c  Pos1bk - relative position of first backcast in orix vector
+c  Pos1ob - relative position of first observation of original series in
+c           orix vector
+c  Posfob - relative position of final observation of original series in
+c           orix vector
+c  Posffc - relative position of final observation of original series
+c           augmented by forecasts in orix vector
+c-----------------------------------------------------------------------
+      INTEGER Pos1bk,Pos1ob,Posfob,Posffc
+c-----------------------------------------------------------------------
+      COMMON /foscmn / Pos1bk,Pos1ob,Posfob,Posffc

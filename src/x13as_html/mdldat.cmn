@@ -1,0 +1,45 @@
+c-----------------------------------------------------------------------
+c     Common for data dependant part of the model description.
+c-----------------------------------------------------------------------
+c     Convrg - Logical variable which indicates if the model estimation
+c              procedure converged
+c-----------------------------------------------------------------------
+      LOGICAL Convrg
+c-----------------------------------------------------------------------
+c     Armaer - type of error in the ARIMA estimation procedure 
+c              Armaer = 0 means no error
+c     Begspn - starting date of analysis span
+c     Nliter - number of ARMA iterations
+c     Nfev - number of function evaluations in model estimation
+c     Nlwrk - size of Non linear work array 
+c     Nspobs - number of observations in the span
+c     Prbfac - integer scalar which keeps track of which ARMA operator
+c              causes an error in the roots checking procedure
+c     Sngcol - column of the regression matrix that causes the matrix to
+c              be singular
+c-----------------------------------------------------------------------
+      INTEGER Armaer,Begspn,Nliter,Nfev,Nlwrk,Nspobs,Prbfac,Sngcol
+c-----------------------------------------------------------------------
+c     Arimap - vector of ARMA parameter estimates
+c     Arimcm - ARMA parameter correlation matrix
+c     B - vector of regression parameter estimates
+c     Chlgpg - cholesky decomposition of G'G
+c     Chlvwp - cholesky decomposition of w_p|z
+c     Chlxpx - cholesky decomposition of X-prime-X matrix
+c     Lndtcv - determinate of G'G
+c     Lnlkhd - log likelihood
+c     Matd - D matrix used in ARMA filtering
+c     Xy - regression matrix + y
+c     Var - maximum likelihood variance
+c     Eick - penalty term for the Empiracle Information Criterion
+c-----------------------------------------------------------------------
+      DOUBLE PRECISION Arimap,Armacm,B,Chlgpg,Chlvwp,Chlxpx,Eick,Lndtcv,
+     &                 Lnlkhd,Matd,Xy,Var
+c-----------------------------------------------------------------------
+      DIMENSION Arimap(PARIMA),Armacm(PLEN+2*PORDER,PARIMA),B(PB),
+     &          Begspn(2),Chlgpg(PGPG),Chlvwp(PGPG),Chlxpx(PXPX),
+     &          Matd((PLEN+PORDER)*PORDER),Xy(PLEN*(PB+1))
+C     ------------------------------------------------------------------
+      COMMON /cmdldt/ Arimap,Armacm,B,Chlgpg,Chlvwp,Chlxpx,Eick,Lndtcv,
+     &                Lnlkhd,Matd,Xy,Var,Armaer,Begspn,Nliter,Nfev,
+     &                Nlwrk,Nspobs,Prbfac,Sngcol,Convrg

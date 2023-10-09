@@ -1,0 +1,9 @@
+c-----------------------------------------------------------------------
+      DOUBLE PRECISION Stcftr,Stcfsf,Stcfor,Stcfsa,Stcfcy
+      LOGICAL Hvstft,Hvstfs,Hvstfo,Hvstfa,Hvstfc
+      DIMENSION Stcftr(PFCST),Stcfsf(PFCST),Stcfor(PFCST),Stcfsa(PFCST),
+     &          Stcfcy(PFCST)
+c-----------------------------------------------------------------------
+      COMMON / stcfcm / Stcftr,Stcfsf,Stcfor,Stcfsa,Stcfcy
+      COMMON / stclcm / Hvstft,Hvstfs,Hvstfo,Hvstfa,Hvstfc
+c-----------------------------------------------------------------------

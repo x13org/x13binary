@@ -1,0 +1,36 @@
+c-----------------------------------------------------------------------
+c     data dictionary for descriptions of series and output dealing with
+c     composite seasonal adjustment.  See descmp.var for pointers.
+c-----------------------------------------------------------------------
+      CHARACTER DSCDIC*1771
+      INTEGER dscptr
+      DIMENSION dscptr(0:PDSC)
+c-----------------------------------------------------------------------
+      PARAMETER(DSCDIC='composite time series data (for the span analyze
+     &d)prior adjusted composite datacomposite series (prior adjusted)co
+     &mposite series (prior adjusted)regARIMA calendar adjusted composit
+     &e dataregARIMA outlier adjusted composite dataindirect seasonal ad
+     &justment of composite seriescomposite smoothness diagnosticsindire
+     &ct unmodified SI componentfinal replacement values for SI componen
+     &t of indirect adjustmentindirect seasonal componentindirect season
+     &al component (saved as percentages if multiplicative adj)indirect 
+     &final seasonal differenceindirect seasonally adjusted dataindirect
+     & trend cycleindirect irregular componentindirect irregular compone
+     &nt (saved as percentages if multiplicative adj)original data modif
+     &ied for extremes from indirect adjustmentseasonally adjusted data 
+     &modified for extremes from indirect adjustmentirregular component 
+     &modified for extremes from indirect adjustment%s for composite ser
+     &ies%s for composite series (saved as percentages if appropriate)%s
+     & for indirect seasonally adjusted series%s for indirect seasonally
+     & adjusted series (saved as percentages if appropriate)%s for indir
+     &ect seasonally adjusted series with forced yearly totals%s for ind
+     &irect seasonally adjusted series with forced yearly totals (saved 
+     &as percentages if appropriate)%s for rounded indirect seasonally a
+     &djusted series%s for rounded indirect seasonally adjusted series (
+     &saved as percentages if appropriate)%s for indirect trend componen
+     &t%s for indirect trend component (saved as percentages if appropri
+     &ate)% in original series adjusted for calendar effects% in origina
+     &l series adjusted for calendar effects (saved as percentages if ap
+     &propriate)robust estimate of the indirect final seasonally adjuste
+     &d seriesindirect final adjustment ratiosindirect total adjustment 
+     &factors')

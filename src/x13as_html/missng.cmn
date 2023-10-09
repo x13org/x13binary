@@ -1,0 +1,15 @@
+c-----------------------------------------------------------------------
+c     Missng - Logical variable which indicates if a missing value has
+c              been found in the series
+c     Misind - Logical vector of length PLEN which indicates if 
+c              observation t is a missing value
+c-----------------------------------------------------------------------
+      LOGICAL Missng
+c-----------------------------------------------------------------------
+c     Mvcode - code for missing values (default -99999D0)
+c     Mvval - replacement value for missing values (default 1000000000)
+c----------------------------------------------------------------------
+      DOUBLE PRECISION Mvcode,Mvval
+c----------------------------------------------------------------------
+      COMMON /missvl/ Mvcode,Mvval,Missng
+

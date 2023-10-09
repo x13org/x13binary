@@ -1,0 +1,21 @@
+c-----------------------------------------------------------------------
+c     Variables in the common cseries used in the nonlinear routine.
+c Common should only be found in the main and the function evaluation
+c routine.  This file is dependant on srslen.prm
+c-----------------------------------------------------------------------
+c Name  Type Description cseries common variables
+c-----------------------------------------------------------------------
+c Dnefob  d  Input number of effective observations and the length of 
+c             the differenced regression variables and series less the
+c             order of the DF*AR operators if the AR is conditional and
+c             less DF if the AR is exact.
+c Lrgrsd  d  magnitude of the largest residual needed for the
+c             constrained estimation in Minpack
+c Tsrs    d  Psrs long copy of the series input to the nonlinear routine
+c-----------------------------------------------------------------------
+c     Variable typing and initialization
+c-----------------------------------------------------------------------
+      DOUBLE PRECISION Dnefob,Lrgrsd,Tsrs
+      DIMENSION Tsrs(PLEN)
+      COMMON /csrs/ Dnefob,Lrgrsd,Tsrs
+

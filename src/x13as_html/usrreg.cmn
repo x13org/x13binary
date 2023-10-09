@@ -1,0 +1,18 @@
+c     ------------------------------------------------------------------
+c     Usrttl - data dictionary for the names of the user-defined 
+c              regressor variables.
+c     Usrptr - pointers for the data dictionary of the names of the 
+c              user-defined regressor variables.
+c     Usrtyp - indicator of what type of regressor for each of the
+c              user-defined regressor variables.
+c     Ncusrx - Number of user-defined regression variables
+c     Nguhl  - Number of holiday groups defined withing user-defined
+c              regression variables
+c     ------------------------------------------------------------------
+      CHARACTER Usrttl*(PCOLCR*PUREG)
+      INTEGER Usrtyp,Ncusrx,Usrptr,Nguhl
+      DIMENSION Usrtyp(PUREG),Usrptr(0:PUREG)
+c     ------------------------------------------------------------------
+      COMMON /usrreg/ Ncusrx,Usrtyp,Usrptr,Nguhl,Usrttl
+c     ------------------------------------------------------------------
+

@@ -1,0 +1,11 @@
+c-----------------------------------------------------------------------
+c    Options from Seats spec
+c-----------------------------------------------------------------------
+      CHARACTER*100 Tabtbl
+      DOUBLE PRECISION Epsph2,Xl2,Rmod2,Epsiv2,Hplan2
+      INTEGER Qmax2,Out2,Maxit2,Kmean,Bias2,Iphtrf,Hptrgt
+      LOGICAL Lnoadm,Lhp,Lstsea,Lfinit,Lmdsum,Lsgud,Lhprmls
+c-----------------------------------------------------------------------
+      COMMON /setopt/ Epsph2,Xl2,Rmod2,Epsiv2,Hplan2,Qmax2,Out2,Bias2,
+     &                Maxit2,Kmean,Iphtrf,Hptrgt,Lnoadm,Lhp,Lsgud,
+     &                Lstsea,Lfinit,Lmdsum,Lhprmls,Tabtbl

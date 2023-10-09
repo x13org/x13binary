@@ -1,0 +1,13 @@
+c-----------------------------------------------------------------------
+c     PREV - maximum number of observations that can be analyzed in a
+c            revisions history analysis
+c     PFCLAG - maximum number of forecast lags that can be analyzed in a
+c              revisions history analysis
+c     PREVY - maximum number of years that can be analyzed in a 
+c             revisions history analysis
+c     PTARGT - maximum number of targets that can be analyzed in a 
+c              revisions history analysis
+c-----------------------------------------------------------------------
+      INTEGER PREV, PFCLAG, PREVY, PTARGT
+      PARAMETER(PREV=PLEN-20,PFCLAG=4,PREVY=PYRS-5,PTARGT=5)
+

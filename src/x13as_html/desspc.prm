@@ -1,0 +1,26 @@
+c-----------------------------------------------------------------------
+c     data dictionary for descriptions of series and output dealing with
+c     spectral plots and diagnostics.  See desspc.var for pointers.
+c-----------------------------------------------------------------------
+      CHARACTER DSPDIC*1153
+      INTEGER dspptr
+      DIMENSION dspptr(0:PDSP)
+c-----------------------------------------------------------------------
+      PARAMETER(DSPDIC='spectrum of the original seriesspectrum of the r
+     &egARIMA model residualsspectrum of differenced seasonally adjusted
+     & seriesspectrum of irregular componentspectrum of the seasonally a
+     &djusted series (SEATS)spectrum of the irregular component (SEATS)s
+     &pectrum of the extended residuals (SEATS)spectrum of differenced i
+     &ndirect seasonally adjusted seriesspectrum of indirect irregular c
+     &omponentspectrum of the composite seriesTukey spectrum of the orig
+     &inal seriesTukey spectrum of the regARIMA model residualsTukey spe
+     &ctrum of differenced seasonally adjusted seriesTukey spectrum of i
+     &rregular componentTukey spectrum of the seasonally adjusted series
+     & (SEATS)Tukey spectrum of the irregular component (SEATS)Tukey spe
+     &ctrum of the extended residuals (SEATS)Tukey spectrum of differenc
+     &ed indirect seasonally adjusted seriesTukey spectrum of indirect i
+     &rregular componentTukey spectrum of the composite seriesQS diagnos
+     &tic to detect seasonalityQS diagnostic to detect seasonality (indi
+     &rect adjustment)Peak probabilties for the Tukey spectrumQuarterly 
+     &seasonality checkNP test for seasonally adjusted seriesNP test for
+     & seasonally adjusted series (indirect adjustment)')

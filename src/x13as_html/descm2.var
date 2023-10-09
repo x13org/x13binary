@@ -1,0 +1,8 @@
+c-----------------------------------------------------------------------
+c     pointers for descriptions of series and output dealing with
+c     composite seasonal adjustment.  See descm2.prm for data dictionaries.
+c-----------------------------------------------------------------------
+      DATA dc2ptr / 
+     &    1,  43,  70, 125, 172, 195, 219, 219, 286, 335,
+     &  351, 426, 473, 516, 571, 612, 667, 701, 741, 785,
+     &  812, 848, 929,1012,1090,1163 /

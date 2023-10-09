@@ -1,0 +1,11 @@
+c-----------------------------------------------------------------------
+C ---  Mt is the input spec file
+C ---  Mtm is the model file
+C ---  Mt1 is the main printout
+C ---  Mt2 is the error file
+C ---  Ng is the file containing a summary of the run(s)
+C ---  Nform contains the seasonal adjustment diagnostics for the run
+c-----------------------------------------------------------------------
+      INTEGER Mt,Mtm,Mt1,Mt2,Nform,Ng,Mtprof
+      COMMON /units / Mt,Mtm,Mt2,Mt1,Ng,Nform,Mtprof
+

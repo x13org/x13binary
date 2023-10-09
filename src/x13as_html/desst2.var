@@ -1,0 +1,6 @@
+c-----------------------------------------------------------------------
+c     pointers for descriptions of series and output dealing with
+c     SEATS seasonal adjustment.  See desst2.prm for data dictionaries.
+c-----------------------------------------------------------------------
+      DATA ds2ptr / 
+     &    1,  53, 115, 165,220 /

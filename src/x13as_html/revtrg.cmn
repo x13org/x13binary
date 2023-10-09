@@ -1,0 +1,12 @@
+c     Targsa - Integer vector of displacements for seasonal adjustment
+c              revisions history targets
+c     Ntarsa - Number of seasonal adjustment revisions history targets
+c     Targtr - Integer vector of displacements for trend revisions 
+c              history targets
+c     Ntartr - Number of trend revisions history targets
+c-----------------------------------------------------------------------
+      INTEGER Targsa,Ntarsa,Targtr,Ntartr
+      DIMENSION Targsa(PTARGT),Targtr(PTARGT)
+c-----------------------------------------------------------------------
+      COMMON /revtrg/ Targsa,Ntarsa,Targtr,Ntartr
+

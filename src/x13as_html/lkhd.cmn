@@ -1,0 +1,6 @@
+c-----------------------------------------------------------------------
+c     Allow aicc, bic and likelihood to be passed to other routines
+c     BCM - January 1994, revised November 2000
+c-----------------------------------------------------------------------
+      DOUBLE PRECISION Aic,Aicc,Bic,Bic2,Hnquin,Olkhd,Eic
+      COMMON /lkhd  / Aic,Aicc,Bic,Bic2,Hnquin,Olkhd,Eic

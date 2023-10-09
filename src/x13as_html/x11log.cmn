@@ -1,0 +1,23 @@
+c-----------------------------------------------------------------------
+c     Axrghl - Logical variable which determines if X-11 regression 
+c              holiday factors were used to adjust the series
+c     Axruhl - Logical variable which determines if X-11 user-defined 
+c              regression holiday factors were present
+c     Axrgtd - Logical variable which determines if X-11 regression 
+c              trading day factors were used to adjust the series
+c     Otlxrg - Logical variable which determines if AO outlier detection
+c              is used with X-11 regression
+c     Xeastr - Logical variable which determines if an AIC test will be
+c              performed for Easter in the irregular regression
+c     Xuser  - Logical variable which determines if an AIC test will be
+c              performed for user-defined regressors in the irregular 
+c              regression
+c     Xhlnln - Logical variable which determines if a nonlinear 
+c              procedure will be used when TD+Holiday is used in the
+c              X-11 regression.
+c-----------------------------------------------------------------------
+      LOGICAL Axrgtd,Axrghl,Axruhl,Otlxrg,Xeastr,Xuser,Xhlnln,Calfrc,
+     &        Havxhl,Havxtd,Xelong,Lxrneg,Cvxtyp
+c-----------------------------------------------------------------------
+      COMMON /lxropt/ Axrgtd,Axrghl,Axruhl,Otlxrg,Xeastr,Xuser,Xhlnln,
+     &                Calfrc,Havxhl,Havxtd,Xelong,Lxrneg,Cvxtyp

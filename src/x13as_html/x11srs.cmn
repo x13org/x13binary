@@ -1,0 +1,9 @@
+c-----------------------------------------------------------------------
+c     Arrays containing the elemental components of an X-11 seasonal
+c     adjustment
+c-----------------------------------------------------------------------
+      DOUBLE PRECISION Sts,Stsi,Stc,Stci,Sti,Stc2
+      DIMENSION Sts(PLEN),Stsi(PLEN),Stc(PLEN),Stci(PLEN),Sti(PLEN),
+     &          Stc2(PLEN)
+c-----------------------------------------------------------------------
+      COMMON /x11srs / Sts,Stsi,Stc,Stc2,Stci,Sti

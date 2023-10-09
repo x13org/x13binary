@@ -1,0 +1,4 @@
+      DOUBLE PRECISION Stcsi,Sto,Stoap,Stopp,Stocal
+      DIMENSION Stcsi(PLEN),Sto(PLEN),Stoap(PLEN),Stopp(PLEN),
+     &          Stocal(PLEN)
+      COMMON /orisrs/ Stcsi,Sto,Stoap,Stopp,Stocal

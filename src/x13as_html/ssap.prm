@@ -1,0 +1,8 @@
+c-----------------------------------------------------------------------
+c     MXLEN : Maximum length of sliding spans matrix
+c     MXCOL : Maximum number of columns in a sliding spans matrix
+c     MXYR  : Maximum number of years in sliding span
+c     NEST : Number of estimates analyzed in sliding spans
+c-----------------------------------------------------------------------
+      INTEGER MXLEN,MXCOL,MXYR,NEST
+      PARAMETER(MXCOL=4,MXYR=23,MXLEN=PSP*MXYR,NEST=5)

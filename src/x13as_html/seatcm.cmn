@@ -1,0 +1,27 @@
+c-----------------------------------------------------------------------
+      DOUBLE PRECISION Seattr,Seatsf,Seatir,Seatsa,Seatcy,Setftr,
+     &                 Setfsf,Setfir,Setfsa,Setfcy,Sttftr,Sttfsf,
+     &                 Sttfor,Sttfsa,Sttfcy,Sseftr,Ssefsf,Ssefor,
+     &                 Ssefsa,Ssefcy,Ssrftr,Ssrfsf,Ssrfsa,Ssrfcy,
+     &                 Seataf,Spitrc,Spis,Spitra,Spisa,Sep,Sebp,Seq,
+     &                 Sebq,Stocir,Stocsa,Setsa2,Stsarn,Sttrse,Stsfse,
+     &                 Stsase,Stcyse,Setcyc,Setltt,Odiff
+      DIMENSION Seattr(PLEN),Seatsf(PLEN),Seatir(PLEN),Seatsa(PLEN),
+     &          Seatcy(PLEN),Setftr(PFCST),Setfsf(PFCST),Setfir(PFCST),
+     &          Setfsa(PFCST),Setfcy(PFCST),Sttftr(PFCST),Sttfsf(PFCST),
+     &          Sttfor(PFCST),Sttfsa(PFCST),Sttfcy(PFCST),Sseftr(PFCST),
+     &          Ssefsf(PFCST),Ssefor(PFCST),Ssefsa(PFCST),Ssefcy(PFCST),
+     &          Ssrftr(PFCST),Ssrfsf(PFCST),Ssrfsa(PFCST),Ssrfcy(PFCST),
+     &          Seataf(PLEN),Spitrc(PLEN),Spis(PLEN),Spitra(PLEN),
+     &          Spisa(PLEN),Sep(3),Sebp(3),Seq(3),Sebq(3),Stocir(PLEN),
+     &          Stocsa(PLEN),Setsa2(PLEN),Stsarn(PLEN),Sttrse(PLEN),
+     &          Stsfse(PLEN),Stsase(PLEN),Stcyse(PLEN),Setcyc(PLEN),
+     &          Setltt(PLEN),Odiff(PLEN)
+c-----------------------------------------------------------------------
+      COMMON / seatcm / Seattr,Seatsf,Seatir,Seatsa,Seatcy,Setftr,
+     &                  Setfsf,Setfir,Setfsa,Setfcy,Sttftr,Sttfsf,
+     &                  Sttfor,Sttfsa,Sttfcy,Sseftr,Ssefsf,Ssefor,
+     &                  Ssefsa,Ssefcy,Ssrftr,Ssrfsf,Ssrfsa,Ssrfcy,
+     &                  Seataf,Spitrc,Spis,Spitra,Spisa,Sep,Sebp,
+     &                  Seq,Sebq,Stocir,Stocsa,Setsa2,Stsarn,Sttrse,
+     &                  Stsfse,Stsase,Stcyse,Setcyc,Setltt,Odiff

@@ -1,0 +1,33 @@
+c-----------------------------------------------------------------------
+c     data dictionary for descriptions of series and output dealing with
+c     revisions histories.  See desdgn.var for pointers.
+c-----------------------------------------------------------------------
+      CHARACTER DSDDIC*1576
+      INTEGER dsdptr
+      DIMENSION dsdptr(0:PDSD)
+c-----------------------------------------------------------------------
+      PARAMETER(DSDDIC='revisions history analysisrevision history of th
+     &e outliers identifiedrevision history of the Moving Seasonality Ra
+     &tiopercent revisions of the concurrent seasonal adjustmentssummary
+     & statistics : average absolute percent revisions of the seasonal a
+     &djustmentsconcurrent and revised seasonal adjustments and revision
+     &spercent revisions of the % of the adjustmentssummary statistics :
+     & average absolute revisions of the % of the adjustmentshistory of 
+     &the % of the adjustmentspercent revisions of the concurrent indire
+     &ct seasonal adjustmentssummary statistics : average absolute perce
+     &nt revisions of the concurrent indirect seasonal adjustmentsconcur
+     &rent and revised indirect seasonal adjustments and revisionspercen
+     &t revision of the concurrent Henderson trend-cycle valuessummary s
+     &tatistics : average absolute percent revision of the concurrent He
+     &nderson trend-cycleconcurrent and revised Henderson trend-cycle va
+     &lues and revisionspercent revisions of the % of the trend-cycle va
+     &luessummary statistics : average absolute percent revisions of the
+     & % of the trend-cyclehistory of the % of the trend-cycle valuesrev
+     &isions of the concurrent and projected seasonal componentsummary s
+     &tatistics : average absolute percent revisions of the concurrent a
+     &nd projected seasonal componentconcurrent and projected seasonal c
+     &omponent and their percent revisionsrevision history of the likeli
+     &hood statisticsrevision history of the out-of-sample forecastsfore
+     &cast and forecast error historySEATS ARIMA model historyseasonal f
+     &orecast historyARMA model coefficient historytrading day coefficie
+     &nt history')

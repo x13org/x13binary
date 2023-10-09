@@ -1,0 +1,25 @@
+c-----------------------------------------------------------------------
+c     Tmpser  - name of temporary prior adjustment series
+c     Prmser  - name of permanent prior adjustment series
+c-----------------------------------------------------------------------
+      CHARACTER Tmpser*64,Prmser*64
+c-----------------------------------------------------------------------
+c     Bgutad : Starting date for user-defined temporary prior adjustment 
+c              factors
+c     Bgupad : Starting date for user-defined permanent prior adjustment 
+c              factors
+c     Frstat : Position in the user defined temporary adjustment series 
+c              that corresponds to the beginning of the span
+c     Frstap : Position in the user defined permanent adjustment series
+c              that corresponds to the beginning of the span
+c     Nustad : Number of user-defined temporary prior adjustment factors
+c     Nuspad : Number of user-defined permanent prior adjustment factors
+c     Ntser -  length of name of temporary prior adjustment factors
+c     Npser -  length of name of permanent prior adjustment factors
+c-----------------------------------------------------------------------
+      INTEGER Bgutad,Bgupad,Nustad,Nuspad,Frstat,Frstap,Ntser,Npser
+      DIMENSION Bgutad(2),Bgupad(2)
+c-----------------------------------------------------------------------
+      COMMON /priusr / Nustad,Nuspad,Frstat,Frstap,Bgutad,Bgupad,
+     &                 Ntser,Npser,Tmpser,Prmser
+

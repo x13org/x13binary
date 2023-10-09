@@ -1,0 +1,9 @@
+c     ------------------------------------------------------------------
+c     Common block contains a variable that indicates whether an
+c     individual observation is "good" for multiplicative seasonal
+c     adjustment (ie, > 0)
+c     ------------------------------------------------------------------
+      LOGICAL Gudval
+      DIMENSION Gudval(PLEN)
+c     ------------------------------------------------------------------
+      COMMON /goodob/ Gudval

@@ -1,0 +1,8 @@
+c-----------------------------------------------------------------------
+c     pointers for descriptions of series and output dealing with
+c     spectral plots and diagnostics.  See desspc.prm for data dictionaries.
+c-----------------------------------------------------------------------
+      DATA dspptr / 
+     &    1,  32,  72, 122, 153, 203, 246, 288, 347, 387,
+     &  419, 456, 502, 558, 595, 651, 700, 748, 813, 859,
+     &  897, 932, 989,1029,1056,1094,1154 /

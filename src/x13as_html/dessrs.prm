@@ -1,0 +1,19 @@
+c-----------------------------------------------------------------------
+c     data dictionary for descriptions of series and output dealing with
+c     data and transformations.  See dessrs.var for pointers.
+c-----------------------------------------------------------------------
+      CHARACTER DSRDIC*665
+      INTEGER dsrptr
+      DIMENSION dsrptr(0:PDSR)
+c-----------------------------------------------------------------------
+      PARAMETER(DSRDIC='time series data (for the span analyzed)original
+     & seriesinput specification fileoriginal series adjusted for missin
+     &g value regressorsregARIMA calendar adjusted original dataregARIMA
+     & outlier adjusted original dataoriginal series (prior adjusted)ori
+     &ginal series (prior adjusted)time series data plus constant (for t
+     &he span analyzed)original series plus constantprior-adjustment fac
+     &torspermanent prior-adjustment factorstemporary prior-adjustment f
+     &actorsprior-adjusted datapermanent prior-adjusted dataprior-adjust
+     &ed data (including prior trading day adjustments)permanent prior-a
+     &djusted data (including prior trading day adjustments)prior-adjust
+     &ed and transformed data')

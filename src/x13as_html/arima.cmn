@@ -1,0 +1,158 @@
+c-----------------------------------------------------------------------
+c     This common block contains all the variables which must be 
+c     transferred from gtinpt to the arima subroutines
+c-----------------------------------------------------------------------
+c     NOTE : all dates are integer arrays of length two, with 
+c            DATE(1) = year, DATE(2) = period
+c-----------------------------------------------------------------------
+c     Bstdsn - model description of the "best" model selected by the
+c              automatic model identification procedure
+c-----------------------------------------------------------------------
+      CHARACTER Autofl*(PFILMD),Bstdsn*(132)
+c-----------------------------------------------------------------------
+c     Nobs   : Number of observations read in for the original series
+c     Mxnlit : Maximum number of nonlinear iterations 
+c     Endspn : Ending date for the span of data analyzed
+c     Begsrs : Starting date of the original series
+c     Nrusrx : Number of observations read in for the user-defined 
+c              regression variables.
+c     Bgusrx : Starting date for the user-defined regression variables.
+c     Mxiter : Maximum number of total iterations 
+c     Begtst : Starting date for the outlier testing procedure
+c     Endtst : Ending date for the outlier testing procedure
+c     Fctdrp : Number of observations to "drop" at the end of the series
+c              to determine when the forecasts will start
+c     Frstsy : Pointer for the location of the first observation of the
+c              span in the original series
+c     Mxcklg : Maximum number of lags to compute for ACF and PACF tables
+c              (read in from the check spec)
+c     Dflist : List of differences to be applied in the identification
+c              output
+c     Niddf  : Number of regular differences to be applied in the 
+c              identification output
+c     Nidsdf : Number of seasonal differences to be applied in the 
+c              identification output
+c     Mxidlg : Maximum number of lags to compute for ACF and PACF tables
+c              (read in from the identify spec)
+c     Nrxy   : Number of rows in Xy regression matrix
+c     Lsrun  : Maximum number of LS outliers to be grouped together in 
+c              temporary level shift test
+c     Reglom : Regression variable prior adjustment indicator variable
+c              (0,1=none, 2=td, and 3=all)
+c     Fcntyp : Indicator variable specifying Box-Cox and other functions
+c              (1=log,3=logistic,4=none,6=power transformation)
+c     Itdtst : Indicator variable specifying whether an AIC-test will
+c              be performed for the trading day regression variables
+c              (1=td,2=td6,3=tdstock)
+c     Aicstk : Stock day given in tdstock selected for TD AIC-test
+c     Begxy  : Beginning date of Xy regression matrix
+c     Begmdl : Starting date for the span of data to be modelled
+c     Endmdl : Ending date for the span of data to be modelled
+c     Easvec : Vector for Easter windows used for Easter AIC-test
+c     Neasvc : Number of Easter windows used for Easter AIC-test
+c     Maxord : Vector of length two which contains the maximum order
+c              (regular, seasonal) for the automatic model
+c            identification procedure
+c     Diffam : Vector of length two which contains the order of
+c              differences (regular, seasonal) set by the user in
+c            the automatic model identification procedure
+c     Nbstds - length of description of "best" model
+c-----------------------------------------------------------------------
+      INTEGER Nobs,Mxnlit,Endspn,Begsrs,Nrusrx,Bgusrx,Mxiter,Begtst,
+     &        Endtst,Fctdrp,Frstsy,Mxcklg,Dflist,Niddf,Nidsdf,Nomnfy,
+     &        Mxidlg,Nrxy,Lsrun,Reglom,Fcntyp,Itdtst,Aicstk,Begxy,
+     &        Aicind,Aicint,Begmdl,Endmdl,Easvec,Neasvc,Maxord,Diffam,
+     &        Frstar,Nbstds,Eastst,Lomtst,Exdiff,Tdayvc,Ntdvec
+c-----------------------------------------------------------------------
+c     Lestim : Logical variable indicating whether REGARIMA model will
+c              be estimated (.true.) or if the model parameters will
+c              be fixed (.false.)
+c     Ltstao : Logical variable indicating whether AO outliers will be
+c              identified in outlier procedure
+c     Ltstls : Logical variable indicating whether LS outliers will be
+c              identified in outlier procedure
+c     Ltsttc : Logical variable indicating whether TC outliers will be
+c              identified in outlier procedure
+c     Ladd1  : Logical variable indicating whether outliers will be 
+c              added one at a time
+c     Lautom : Logical variable indicating whether automatic model
+c              identification should be performed
+c     Lautod : Logical variable indicating whether automatic difference
+c              order identification should be performed
+c     Ldestm : Logical variable indicating whether any REGARIMA model
+c              estimation will be performed
+c     Outfct : Logical variable indicating whether out-of-sample
+c              forecast errors will be used as a diagnostic statistic.
+c     Leastr : Logical variable for automatic easter AIC test
+c     Luser  : Logical variable for automatic AIC test for user-defined
+c              regressors
+c     Lsovdf : Logical variable for the test for seasonal 
+c              overdifferencing
+c     Lttc   : Logical variable for trendtc whether TC outlier will be 
+c              treated as level change or AO
+c-----------------------------------------------------------------------
+c      LOGICAL Lestim,Ltstao,Ltstls,Ltsttc,Ltstso,Ladd1,Lautom,Lautod,
+      LOGICAL Lestim,Ltstao,Ltstls,Ltsttc,Ladd1,Lautom,Lautod,
+     &        Ldestm,Outfct,Leastr,Luser,Lbalmd,Hrinit,Laccdf,
+     &        Lotmod,Lautox,Pck1st,Id1st,Outfer,Elong,Cvtype,Lchkmu,
+     &        Lmixmd,Lrejfc,Lognrm,Rmcnst,Ch2tst,Lceaic,Lsovdf,Lttc
+c-----------------------------------------------------------------------
+c     Ub1lim : Acceptance limit for initial unit root test
+c     Ub2lim : Acceptance limit for final unit root test
+c     Ubfin  : Acceptance limit for unit root test of final model
+c     Tsig   : T-value limit for final ARMA coefficient test
+c     Predcv : Percent reduction in automatic outlier identification
+c              threshold for automatic model identification
+c     Cancel : Acceptance limit for cancellation of rootse
+c     Y      : Original series
+c     Lam    : Box-Cox transformation parameter
+c     Userx  : User-defined regression variables
+c     Critvl : Critical value for outlier identification procedure
+c     Traicd : The difference in AICC needed to accept no
+c              transformation when the automatic transformation
+c              AIC test isinvoked.  Default value : 2D0
+c     Rgaicd : Vector of length 4 (TD, LOM, Easter, UserDef) -
+c              The amount by which the AICC of the model with the
+c              regressor(s) specified in the aictest argument must
+c              fall below the AICC of the model without these
+c              regressor(s) in order for the model with the
+c              regressors to be chosen.  Default value : 0D0
+c     Ciprob : Probability limit for the confidence interval of the
+c              forecasts
+c     Cvrduc : amount to reduce outlier critical value to identify
+c              "almost" outliers
+c-----------------------------------------------------------------------
+      DOUBLE PRECISION Ub1lim,Ub2lim,Ubfin,Cancel,Y,Lam,Userx,Critvl,
+     &                 Fct,Rgaicd,Traicd,Ciprob,Pcr,Tsig,Predcv,Fctlim,
+     &                 Bcklim,Qlim,Ovrdif,Cvalfa,Fctlm2,Cvrduc,Chi2cv,
+     &                 Dfaict,Dfaicl,Dfaice,Dfaicu,Tlimit,Pvaic,QsRsd,
+     &                 QsRsd2
+c-----------------------------------------------------------------------
+      DIMENSION Y(PLEN),Begsrs(2),Endspn(2),Userx(PUSERX),Bgusrx(2),
+     &          Begtst(2),Endtst(2),Dflist(PDFLG,2),Begxy(2),
+     &          Begmdl(2),Endmdl(2),Critvl(POTLR),Easvec(PAICEA),
+     &          Maxord(2),Diffam(2),Tdayvc(3),Rgaicd(PAICT)
+c-----------------------------------------------------------------------
+      COMMON /armadp/ Y,Userx,Critvl,Ciprob,Cvalfa,Cvrduc,Chi2cv,Tlimit,
+     &                Pvaic,QsRsd,QsRsd2
+      COMMON /armain/ Nobs,Nrusrx,Bgusrx,Mxiter,Mxnlit,Mxcklg,Begtst,
+     &                Endtst,Fctdrp,Begsrs,Frstsy,Begmdl,Endmdl,Nomnfy,
+     &                Lsrun
+c      COMMON /armalg/ Lestim,Ltstao,Ltstls,Ltsttc,Ltstso,Ladd1,Ldestm,
+      COMMON /armalg/ Lestim,Ltstao,Ltstls,Ltsttc,Ladd1,Ldestm,Lttc,
+     &                Reglom,Outfct,Elong,Cvtype,Lognrm,Rmcnst,Ch2tst
+      COMMON /armaid/ Dflist,Niddf,Nidsdf,Mxidlg
+      COMMON /armamd/ Ub1lim,Ub2lim,Ubfin,Cancel,Pcr,Tsig,Predcv,Fct,
+     &                Fctlm2,Maxord,Diffam,Frstar,Exdiff,Lautom,Lautod,
+     &                Lbalmd,Hrinit,Laccdf,Lotmod,Lchkmu,Lmixmd,Lrejfc,
+     &                Lsovdf
+      COMMON /armamx/ Fctlim,Bcklim,Qlim,Ovrdif,Lautox,Pck1st,Id1st,
+     &                Outfer,Autofl
+      COMMON /armalm/ Lam,Fcntyp
+      COMMON /aictst/ Rgaicd,Traicd,Dfaict,Dfaicl,Dfaice,Dfaicu,Itdtst,
+     &                Aicstk,Easvec,Neasvc,Tdayvc,Ntdvec,Aicind,Aicint,
+     &                Lomtst,Eastst,Leastr,Lceaic,Luser
+      COMMON /armaxy/ Endspn,Begxy,Nrxy
+      COMMON /autom / Nbstds,Bstdsn
+c-----------------------------------------------------------------------      
+      

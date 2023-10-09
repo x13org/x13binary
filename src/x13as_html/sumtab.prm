@@ -1,0 +1,7 @@
+c-----------------------------------------------------------------------
+c     sumtab - logical variable which defines those tables to be saved
+c              when the -s flag is used
+c              DATA statement that defines sumtab is in sumtab.var
+c-----------------------------------------------------------------------
+      LOGICAL sumtab
+      DIMENSION sumtab(NTBL)

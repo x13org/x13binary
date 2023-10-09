@@ -1,0 +1,9 @@
+c-----------------------------------------------------------------------
+      DOUBLE PRECISION Tdmdl,Tdmdl1,Lpmdl,Lpmdl1
+      INTEGER Tdtbl,Tday
+      DIMENSION Tdmdl(PTD),Tdmdl1(PTD),
+     &          Tday(PLEN),Lpmdl(2),Lpmdl1(2)
+c-----------------------------------------------------------------------
+      COMMON /tdtyp / Tdtbl,Tday
+      COMMON /cmdltd / Tdmdl,Tdmdl1,Lpmdl,Lpmdl1
+c-----------------------------------------------------------------------

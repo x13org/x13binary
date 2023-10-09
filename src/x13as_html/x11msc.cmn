@@ -1,0 +1,21 @@
+c-----------------------------------------------------------------------
+c     Miscellanous X-11 options added to the X-12 program as 
+c     enhancements
+c-----------------------------------------------------------------------
+c     Shrtsf - Logical variable which indicates when seasonal filter  
+c              specified by user should be used for short series
+c     Psuadd - Logical variable which indicates when pseudo-additive  
+c              seasonal adjustment is performed
+c     Same - Logical variable which indicates when all original series
+c            values are the same
+c     Rvper - Logical variable which indicates that percent revisions
+c             are used
+c     Yr2000 - Logical variable which indicates that yrs read in from
+c              X-11 formats that are <= 45 are assumed to be from the
+c              21 century; else, years are assumed to be in the 20th
+c              century.
+c-----------------------------------------------------------------------
+      LOGICAL Shrtsf,Psuadd,Same,Rvper,Yr2000,Noxfct,Tru7hn,
+     &        Lcentr
+      COMMON /x11msc/ Shrtsf,Psuadd,Same,Rvper,Yr2000,Noxfct,Tru7hn,
+     &                Lcentr

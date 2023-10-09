@@ -1,0 +1,10 @@
+c-----------------------------------------------------------------------
+c     Usrtad : Temporary Prior adjustment factors
+c     Usrpad : Permanent Prior adjustment factors
+c-----------------------------------------------------------------------
+      DOUBLE PRECISION Usrtad,Usrpad
+c-----------------------------------------------------------------------
+      DIMENSION Usrtad(PLEN),Usrpad(PLEN)
+c-----------------------------------------------------------------------
+      COMMON /upradj/ Usrtad,Usrpad
+

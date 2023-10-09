@@ -1,0 +1,10 @@
+      DOUBLE PRECISION P0,Qp,K,Qk,Svk,Snr,Sni,U,V0,A0,B0,C,D0,A1,A3,
+     &                 A7,E,F,G,H,Szr,Szi,Lzr,Lzi,Eta,Are,Mre
+      INTEGER N,N0
+C-----------------------------------------------------------------------
+      DIMENSION P0(PORDER+1),Qp(PORDER+1),K(PORDER+1),Qk(PORDER+1),
+     &          Svk(PORDER+1)
+C-----------------------------------------------------------------------
+      COMMON /global/ P0,Qp,K,Qk,Svk,Snr,Sni,U,V0,A0,B0,C,D0,A1,A3,
+     &                A7,E,F,G,H,Szr,Szi,Lzr,Lzi,Eta,Are,Mre,N,N0
+C-----------------------------------------------------------------------

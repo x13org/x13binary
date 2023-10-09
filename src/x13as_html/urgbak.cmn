@@ -1,0 +1,14 @@
+c     ------------------------------------------------------------------
+c     Backup copies of variables for user defined regressors 
+c     ------------------------------------------------------------------
+      LOGICAL Fxuser
+      CHARACTER Usrtt2*(PCOLCR*PUREG)
+      DOUBLE PRECISION Buser,Userx2
+      INTEGER Usrty2,Ncusx2,Usrpt2
+      DIMENSION Buser(PUREG*2),Fxuser(PUREG*2),Userx2(PUSERX*2),
+     &          Usrty2(PUREG*2),Usrpt2((PUREG+1)*2),Ncusx2(0:1),
+     &          Usrtt2(0:1)
+c     ------------------------------------------------------------------
+      COMMON /usrbak/ Buser,Userx2,Ncusx2,Usrty2,Usrpt2,Usrtt2,Fxuser
+
+

@@ -1,0 +1,17 @@
+c-----------------------------------------------------------------------
+c     Adj    : Prior adjustment factors
+c     Adj1st : Position in the Adj vector that corresponds to the
+c              beginning of the span
+c     Adjmod : Mode of the prior adjustment factors in Adj
+c              (0=differences converted to facter by exponentiation,
+c               1=factors,2=differences)
+c     Nadj   : Number user-defined prior adjustment factors
+c     Begadj : Starting date for user-defined prior adjustment factors
+c     Setpri : gives pointer for first observation in Sprior
+c-----------------------------------------------------------------------
+      INTEGER Adj1st,Adjmod,Nadj,Begadj,Setpri
+      DOUBLE PRECISION Adj,Cnstnt
+      DIMENSION Adj(PLEN),Begadj(2)
+c-----------------------------------------------------------------------
+      COMMON / adjcmn / Adj,Cnstnt,Adj1st,Nadj,Begadj,Setpri,Adjmod
+c-----------------------------------------------------------------------

@@ -1,0 +1,9 @@
+c-----------------------------------------------------------------------
+c     Note NSVLOG (the number of tables) is half PSVLOG because each 
+c table has a long and short name.  In the table dictionaries the short
+c name is written after each long name so the 2i-1 and 2i entries relate
+c to table i.  change NSVLOG from 111->109, Jan.2021
+c-----------------------------------------------------------------------
+      INTEGER NSVLOG
+      PARAMETER(NSVLOG=109)
+c-----------------------------------------------------------------------

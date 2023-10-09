@@ -1,0 +1,6 @@
+      INTEGER Ntukey,Itukey
+      DOUBLE PRECISION Ptsr,Ptso,Ptsa,Ptsi,Pttdr,Pttdo,Pttda,Pttdi
+      DIMENSION Itukey(4),Ptsr(6),Ptso(6),Ptsa(6),Ptsi(6)
+c-----------------------------------------------------------------------
+      COMMON /ctukey / Ptsr,Ptso,Ptsa,Ptsi,Pttdr,Pttdo,Pttda,Pttdi,
+     &                 Ntukey,Itukey

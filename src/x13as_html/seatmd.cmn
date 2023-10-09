@@ -1,0 +1,18 @@
+      INTEGER Ntcnum,Ntcden,Nsnum,Nsden,Nsanum,Nsaden,Ntrnum,Ntrden,
+     &        Ntcwkf,Nsawkf,Nswkf,Ntrwkf,Nirwkf,Nrsdex,Nsfsa,Nsftr,
+     &        Nsfsf,Nsfir,Nsfcy,Lstsse,Lstyse,Lsttse,Lstase,Nfcfor,
+     &        Nodiff
+      DOUBLE PRECISION Tcnum,Tcden,Tcvar,Snum,Sden,Svar,Sanum,Saden,
+     &                 Savar,Trnum,Trden,Trvar,Irrvar,Tcwkf,Sawkf,
+     &                 Swkf,Trwkf,Irwkf,Srsdex
+      DIMENSION Tcnum(8),Tcden(8),Snum(27),Sden(27),Sanum(32),Saden(20),
+     &          Trnum(32),Trden(17),Tcwkf(120),Sawkf(120),Swkf(120),
+     &          Trwkf(120),Irwkf(120),Srsdex(PLEN)
+c-----------------------------------------------------------------------
+      COMMON /seatmd/ Tcnum,Tcden,Tcvar,Snum,Sden,Svar,Sanum,Saden,
+     &                Savar,Trnum,Trden,Trvar,Irrvar,Tcwkf,Sawkf,Swkf,
+     &                Trwkf,Irwkf,Srsdex,Ntcnum,Ntcden,Nsnum,Nsden,
+     &                Nsanum,Nsaden,Ntrnum,Ntrden,Ntcwkf,Nsawkf,Nswkf,
+     &                Ntrwkf,Nirwkf,Nrsdex,Nsfsa,Nsftr,Nsfsf,Nsfir,
+     &                Nsfcy,Lstsse,Lstyse,Lsttse,Lstase,Nfcfor,Nodiff
+c-----------------------------------------------------------------------

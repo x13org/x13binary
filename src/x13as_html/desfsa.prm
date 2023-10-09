@@ -1,0 +1,30 @@
+c-----------------------------------------------------------------------
+c     data dictionary for descriptions of series and output dealing with
+c     X-11 seasonal adjustment (tables 8-20).  See desfsa.var for pointers.
+c-----------------------------------------------------------------------
+      CHARACTER DSSDIC*1406
+      INTEGER dssptr
+      DIMENSION dssptr(0:PDSS)
+c-----------------------------------------------------------------------
+      PARAMETER(DSSDIC='unmodified SI ratios, B iterationfinal unmodifie
+     &d SI ratiosfinal unmodified SI ratios, with labels for outliers an
+     &d extreme values% in original series adjusted for calendar factors
+     & (A18)% in original series adjusted for calendar factors (A18 - sa
+     &ved as percentages if appropriate)replacement values for extremes 
+     &of SI componentmodified SI ratiosfinal replacement values for SI r
+     &atiosseasonal factors, B iterationseasonal factors, C iterationfin
+     &al seasonal factorsfinal seasonal factors (saved as percentages if
+     & multiplicative adj)final seasonal differenceseasonal factors, adj
+     &usted for user-defined seasonal regARIMA componentseasonal factors
+     &, before shrinkage appliedseasonally adjusted data, B iterationsea
+     &sonally adjusted data, C iterationfinal seasonally adjusted datafi
+     &nal seasonally adjusted series with constant value addedseasonally
+     & adjusted series with alternative extreme value modificationfinal 
+     &trend cyclefinal trend cycle not including outlier effectsbias cor
+     &rection factorsfinal trend cycle with constant value addedirregula
+     &r component, B iterationirregular component, C iterationfinal irre
+     &gular componentfinal irregular component (saved as percentages if 
+     &multiplicative adj)final irregular component not including outlier
+     & effectspreliminary weights for irregular componentfinal weights f
+     &or irregular componentpreliminary extreme value adjustment factors
+     &final extreme value adjustment factors')

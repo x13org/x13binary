@@ -1,0 +1,11 @@
+c-----------------------------------------------------------------------
+c     This is a common block used in the irregular regression
+c     subroutines to keep track of irregular values that are excluded
+c     from the regression.
+c-----------------------------------------------------------------------
+      INTEGER Nxcld
+      LOGICAL Rgxcld
+c----------------------------------------------------------------------
+      DIMENSION Rgxcld(PLEN)
+c-----------------------------------------------------------------------
+      COMMON /xclude/ Nxcld,Rgxcld

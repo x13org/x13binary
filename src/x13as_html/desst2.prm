@@ -1,0 +1,12 @@
+c-----------------------------------------------------------------------
+c     data dictionary for descriptions of series and output dealing with
+c     SEATS seasonal adjustment.  See desst2.var for pointers.
+c-----------------------------------------------------------------------
+      CHARACTER DS2DIC*219
+      INTEGER ds2ptr
+      DIMENSION ds2ptr(0:PDS2)
+c-----------------------------------------------------------------------
+      PARAMETER(DS2DIC='standard error of final transitory component (SE
+     &ATS)final seasonally adjusted series adjusted for outliers (SEATS)
+     &final irregular component outlier adjusted (SEATS)final trend cycl
+     &e not including outlier effects (SEATS)')

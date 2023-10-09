@@ -1,0 +1,15 @@
+c-----------------------------------------------------------------------
+      LOGICAL Havetr,Havesf,Haveir,Havesa,Havecy,Havftr,Havfsf,Havfir,
+     &        Havfsa,Havfcy,Hvfttr,Hvftsf,Hvftor,Hvftsa,Hvftcy,Hseftr,
+     &        Hsefsf,Hsefor,Hsefsa,Hsefcy,Hsrftr,Hsrfsf,Hsrfsa,Hsrfcy,
+     &        Haveaf,Hpitrc,Hpis,Hpitra,Hpisa,Hvstsa,Hvstir,Hvtrse,
+     &        Hvsfse,Hvsase,Hvcyse,Hvscyc,Hvsltt,Hvodff
+c-----------------------------------------------------------------------
+      COMMON / seatlg / Havetr,Havesf,Haveir,Havesa,Havecy,Havftr,
+     &                  Havfsf,Havfir,Havfsa,Havfcy,Hvfttr,Hvftsf,
+     &                  Hvftor,Hvftsa,Hvftcy,Hseftr,Hsefsf,Hsefor,
+     &                  Hsefsa,Hsefcy,Hsrftr,Hsrfsf,Hsrfsa,Hsrfcy,
+     &                  Haveaf,Hpitrc,Hpis,Hpitra,Hvstir,Hpisa,Hvstsa,
+     &                  Hvtrse,Hvsfse,Hvsase,Hvcyse,Hvscyc,Hvsltt,
+     &                  Hvodff
+     

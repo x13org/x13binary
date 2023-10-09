@@ -1,0 +1,18 @@
+      INTEGER Tdzero,Tddate,Lnzero,Lndate
+c-----------------------------------------------------------------------
+c     Picktd - logical scalar which indicates that "td" was selected
+c              as one of the trading day regressors
+c     Lrgmtd - logical scalar which indicates that change of regime
+c              trading day regressors are contained in the current 
+c              model being processed
+c     Lrgmln - logical scalar which indicates that length of period
+c          (length of month, quarter, or leap year) change of
+c              regime regressor is contained in the current model being
+c              processed
+c-----------------------------------------------------------------------
+      LOGICAL Picktd,Lrgmtd,Fulltd,Lrgmln,Fullln,Fulllp
+c-----------------------------------------------------------------------
+      DIMENSION Tddate(2),Lndate(2)
+c-----------------------------------------------------------------------
+      COMMON /cpktd / Tdzero,Tddate,Lnzero,Lndate,Picktd,Lrgmtd,Fulltd,
+     &                Lrgmln,Fullln,Fulllp

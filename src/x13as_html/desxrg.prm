@@ -1,0 +1,27 @@
+c-----------------------------------------------------------------------
+c     data dictionary for descriptions of series and output dealing with
+c     irregular component regressions.  See desxrg.var for pointers.
+c-----------------------------------------------------------------------
+      CHARACTER DSIDIC*1172
+      INTEGER dsiptr
+      DIMENSION dsiptr(0:PDSI)
+c-----------------------------------------------------------------------
+      PARAMETER(DSIDIC='prior trading day factorsextreme irregular value
+     &s excluded from irregular component regressionextreme irregular va
+     &lues excluded from irregular component regressionpreliminary irreg
+     &ular component regressionfinal irregular component regressionpreli
+     &minary trading day factors from irregular component regressionfina
+     &l trading day factors from irregular component regressionprelimina
+     &ry combined trading day factors from irregular component regressio
+     &nfinal combined trading day factors from irregular component regre
+     &ssionpreliminary holiday factors from irregular component regressi
+     &onfinal holiday factors from irregular component regressionprelimi
+     &nary calendar factors from irregular component regressionfinal cal
+     &endar factors from irregular component regressionpreliminary combi
+     &ned calendar factors from irregular component regressionfinal comb
+     &ined calendar factors from irregular component regressionAO outlie
+     &r detection results for irregular component regression, by iterati
+     &onregression matrix used in final irregular component regressionco
+     &variance matrix of irregular component regression parameter estima
+     &tesresults of AIC tests used in final irregular component regressi
+     &on')

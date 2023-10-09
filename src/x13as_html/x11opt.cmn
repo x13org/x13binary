@@ -1,0 +1,51 @@
+c-----------------------------------------------------------------------
+c     Sigmal - lower sigma limit
+c     Sigmau - upper sigma limit
+c     Rati - I/S ratios for individual months (or quarters)
+c     Ratis - Global MSR
+c     Ratic - I/C ratio
+c     Tic - I\C ratio specified by user and used to generate end wts
+c           for henderson filter
+c-----------------------------------------------------------------------
+      DOUBLE PRECISION Ratic,Tic,Rati,Ratis,Sigml,Sigmu
+c-----------------------------------------------------------------------
+c     Length - Length of the series
+c     Muladd - adjustment mode - (0=multiplicate, 1=add, 2=logadd)
+c     Tmpma -  temporary variable used in conjunction with Muladd
+c     Imad - indicator designating which MAD used for std. error
+c            in extreme value adjustment
+c     Lterm - default seasonal filter used in seasonal adjustment
+c     Mtype - type of seasonal filter used in seasonal adjustment
+c     Lter - vector of seasonal filters used for each month (quarter)
+c            in seasonal adjustment
+c     Ktcopt - Henderson filter specified to estimate trend; if =0,
+c              trend filter chosen automatically
+c     Nterm - Henderson filter currently used to estimate trend
+c     Lyr - first year of series seasonally adjusted
+c     Lstmo - last month (or quarter) of series seasonally adjusted
+c     Lstyr - last year of series seasonally adjusted
+c     Kfulsm - indicator variable for full seasonal adjustment (0) or
+c              summary measures (1) run
+c     Ny - length of seasonal period (12 if monthly, 4 if quarterly)
+c     Kpart - counter for which seasonal adjustment iteration
+c             we are currently in
+c     Kswv - indicator for prior trading day
+c     Ksect - counter for what part of the seasonal adjustment iteration
+c             we are currently in
+c     Mcd - months for cyclical dominance
+c     Keastr - Indicator variable for X-11 easter adjustment
+c     Khol - Indicator variable for X-11 holiday adjustment
+c     Kdec - number of output decimals to display
+c     Lmsr - if > 0, this means automatic seasonal filter selection is 
+c            on for this run
+c-----------------------------------------------------------------------
+      INTEGER Divpwr,Kdec,Muladd,Tmpma,Imad,Lterm,Mtype,Lter,Lmsr,
+     &        Ktcopt,Nterm,Lyr,Lstmo,Lstyr,Kfulsm,Ny,Length,Ishrnk,
+     &        Kpart,Kswv,Ksect,Mcd,Keastr,Khol
+c-----------------------------------------------------------------------
+      DIMENSION Lter(PSP),Rati(3*PSP)
+c----------------------------------------------------------------------- 
+      COMMON /optxin/ Divpwr,Kdec,Muladd,Tmpma,Imad,Lterm,Mtype,Lter,
+     &                Lmsr,Ktcopt,Nterm,Lyr,Lstmo,Lstyr,Kfulsm,Ny,
+     &                Ishrnk,Kpart,Kswv,Ksect,Mcd,Length,Keastr,Khol
+      COMMON /optxdp/ Ratic,Tic,Rati,Ratis,Sigml,Sigmu

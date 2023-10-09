@@ -1,0 +1,17 @@
+c-----------------------------------------------------------------------
+c     data dictionary for descriptions of series and output dealing with
+c     sliding spans analysis.  See desdg2.var for pointers.
+c-----------------------------------------------------------------------
+      CHARACTER DD2DIC*518
+      INTEGER dd2ptr
+      DIMENSION dd2ptr(0:PDD2)
+c-----------------------------------------------------------------------
+      PARAMETER(DD2DIC='sliding spans of the seasonal factorssliding spa
+     &ns of the indirect seasonal factorssliding spans of the changes in
+     & the seasonally adjusted seriessliding spans of the changes in the
+     & indirect seasonally adjusted seriessliding spans of the seasonall
+     &y adjusted seriessliding spans of the indirect seasonally adjusted
+     & seriessliding spans of the year-to-year changes in the seasonally
+     & adjusted seriessliding spans of the year-to-year changes in the i
+     &ndirect seasonally adjusted seriessliding spans of the trading day
+     & factors')

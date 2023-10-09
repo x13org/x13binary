@@ -1,0 +1,10 @@
+c-----------------------------------------------------------------------
+c     Prttab - Logical vector indicating which series are to be printed
+c     Savtab - Logical vector indicating which series are to be saved
+c     Savfct - Logical scalar indicating if forecasts should be stored
+c              with selected series
+c-----------------------------------------------------------------------
+      LOGICAL Prttab,Savtab,Savfct,Savbct
+      DIMENSION Prttab(NTBL),Savtab(NTBL)
+c-----------------------------------------------------------------------
+      COMMON /ctbllg/Prttab,Savtab,Savfct,Savbct

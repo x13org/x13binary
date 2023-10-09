@@ -1,0 +1,26 @@
+c-----------------------------------------------------------------------
+c     Factd - Regarima (or X-11 Regression) TD factors
+c     FacAO - Regarima AO factors
+c     FacLS - Regarima LS factors
+c     FacTC - Regarima TC factors
+c     FacSO - Regarima SO factors
+c     Facsea - Regarima seasonal factors
+c     Facusr - Regarima factors derived from user-defined regression
+c              variables
+c     Fachol - Regarima (or X-11 Regression) holiday factors
+c     Faccal - X-11 Regression (or Regarima) factors derived from 
+c              calendar effects (trading day and holiday)
+c     Facxhl - X-11 Regression factors derived from holiday effects
+c     X11hol - X-11 Easter factors
+c     Stptd - Prior Trading Day factors
+c-----------------------------------------------------------------------
+      DOUBLE PRECISION Factd,FacAO,FacLS,FacTC,FacSO,Facsea,Faccyc,
+     &                 Facusr,Fachol,Faccal,Facxhl,X11hol,Stptd
+c      DOUBLE PRECISION LnMean
+      DIMENSION Factd(PLEN),FacAO(PLEN),FacLS(PLEN),FacTC(PLEN),
+     &          FacSO(PLEN),Facsea(PLEN),Faccyc(PLEN),Facusr(PLEN),
+     &          Fachol(PLEN),Faccal(PLEN),Facxhl(PLEN),X11hol(PLEN),
+     &          Stptd(PLEN)
+c-----------------------------------------------------------------------
+      COMMON / x11fac / Factd,Fachol,FacAO,FacLS,FacTC,FacSO,Facsea,
+     &                  Faccyc,Facusr,Faccal,Facxhl,X11hol,Stptd

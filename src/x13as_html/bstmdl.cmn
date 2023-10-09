@@ -1,0 +1,20 @@
+c-----------------------------------------------------------------------
+c     Model variables for the "best" model found by the automatic model
+c     selection procedure
+c-----------------------------------------------------------------------
+      LOGICAL Bstsdf,Bstafx
+      DOUBLE PRECISION Bstap,Bstb
+      INTEGER Bstalg,Bstm,Bsto,Bstofc,Bstopt,Bstno,Bstnot,Bstnm,
+     &        Bnsedf,Bseadf,Bstngr,Bsngrt,Bsncxy,Bstnb,Bstnct,Bclptr,
+     &        Bstgrp,Bsgptr,Bstrgv
+      CHARACTER Bstctl*(PCOLCR*PB),Bstgtl*(PGRPCR*PGRP),
+     &          Bstot*(POPRCR*POPR)
+c-----------------------------------------------------------------------
+      DIMENSION Bstap(PARIMA),Bstb(PB),Bstafx(PARIMA),Bstalg(PARIMA),
+     &          Bstm(0:3*PMDL),Bsto(0:POPR),Bstofc(POPR),Bstopt(0:POPR),
+     &          Bclptr(0:PB),Bstgrp(0:PGRP),Bsgptr(0:PGRP),Bstrgv(PB)
+c-----------------------------------------------------------------------
+      COMMON /bstcmn/ Bstap,Bstb,Bstalg,Bstm,Bsto,Bstofc,Bstopt,Bstno,
+     &                Bstnot,Bstnm,Bnsedf,Bseadf,Bstngr,Bsngrt,Bsncxy,
+     &                Bstnb,Bstnct,Bclptr,Bstgrp,Bsgptr,Bstrgv,Bstsdf,
+     &                Bstafx,Bstctl,Bstgtl,Bstot

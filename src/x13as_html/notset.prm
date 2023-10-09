@@ -1,0 +1,19 @@
+c-----------------------------------------------------------------------
+c     Parameter file for all the notset values.
+c-----------------------------------------------------------------------
+c Name Type Description
+c-----------------------------------------------------------------------
+c CNOTST c  Parameter, '?', signifies character variable not input
+c            to namelist
+c DNOTST d  Parameter -999.0d-0, signifies value not input
+c NOTSET i  Parameter signifies integer variable not input to namelist
+c SNOTST r  Parameter -999.0, signifies single precision value not
+c            input
+c-----------------------------------------------------------------------
+      CHARACTER CNOTST*1
+      INTEGER NOTSET
+c      REAL SNOTST
+      DOUBLE PRECISION DNOTST
+      PARAMETER (CNOTST='?',NOTSET=-32767,DNOTST=-999.0d0)
+c      PARAMETER (SNOTST=-999.0)
+

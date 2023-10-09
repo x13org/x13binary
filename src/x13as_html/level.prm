@@ -1,0 +1,7 @@
+c-----------------------------------------------------------------------
+c     level  - logical variable which defines those tables to be printed
+c              for an X-13 run when a specific print level (none,brief,
+c              default,alltables,all) is specified
+c-----------------------------------------------------------------------
+      LOGICAL level
+      DIMENSION level(NTBL,NLVL)

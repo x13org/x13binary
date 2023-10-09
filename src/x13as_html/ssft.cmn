@@ -1,0 +1,6 @@
+      INTEGER Icol,Issqf
+	  DOUBLE PRECISION Ssfts,Ssmf
+c-----------------------------------------------------------------------
+      DIMENSION Ssfts(MXCOL),Ssmf(MXCOL),Issqf(MXCOL)
+c-----------------------------------------------------------------------
+      COMMON /ssft  / Ssfts,Ssmf,Issqf,Icol

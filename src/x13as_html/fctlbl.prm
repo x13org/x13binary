@@ -1,0 +1,15 @@
+c-----------------------------------------------------------------------
+c     data dictionary for descriptions of series and output dealing with
+c     X-13 output labels of forecasts and other special tables.  See fctlbl.var for pointers.
+c-----------------------------------------------------------------------
+      CHARACTER LBFDIC*373
+      INTEGER lbfptr,PLBF
+      PARAMETER(PLBF=395)
+      DIMENSION lbfptr(0:PLBF)
+c-----------------------------------------------------------------------
+      PARAMETER(LBFDIC='B 1.AA 8.AA 8.TC.AA 8.SO.AA 6.AA 7.AA 9.AA 10.AA
+     & 13.AD 10.AD 10.AD 10.ED 10.CD 10.TH 1.AA 16.AD 16.AD 16.AD 16.CD 
+     &18.AE 18.AE 18.CD 11.FFA 4.CC 16.AC 18.AC 16H.AC 16C.AC 18C.AB 1.A
+     &D 10.AD 10.AD 10.CE 18.AE 18.CD 18.AD 16.AD 16.AD 11.FFS 12.AS 12.
+     &DS 10.AS 10.AS 13.AS 13.AS 11.AS 11.DS 14.AS 14.AS 16.AS 16.AS 18.
+     &AS 18.CS 1.FS 11.FS 12.FS 10.CS 14.TCFS 14.DTCFS 11.OAS 13.OA')

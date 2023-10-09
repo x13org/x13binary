@@ -1,0 +1,29 @@
+c-----------------------------------------------------------------------
+c     data dictionaries, pointers for titles of tables dealing with
+c     forecasts of specified series and special tables
+c-----------------------------------------------------------------------
+      CHARACTER TTFDIC*1295
+      INTEGER ttfptr,PTTF
+      PARAMETER(PTTF=225)
+      DIMENSION ttfptr(0:PTTF)
+      PARAMETER(TTFDIC='A 7.A  REGARIMA AO outlier component forecastsA 
+     &8.A  REGARIMA level change outlier component forecastsA 5.A  REGAR
+     &IMA trading day component forecastsA 6.A  REGARIMA holiday compone
+     &nt forecastsA 9.A  REGARIMA user-defined regression component fore
+     &castsB 1.A  Original series (prior adjusted), forecast extendedD 1
+     &0.A  Final seasonal component forecastsD 10.C  Final seasonal diff
+     &erence forecastsH 1.A  Holiday component forecastsD 16.A  Combined
+     & adjustment component forecastsD 10.C  Final adjustment difference
+     & forecastsA 4.C  Prior trading day component forecastsC 16.A  Fina
+     &l X-11 regression trading day component forecastsC 18.A  Final X-1
+     &1 regression trading day component forecastsC 16H.A  Final X-11 re
+     &gression holiday component forecastsC 16C.A  Final X-11 calendar c
+     &omponent forecastsC 18C.A  Final X-11 combined calendar component 
+     &forecastsR 1.B  Final seasonal adjustmentsR 2.B  Final seasonal co
+     &mponentR 3.B  History of the % from the preceding period in the fi
+     &nal seasonal adjustmentsR 4.B  Final Henderson trend-cycle valuesR
+     & 7.B  History of the % from the preceding period in the final tren
+     &d-cycle valuesR 8.B  Final seasonal componentR 1I.B  Final indirec
+     &t seasonal adjustmentsD 10.A  Final indirect seasonal component fo
+     &recastsD 10.C  Indirect final seasonal difference forecasts')
+

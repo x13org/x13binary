@@ -1,0 +1,6 @@
+c-----------------------------------------------------------------------
+c     vector of file extensions used to save tables.  See filext.var
+c     for actual table names.
+c-----------------------------------------------------------------------
+      CHARACTER tbxdic*3
+      DIMENSION tbxdic(NTBL)

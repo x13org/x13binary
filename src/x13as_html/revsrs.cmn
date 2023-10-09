@@ -1,0 +1,35 @@
+c-----------------------------------------------------------------------
+c  This common block has the series used to generate the revisions
+c  history analysis
+c-----------------------------------------------------------------------
+c     Cncsf - Concurrent estimates for the seasonal factors
+c     Cncsfp - Concurrent estimates for the projected seasonal factors
+c     Finsf - Final estimates for the seasonal factors
+c     Cncch - Concurrent estimates for the month-to-month changes
+c     Finch - Final estimates for the month-to-month changes
+c     Cncsa - Concurrent estimates for the seasonally adjusted series
+c     Finsa - Final estimates for the seasonally adjusted series
+c     Cncisa - Concurrent estimates for the indirect seasonally adjusted
+c              series
+c     Finisa - Final estimates for the indirect seasonally adjusted 
+c              series
+c     Cncfct - Concurrent estimates for the forecasts for selected lags
+c     Cnctrn - Concurrent estimates for the final trend
+c     Fintrn - Final estimates for the final trend
+c     Cnctch - Concurrent estimates for the month-to-month changes of 
+c              the final trend
+c     Fintch - Final estimates for the month-to-month changes of the
+c              final trend
+c-----------------------------------------------------------------------
+      DOUBLE PRECISION Cncsf,Cncsfp,Finsf,Cncch,Finch,Cncsa,Finsa,
+     &                 Cncisa,Finisa,Cncfct,Cnctrn,Fintrn,Cnctch,
+     &                 Fintch
+      DIMENSION Cncsf(PREV),Cncsfp(PREV),Finsf(PREV),Cncsa(PREV),
+     &          Finsa(0:PTARGT,PREV),Cncisa(PREV),Finisa(0:PTARGT,PREV),
+     &          Cncch(PREV),Finch(0:PTARGT,PREV),Cnctrn(PREV),
+     &          Fintrn(0:PTARGT,PREV),Cncfct(PFCLAG,PREV),Cnctch(PREV),
+     &          Fintch(0:PTARGT,PREV)
+c-----------------------------------------------------------------------
+      COMMON /revdta/ Cncsf,Cncsfp,Finsf,Cncsa,Finsa,Cncisa,Finisa,
+     &                Cncch,Finch,Cncfct,Cnctrn,Fintrn,Cnctch,Fintch
+

@@ -1,0 +1,5 @@
+C-----------------------------------------------------------------------
+      CHARACTER LogfHTML*(PFILCR),CsrsHTML*(PFILCR)
+      INTEGER NlfHTML,NcsHTML,Nlflast,Ncslast
+C-----------------------------------------------------------------------
+      COMMON /cfhtml/ NlfHTML,NcsHTML,Nlflast,Ncslast,LogfHTML,CsrsHTML

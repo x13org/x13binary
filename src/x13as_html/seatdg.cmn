@@ -1,0 +1,17 @@
+      CHARACTER X13mdl*(132)
+      DOUBLE PRECISION Kurt,Kurtse,Testnm,Skew,Skewse,Sdres,Ceetrn,
+     &                 Ceesad,Prsetr,Prsesa,Aadasa,Aadatr,Tsetrn,Tsesea,
+     &                 Tsetcm,Tsesad,Vartrn,Varsad,Varirr,Varsea,Dwstat,
+     &                 SeasNP
+      INTEGER Iprsm,Iqrsm,Ipssm,Iqssm,Idrsm,Idssm,Ssghst,Ssgcnc,Ssgfct,
+     &        Nxmdl
+      DIMENSION Prsetr(5),Prsesa(5),Vartrn(3),Varsad(3),Varirr(3),
+     &          Varsea(3)
+c-----------------------------------------------------------------------
+      COMMON /stdiag/Kurt,Kurtse,Testnm,Skew,Skewse,Sdres,Ceetrn,Ceesad,
+     &               Prsetr,Prsesa,Aadasa,Aadatr,Tsetrn,Tsesea,Tsetcm,
+     &               Tsesad,Vartrn,Varsad,Varirr,Varsea,Dwstat,SeasNP,
+     &               Ssghst,Ssgcnc,Ssgfct,Iprsm,Iqrsm,Ipssm,Iqssm,Idrsm,
+     &               Idssm
+      COMMON /chdiag/X13mdl,Nxmdl
+c-----------------------------------------------------------------------

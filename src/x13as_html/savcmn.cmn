@@ -1,0 +1,12 @@
+c-----------------------------------------------------------------------
+c     This is a set of common blocks used in the EDITOR subroutine of 
+c     X-11-ARIMA, and contains most of the variables used by the 
+c     seasonal adjustment routines of X-12-ARIMA
+c-----------------------------------------------------------------------
+      CHARACTER Svfmt*(11)
+c-----------------------------------------------------------------------
+c     Length - Length of the series
+c----------------------------------------------------------------------
+      INTEGER Svprec,Svsize
+c-----------------------------------------------------------------------
+      COMMON /savcmn/ Svprec,Svsize,Svfmt

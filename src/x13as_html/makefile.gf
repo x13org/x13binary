@@ -4,10 +4,10 @@ LINKER    = gfortran
 PROGRAM         = x13as_html
 DEST      = .
 EXTHDRS         =
-FFLAGS    = -O0 -g 
+FFLAGS    = -O0 -g
 HDRS            =
 LDFLAGS   = -s
-LDMAP     = 
+LDMAP     =
 LIBS      =
 MAKEFILE  = Makefile
 OBJS            = aaamain.o abend.o acf.o acfar.o acfdgn.o \
@@ -1704,13 +1704,13 @@ phasegain.o: notset.prm
 
 altundovrtst.o: acfast.i across.i htmlout.cmn models.i stream.i
 
-rvarma.o: error.cmn mdldat.cmn model.cmn model.prm rev.prm srslen.prm 
+rvarma.o: error.cmn mdldat.cmn model.cmn model.prm rev.prm srslen.prm
 
 rvtdrg.o: error.cmn mdldat.cmn model.cmn model.prm picktd.cmn rev.prm \
          srslen.prm usrreg.cmn
 
 prtukp.o: arima.cmn error.cmn htmlout.cmn htmlout.prm model.prm rho.cmn \
-         spctbl.i srslen.prm title.cmn tukey.cmn 
+         spctbl.i srslen.prm title.cmn tukey.cmn
 
 svtukp.o: notset.prm spctbl.i tukey.cmn units.cmn
 

@@ -292,7 +292,7 @@ SRCS            = aaamain.f abend.f acf.f acfar.f acfdgn.f \
                   testodf.f
 
 $(PROGRAM):     $(OBJS) $(LIBS)
-	$(LINKER) -static -o $@ $(OBJS) $(LDMAP) $(LIBS) $(LDFLAGS)
+	$(LINKER) -o $@ $(OBJS) $(LDMAP) $(LIBS) $(LDFLAGS)
 
 clean:;         @rm -f $(OBJS)
 

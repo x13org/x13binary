@@ -4,3 +4,5 @@
 .*\.tar\.gz$
 ^\.github
 ^inst/tools*
+^.*\.Rproj$
+^\.Rproj\.user$

@@ -1,10 +1,8 @@
 # MKMF template makefile for protected mode executables.
-FC        = gfortran
-LINKER    = gfortran
+LINKER    = $(FC)
 PROGRAM         = x13as_html
 DEST      = .
 EXTHDRS         =
-FFLAGS    = -O0 -g
 HDRS            =
 LDFLAGS   = -s
 LDMAP     =

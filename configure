@@ -27,7 +27,7 @@ root="$(cd "$(dirname "$0")" && pwd)"
 cd ./src/x13as_html
 make -f makefile.gf
 
-cp x13as_html $root/inst/bin
+cp x13as_html $root/inst/bin/x13ashtml
 
 exit 0
 

@@ -29,6 +29,11 @@ jobs:
           chmod 0755 run.sh
           ./run.sh bootstrap
 
+      - name: Add Fortran
+        if: ${{ runner.os == 'macos' }}
+        run: |
+          brew install gfortran
+
       - name: Dependencies
         run: ./run.sh install_deps
 

@@ -29,6 +29,13 @@ jobs:
           chmod 0755 run.sh
           ./run.sh bootstrap
 
+      - uses: fortran-lang/setup-fortran@v1
+        id: setup-fortran
+
+      - run: ${{ env.FC }} --version
+        env:
+          FC: ${{ steps.setup-fortran.outputs.fc }}
+
       - name: Dependencies
         run: ./run.sh install_deps
 

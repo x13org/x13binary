@@ -36,6 +36,12 @@ jobs:
         env:
           FC: ${{ steps.setup-fortran.outputs.fc }}
 
+      - name: Recon
+        run:
+          which gfortran || true
+          ls -l /opt/homebrew/bin/gfortran || true
+          echo $PATH
+
       - name: Dependencies
         run: ./run.sh install_deps
 

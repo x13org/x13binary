@@ -1,4 +1,4 @@
 /inst/bin/x13ashtml*
 /inst/lib/*
 /inst/*
-/src/x13as_html/x13as_html
+/tools/x13as_html/x13as_html

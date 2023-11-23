@@ -1,15 +1,12 @@
 #!/bin/sh
-cwd=$(pwd)
-cd inst
+set -e
 
-r_script="${R_HOME}/bin${R_ARCH_BIN}/Rscript"
-set_internet2=`"${r_script}" -e "cat(ifelse(compareVersion(paste(R.Version()['major'], R.Version()['minor'], sep = '.'), '3.2.2') > 0, '', 'setInternet2();'))"`
+cd "$(dirname "$0")"
+root="$(pwd)"
 
-"${r_script}" -e "${set_internet2} options(timeout = max(300, getOption(\"timeout\"))); download.file('https://github.com/x13org/x13prebuilt/raw/master/v1.1.57/windows/x13ashtml.zip', 'x13ashtml.zip', quiet = TRUE, mode = \"wb\")"
-unzip -u x13ashtml.zip
-cp x13ashtml/x13ashtml.exe bin
-rm x13ashtml.zip
-rm -R x13ashtml
-cd ${cwd}
+cd ./tools/x13as_html
+make -f makefile.gf
+
+cp x13as_html.exe $root/inst/bin/x13ashtml.exe
 
 exit 0

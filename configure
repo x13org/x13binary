@@ -22,7 +22,8 @@
 
 set -e
 
-root="$(cd "$(dirname "$0")" && pwd)"
+cd "$(dirname "$0")"
+root="$(pwd)"
 
 cd ./src/x13as_html
 make -f makefile.gf

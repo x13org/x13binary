@@ -16,3 +16,4 @@ URL: https://github.com/x13org/x13binary
 BugReports: https://github.com/x13org/x13binary/issues/
 RoxygenNote: 7.1.1
 Encoding: UTF-8
+SystemRequirements: Fortran binaries in `tools` are compiled via `configure`.

@@ -6,3 +6,4 @@
 ^inst/tools*
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^\.github$

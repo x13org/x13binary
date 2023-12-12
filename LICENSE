@@ -1,14 +1,12 @@
-The x13binary source package contains only code that is copyright by Dirk
-Eddelbuettel and Christoph Sax, and released under the terms of the GNU
-General Public License, Version 2 or later ("GPL (>= 2)".
+The X-13ARIMA-SEATS Fortran source code is provided by the U.S. Census Bureau and is included in the source package at `tools/x13as_html`.
+The x13binary package uses these sources and builds an install-ready binary
+package of x13binary. The X-13ARIMA-SEATS manual at
 
-Using these sources and building an install-ready binary package of x13binary
-then adds the corresponding binary of x13ashtml, the X-13ARIMA-SEATS program
-by the US Census Bureau.  Its website at 
-                https://www.census.gov/srd/www/x13as/
-carries thec following statement
+  https://www2.census.gov/software/x-13arima-seats/x13as/windows/documentation/docx13as.pdf
 
-  License Information and Disclaimer (March 1, 2016):
+carries thec following statement:
+
+  License Information and Disclaimer (June 12, 2023):
 
   This Software was created by U.S. Government employees and therefore is not
   subject to copyright in the United States (17 U.S.C. §105). The United
@@ -45,3 +43,8 @@ carries thec following statement
   User agrees to make a good faith effort to use the Software in a way that does
   not cause damage, harm, or embarrassment to the United States/Commerce. The
   United States/Commerce expressly reserve all rights and remedies.
+
+The remaining code is copyright by the authors of the R package, and released
+under the terms of the GNU General Public License, Version 2 or later
+("GPL (>= 2)".
+

@@ -1,0 +1,19 @@
+c-----------------------------------------------------------------------
+c    arrays and variables for X-11 extreme value procedure
+c-----------------------------------------------------------------------
+c     Csigvc - Logical variable which indicates when calendarsigma is
+c              used
+c     Stdper - standard errors for different months (or quarters) used
+c              in Bundesbank extreme value replacement procedure
+c-----------------------------------------------------------------------
+      DOUBLE PRECISION Stwt,Stdper,Stdev
+c-----------------------------------------------------------------------
+c     Ksdev - Indicator for Budesbank outlier procedure
+c     Kersa - Indicator variable used in Budesbank outlier procedure
+c-----------------------------------------------------------------------
+      INTEGER Ksdev,Kersa
+      LOGICAL Csigvc
+c-----------------------------------------------------------------------
+      DIMENSION Stwt(PLEN),Stdev(PYRS+1),Stdper(PSP),Csigvc(PSP)
+c-----------------------------------------------------------------------
+      COMMON /cxtrm / Stwt,Stdev,Stdper,Ksdev,Kersa,Csigvc

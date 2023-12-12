@@ -1,0 +1,7 @@
+c-----------------------------------------------------------------------
+c     deftab - logical variable which defines those tables to be printed
+c              in a default X-13 run
+c              DATA statement that defines deftab is in deftab.var
+c-----------------------------------------------------------------------
+      LOGICAL deftab
+      DIMENSION deftab(NTBL)

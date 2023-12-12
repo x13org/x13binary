@@ -1,0 +1,8 @@
+c-----------------------------------------------------------------------
+c     pointers for descriptions of series and output dealing with
+c     data and transformations.  See dessrs.prm for data dictionaries.
+c-----------------------------------------------------------------------
+      DATA dsrptr / 
+     &    1,   1,  41,  56,  80,  80, 133, 173, 212, 244,
+     &  276, 330, 359, 383, 417, 451, 470, 499, 560, 631,
+     &  666, 666 /

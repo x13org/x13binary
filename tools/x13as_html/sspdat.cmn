@@ -1,0 +1,10 @@
+C-----------------------------------------------------------------------
+C     Common block that contains data for the sliding spans analysis
+C-----------------------------------------------------------------------
+	  DOUBLE PRECISION Sfind,Saind,Sfinda,S,Sa,Isfadd,Td
+C-----------------------------------------------------------------------
+      DIMENSION S(MXLEN,MXCOL),Sfind(MXLEN,MXCOL),Sfinda(MXLEN,MXCOL),
+     &          Saind(MXLEN,MXCOL),Sa(MXLEN,MXCOL),Isfadd(MXLEN,MXCOL),
+     &          Td(MXLEN,MXCOL)
+C-----------------------------------------------------------------------
+      COMMON /sser  / Sfind,Sfinda,Saind,S,Sa,Isfadd,Td

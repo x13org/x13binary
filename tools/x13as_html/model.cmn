@@ -1,0 +1,120 @@
+c-----------------------------------------------------------------------
+c     Common for model description that is independant of the data.
+c-----------------------------------------------------------------------
+c     Colttl - data dictionary for the names of the regression variables
+c     Grpttl - data dictionary for the names of groups of regression 
+c              variables
+c     Mdlttl - title for ARIMA model
+c     Mdldsn - description of the ARIMA model (ie, (0 1 1)(0 1 1))
+c     Oprttl - data dictionary for the names of the ARIMA parameters
+c-----------------------------------------------------------------------
+      CHARACTER Colttl*(PCOLCR*PB),Grpttl*(PGRPCR*PGRP),Mdlttl*(PMDLCR),
+     &          Mdldsn*(132),Oprttl*(POPRCR*POPR)
+c-----------------------------------------------------------------------
+c     Arimaf - logical array which indicates which of the ARIMA 
+c              parameters are to be held fixed
+c     Lar    - logical scalar which indicates that exact ML estimation
+c              will be done for the AR parameters and that a model
+c              with AR terms has been specified
+c     Lcalcm - logical scalar which indicates whether errors have 
+c              occured during the model estimation
+c     Lextar - logical scalar which indicates that exact ML estimation
+c              will be done for the AR parameters
+c     Lextma - logical scalar which indicates that exact ML estimation
+c              will be done for the MA parameters 
+c     Lma    - logical scalar which indicates that exact ML estimation
+c              will be done for the MA parameters and that a model
+c              with MA terms has been specified
+c     Lsidsf - logical scalar which indicates that a seasonal difference
+c              was selected in the identify spec 
+c     Lseadf - logical scalar which indicates that a seasonal difference
+c              is contained in the current model being processed
+c     Lseff  - logical scalar which indicates that stable seasonal 
+c              regressors are contained in the current model being 
+c              processed
+c     Lrgmse - logical scalar which indicates that seasonal change of
+c              regime regressors are contained in the current model being
+c              processed
+c     Lprier - logical scalar which indicates that iteration errors
+c              are to be printed out
+c     Regfx -  logical array which indicates which of the regression
+c              parameters are to be held fixed
+c-----------------------------------------------------------------------
+      LOGICAL Arimaf,Lar,Lcalcm,Lextar,Lextma,Lma,Lidsdf,Lprtdf,
+     &        Lseadf,Lseff,Lprier,Lrgmse,Regfx,Userfx,Lmvaft,Ln0aft
+c-----------------------------------------------------------------------
+c     Arimal - lags of the ARIMA model parameters
+c     Colptr - pointers for the regression variable data dictionary
+c     Grp - pointers for regression groups
+c     Grpptr - pointers for regression groups names data dictionary
+c     Mdl - pointers for types of ARIMA model parameters (AR, Diff, MA)
+c     Nb - number of regression variables
+c     Ncoltl - length of Colttl
+c     Ncxy - number of columns in Xy regression matrix
+c     Nestpm - Number of estimated ARIMA model parameters
+c     Nextvl - Number of observations to be excluded from the 
+c              number of effective observations
+c     Ngrp - number of regression variable groups
+c     Ngrptl - length of Grpttl
+c     Nintvl - sum of the maximum differencing lag and maximum AR lag
+c     Nmdl - number of types of ARIMA operators in Mdl
+c     Nmdlcr - length of Mdlttl
+c     Nmddcr - length of Mdldsn
+c     Nnsedf - number of non-seasonal differences
+c     Nopr - number of pointers in Opr
+c     Noptrl - length of Oprttl
+c     Nseadf - number of seasonal differences
+c     Opr - pointers for ARIMA model parameters
+c     Oprfac - ARIMA model parameters factors
+c     Oprptr - pointers for the data dictionary Oprttl
+c     Mxarlg - maximum AR lag
+c     Mxdflg - maximum differencing lag
+c     Mxmalg - maximum MA lag
+c     Rgvrtp - indicator variable denoting regression variable type - 
+c              see model.prm for more details
+c     Sp - length of seasonal period (monthly=12, quarterly=4)
+c     Easidx : Integer indicator variable for type of Easter regressor
+c              (0=default,1=sunday,2=monday,3=statcan)
+c     Iregfx - Integer indicator variable for fixed regressors
+c              (0=default,1=initial values specified for regressors,
+c               2=regressors fixed for some initial values,
+c               3=regressors fixed at initial values.)
+c     Imdlfx - Integer scalar which indicates that the ARIMA model
+c              parameters are fixed
+c              (0=default,1=initial values specified for ARIMA model
+c               parameters,2=model parameters fixed for some initial
+c               values, 3=model parameters fixed at initial values.)
+c     Fixmdl - Integer scalar which controls what regARIMA model
+c              coefficients read in from Mdlfil are fixed (-1=no change,
+c              0=none,1=arma,2=regression,3=all)
+c     Natotl - Integer scalar which indicates how many automatic
+c              outliers are identified in the regARIMA model
+c-----------------------------------------------------------------------
+      INTEGER Arimal,Colptr,Grp,Grpptr,Mdl,Nb,Ncoltl,Ncxy,Nestpm,Fixmdl,
+     &        Nextvl,Ngrp,Ngrptl,Nintvl,Nmdl,Nmdlcr,Nmddcr,Nnsedf,Nopr,
+     &        Noprtl,Nseadf,Opr,Oprfac,Oprptr,Mxarlg,Mxdflg,Mxmalg,
+     &        Rgvrtp,Sp,Easidx,Iregfx,Imdlfx,Natotl,Iqtype,Isrflw
+c-----------------------------------------------------------------------
+c     Nltol - convergance tolerance for non-linear estimation
+c     Nltol0 - initial ARMA convergance tolerance
+c     Tol - global convergance tolerance 
+c     Tcalfa - alpha that controls the shape of temporary change 
+c              outliers
+c     Acflim - limit of acf/se or pacf/se 
+c     Qcheck - p-value limit for ACF Q 
+c-----------------------------------------------------------------------
+      DOUBLE PRECISION Nltol,Nltol0,Tol,Tcalfa,Stepln,Acflim,Ap1,Qcheck
+c-----------------------------------------------------------------------
+      DIMENSION Arimaf(PARIMA),Arimal(PARIMA),Colptr(0:PB),Regfx(PB),
+     &          Grp(0:PGRP),Grpptr(0:PGRP),Mdl(0:3*PMDL),Opr(0:POPR),
+     &          Oprfac(POPR),Oprptr(0:POPR),Rgvrtp(PB),Ap1(PARIMA)
+c     ------------------------------------------------------------------
+      COMMON /cmdl  / Nltol0,Nltol,Tol,Tcalfa,Acflim,Qcheck,Stepln,Ap1,
+     &                Arimal,Colptr,Easidx,Grp,Grpptr,Mdl,Natotl,Nb,
+     &                Ncoltl,Ncxy,Nestpm,Nextvl,Ngrp,Ngrptl,Nintvl,Nmdl,
+     &                Nmdlcr,Nmddcr,Nnsedf,Nopr,Noprtl,Nseadf,Opr,
+     &                Oprfac,Oprptr,Mxarlg,Mxdflg,Mxmalg,Rgvrtp,Sp,
+     &                Isrflw,Iqtype,Iregfx,Imdlfx,Fixmdl,Arimaf,Lmvaft,
+     &                Ln0aft,Regfx,Userfx,Lar,Lcalcm,Lextar,Lextma,Lma,
+     &                Lidsdf,Lprtdf,Lseadf,Lseff,Lprier,Lrgmse,Colttl,
+     &                Grpttl,Mdlttl,Mdldsn,Oprttl

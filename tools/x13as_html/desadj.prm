@@ -1,0 +1,33 @@
+c-----------------------------------------------------------------------
+c     data dictionary for descriptions of series and output dealing with
+c     special X-11 and pre-adjustments.  See desadj.var for pointers.
+c-----------------------------------------------------------------------
+      CHARACTER DSADIC*1576
+      INTEGER dsaptr
+      DIMENSION dsaptr(0:PDSA)
+c-----------------------------------------------------------------------
+      PARAMETER(DSADIC='X-11 Easter adjustment factorscombined holiday c
+     &omponentcombined adjustment factorscombined adjustment factors (sa
+     &ved as percentages if multiplicative adj)final adjustment differen
+     &cescombined calendar adjustment factorsfinal adjustment ratiostota
+     &l adjustment factorsoriginal series adjusted by preliminary irregu
+     &lar regression factorsoriginal series adjusted by final irregular 
+     &regression factorssummary measuresmonitoring and quality assessmen
+     &t statistics^ of annual totalsF-tests for seasonalityMoving season
+     &ality ratiofinal seasonal filter selection via GLOBAL MSRoriginal 
+     &series,@-seasonally adjusted series,coincidence of points^ of the 
+     &original series modified for extremes^ of the S. A. series modifie
+     &d for extremesfinal seasonal factors with one year forecastsfinal 
+     &seasonally adjusted seriesfinal trend cyclefinal irregular compone
+     &ntforecasts of final seasonally adjusted seriesforecasts of final 
+     &trend cycleforecasts of final irregular weightsfinal seasonally ad
+     &justed series with forced yearly totalsrounded final seasonally ad
+     &justed series% in seasonally adjusted series with forced yearly to
+     &tals (D11.A)% in seasonally adjusted series with forced yearly tot
+     &als (D11.A - saved as percentages if appropriate)% in rounded seas
+     &onally adjusted series (D11.R)% in rounded seasonally adjusted ser
+     &ies (D11.R - saved as percentages if appropriate)factors applied t
+     &o adjusted series to get adjusted series with forced yearly totals
+     &ratios or differences in annual totals and indirect seasonally adj
+     &usted seriesfactors applied to get adjusted series with forced yea
+     &rly totals')

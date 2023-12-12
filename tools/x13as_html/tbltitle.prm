@@ -1,0 +1,23 @@
+c-----------------------------------------------------------------------
+c     Parameters for table title data dictionaries
+c-----------------------------------------------------------------------
+      INTEGER PDSR,PDSM,PDSP,PDSX,PDSS,PDSA,PDSI,PDSD,PDD2,PDSC,PDC2,
+     &        PDSE,PDS2,PTTLEN
+      PARAMETER(PDSR=21,PDSM=71,PDSP=26,PDSX=28,PDSS=33,PDSA=38,
+     &          PDSI=22,PDSD=28,PDD2=21,PDSC=35,PDC2=25,PDSE=44,
+     &          PDS2=4,PTTLEN=150)
+      INTEGER PDSUM1,PDSUM2,PDSUM3,PDSUM4,PDSUM5,PDSUM6,PDSUM7,PDSUM8,
+     &        PDSUM9,PDSUM10,PDSUM11
+      PARAMETER(PDSUM1=PDSR+PDSM,PDSUM2=PDSR+PDSM+PDSP,
+     &          PDSUM3=PDSR+PDSM+PDSP+PDSX,
+     &          PDSUM4=PDSR+PDSM+PDSP+PDSX+PDSS,
+     &          PDSUM5=PDSR+PDSM+PDSP+PDSX+PDSS+PDSA,
+     &          PDSUM6=PDSR+PDSM+PDSP+PDSX+PDSS+PDSA+PDSI,
+     &          PDSUM7=PDSR+PDSM+PDSP+PDSX+PDSS+PDSA+PDSI+PDSD,
+     &          PDSUM8=PDSR+PDSM+PDSP+PDSX+PDSS+PDSA+PDSI+PDSD+PDD2,
+     &          PDSUM9=PDSR+PDSM+PDSP+PDSX+PDSS+PDSA+PDSI+PDSD+PDD2+
+     &                 PDSC,
+     &          PDSUM10=PDSR+PDSM+PDSP+PDSX+PDSS+PDSA+PDSI+PDSD+PDD2+
+     &                 PDSC+PDC2,
+     &          PDSUM11=PDSR+PDSM+PDSP+PDSX+PDSS+PDSA+PDSI+PDSD+PDD2+
+     &                 PDSC+PDC2+PDSE)

@@ -1,0 +1,41 @@
+c-----------------------------------------------------------------------
+c     This common block is used in the sliding spans analysis
+c-----------------------------------------------------------------------
+c     Ch - character vector with symbols for each sliding spans table
+c     F1 - format for sliding spans table
+c     F2 - format of header for sliding spans table
+c     F3 - format of sliding spans table, E formats
+c-----------------------------------------------------------------------
+      CHARACTER Ch*(1),F1*(42),F2*(41),F3*(43)
+c-----------------------------------------------------------------------
+c     Iyr - Year of first sliding span
+c     Im - Month (or quarter) of first sliding span
+c     Nseas - length of seasonal period (12 if monthly, 4 if quarterly)
+c     Lyear - Last year of sliding spans analysis
+c     Lobs - Last month (or quarter) of sliding spans analysis
+c     Ic - position of first sliding spans comparison
+c     Icyr - year of first sliding spans comparison
+c     Icm - month (or quarter) of first sliding spans comparison
+c     Ns1 - Ncol + 1
+c     Sslen - number of months used in sliding spans analysis
+c     Sslen2 - location of last sliding spans comparison
+c     Ntot - integer vector containing number of observations flagged 
+c            for each estimate
+c     Itot - integer vector containing total number of sliding spans
+c            comparisons for each estimate
+c     Itd - Integer indicator variable in sliding spans for TD adj
+c     Ihol - Integer indicator variable in sliding spans that holiday
+c            adjustment has been performed 
+c-----------------------------------------------------------------------
+      INTEGER Itd,Ihol,Iyr,Im,Nsea,Lyear,Lobs,Ns1,Sslen,Sslen2,Ic,Icyr,
+     &        Icm,Ntot,Itot,Kount,Indssp,Indcol,Indlen,Nscomp
+c-----------------------------------------------------------------------
+c     Cut - cutoff values for the sliding spans analysis
+c-----------------------------------------------------------------------
+      DOUBLE PRECISION Cut
+c-----------------------------------------------------------------------
+      DIMENSION Cut(NEST,4),Kount(NEST,4),Ntot(NEST),Itot(NEST),Ch(NEST)
+c-----------------------------------------------------------------------
+      COMMON /sspcmn / Cut,Iyr,Im,Nsea,Lyear,Lobs,Ns1,Sslen,Sslen2,Ic,
+     &                 Icyr,Icm,Ntot,Itot,Kount,Indssp,Indcol,Indlen,
+     &                 Nscomp,Itd,Ihol,Ch,F1,F2,F3

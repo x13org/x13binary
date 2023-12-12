@@ -1,0 +1,7 @@
+C-----------------------------------------------------------------------
+c     CLEN:  Maximum length of argument vector
+c     NUMARG:  Maximum number of arguments
+C-----------------------------------------------------------------------
+      INTEGER CLEN,NUMARG
+      PARAMETER(CLEN=256,NUMARG=20)
+

@@ -1,0 +1,12 @@
+c-----------------------------------------------------------------------
+c     Pcdif - label text : "differences" if additive adjustment, else
+c                          "percent change"
+c     Rad   - label text : "differences" if additive adjustment, else
+c                          "ratios"
+c     Moqu  - label text : "month" if monthly data, "quarter" if not
+c     Qm    - label text : "monthly" if monthly data, "quarterly" if not
+c     Mqcd  - label text : "mcd" if monthly data, "qcd" if not
+c-----------------------------------------------------------------------
+      CHARACTER Pcdif*(15),Rad*(11),Moqu*(7),Qm*(9),Mqcd*(3)
+c-----------------------------------------------------------------------
+      COMMON /mq3   / Pcdif,Rad,Moqu,Qm,Mqcd

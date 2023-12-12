@@ -1,0 +1,6 @@
+c-----------------------------------------------------------------------
+c     PMXHND : Maximum length of a Henderson filter 
+c-----------------------------------------------------------------------
+      INTEGER PMXHND,PMXHN1,PMXHN2
+      PARAMETER(PMXHND=101,PMXHN1=PMXHND-1,PMXHN2=(PMXHND+1)/2)
+

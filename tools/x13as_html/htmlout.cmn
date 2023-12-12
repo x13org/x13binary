@@ -1,0 +1,16 @@
+C-----------------------------------------------------------------------
+      INTEGER PNINDX,PNFOOT
+      PARAMETER(PNINDX=5000,PNFOOT=1000)
+C-----------------------------------------------------------------------
+      INTEGER Inpe,Inse,Intv,Ingr,Invl,Inss,Inssp,Indf,Inms,Infv,Inbt,
+     &        Inrs,Intl,Inrl,Inim,Infq,Inmd,Inmu,Insd,Indy,Inspn,Inmq,
+     &        Inqs,Innp,Inrv,Inlgfl,Infoot,VFoot,Idxtab,Idxlog,Vindx,
+     &        Inspc,Inpmdl,Inplkh,Inpacf,indCoef,indMdp,indMdl
+      CHARACTER Cbr*6,Charhr*6
+      DIMENSION VFoot(PNFOOT),Vindx(PNINDX),Indy(7),Inssp(6)
+C-----------------------------------------------------------------------
+      COMMON /chtml/ Inpe,Inse,Intv,Ingr,Invl,Inss,Inssp,Indf,Inms,Infv,
+     &      Inbt,Inrs,Intl,Inrl,Inim,Infq,Inmd,Inmu,Insd,Inmq,Inqs,Innp,
+     &      Inrv,Inlgfl,Idxtab,Idxlog,Infoot,Indy,Vfoot,Vindx,Inspn,
+     &      Inspc,Inpmdl,Inplkh,Inpacf,Cbr,Charhr,indCoef,indMdp,indMdl
+C-----------------------------------------------------------------------

@@ -1,0 +1,8 @@
+c-----------------------------------------------------------------------
+c     pointers for descriptions of series and output dealing with
+c     irregular component regressions.  See desxrg.prm for data dictionaries.
+c-----------------------------------------------------------------------
+      DATA dsiptr / 
+     &    1,  26,  95, 164, 206, 242, 309, 370, 446, 516,
+     &  579, 636, 700, 758, 831, 898, 898, 975, 975, 975,
+     & 1037,1108,1173 /

@@ -1,0 +1,7 @@
+C-----------------------------------------------------------------------
+c     Variables for generalized versions of the airline model
+C-----------------------------------------------------------------------
+      DOUBLE PRECISION Aparm,Bparm,Cparm
+      INTEGER Newmdl
+      COMMON /newcmn/ Aparm,Bparm,Cparm,Newmdl
+C-----------------------------------------------------------------------

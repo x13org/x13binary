@@ -1,0 +1,9 @@
+c-----------------------------------------------------------------------
+c     parameters for user defined metadata
+c-----------------------------------------------------------------------
+c     PMTDAT - maximum number of metadata values
+c     PLMETA - maximum length of characters in metadata data dictionary
+c-----------------------------------------------------------------------
+      INTEGER PMTDAT,PLMETA
+      PARAMETER(PMTDAT=20,PLMETA=2000)
+	  

@@ -1,0 +1,19 @@
+c-----------------------------------------------------------------------
+c     Otrttl - data dictionary containing the names of the outliers 
+c              deleted during the revisions/sliding spans analysis
+c     Botr   - parameter values for the outliers deleted during the
+c              revisions/sliding spans analysis
+c     Otrptr - pointer vector for data dictionary for outliers deleted 
+c              during the revisions/sliding spans analysis
+c     Notrtl - number of outliers deleted during the revisions/sliding 
+c              spans analysis
+c-----------------------------------------------------------------------
+      CHARACTER Otrttl*(PCOLCR*PB)
+      LOGICAL Fixotr
+      DOUBLE PRECISION Botr
+      INTEGER Otrptr,Notrtl
+      DIMENSION Otrptr(0:PB),Botr(PB),Fixotr(PB)
+c-----------------------------------------------------------------------
+      COMMON /Otrev/Botr,Otrptr,Notrtl,Fixotr,Otrttl
+c-----------------------------------------------------------------------
+

@@ -1,0 +1,60 @@
+c-----------------------------------------------------------------------
+c     These variables are all duplicates for other variables that are
+c     changed during the sliding spans and revisions history analysis.
+c     They are used to reset these variables after each span has been
+c     run.  
+c-----------------------------------------------------------------------
+      CHARACTER Cttlrv*(PCOLCR*PB),Gttlrv*(PGRPCR*PGRP),
+     &          Cttxrv*(PCOLCR*PB),Gttxrv*(PGRPCR*PGRP)
+      DOUBLE PRECISION Bbrv,Bbxrv,Ap2rv,Tc2rv,V2r,Chx2r,Chg2r,Acm2r,
+     &                 Dtcv2r,Tcvrv,Svrv,Savrv,Trvrv,Irrvrv
+      INTEGER Clptrv,Ngr2rv,Ngrt2r,Gptrrv,G2rv,Nbbrv,If2rv,Kfm2rv,
+     &        Ksw2rv,Ncxy2r,Pri2rv,Atdrv,Aholrv,AAOrv,ALSrv,ATCrv,
+     &        Asearv,Acycrv,Ausrrv,Nct2rv,Lt2rv,Rgv2rv,Nr2rv,Ktc2rv,
+     &        Nsporv,Lsprv,Ly0rv,Lstyrv,Lyrrv,Bspnrv,Espnrv,Frstrv,
+     &        Bmdlrv,Emdlrv,Ixrgrv,Bxrgrv,Exrgrv,Kholrv,Keasrv,Ncus2r,
+     &        Nbk2rv,Irfx2r,Iagrrv,A1strv,Bgxyrv,Ngx2rv,Ngrx2r,Nxxy2r,
+     &        Nbbxrv,Ncx2rv,Cxptrv,Gx2rv,Gptxrv,Rgvx2r,Nxr2rv,Ncxu2r,
+     &        Ifxx2r,Xbxyrv,Nint2r,Next2r,Mxdf2r,Mxar2r,Mxma2r,Asorv,
+     &        Ntcnrv,Ntcdrv,Nsnrv,Nsdrv,Nsanrv,Nsadrv,Ntrnrv,Ntrdrv,
+     &        Ntcwkr,Nsawkr,Nswkrv,Ntrwkr,Nirwkr
+      LOGICAL Flltdr,Fxarv,Fnholr,FnAOrv,FnLSrv,FnTCrv,Fnusrv,Pktd2r,
+     &        Rgfx2r,Lgnxrv,Prtbrv,Ltaorv,Ltlsrv,Lttcrv,Rxfx2r,Lma2r,
+c     &        Lar2r,Ltsorv,Htrrv,Hsfrv,Hirrv,Hsarv,Hcyrv,Hftrrv,Hfsfrv,
+     &        Lar2r,Htrrv,Hsfrv,Hirrv,Hsarv,Hcyrv,Hftrrv,Hfsfrv,
+     &        Hfirrv,Hfsarv,Hfcyrv,Hsftrv,Hsfsrv,Hsforv,Hsfarv,Hsfcrv,
+     &        Hrftrv,Hrfsrv,Hrfarv,Hrfcrv,Hstarv,Hstirv,Hsttrv,Hstsrv,
+     &        Hstorv,Hstdrv,Hstcrv
+      DIMENSION Ap2rv(PARIMA),Clptrv(0:PB),Gptrrv(0:PGRP),G2rv(0:PGRP),
+     &          Bbrv(PB),Bbxrv(PB),Fxarv(PARIMA),Lt2rv(12),Rgv2rv(PB),
+     &          Rgvx2r(PB),Bspnrv(2),Espnrv(2),Bmdlrv(2),Emdlrv(2),
+     &          Bxrgrv(2),Exrgrv(2),Rgfx2r(PB),Prtbrv(NTBL),Bgxyrv(2),
+     &          Rxfx2r(PB),Cxptrv(0:PB),Gx2rv(0:PGRP),Gptxrv(0:PGRP),
+     &          Xbxyrv(2),Chx2r(PXPX),Chg2r(PGPG),Acm2r(PLEN+2*PORDER,
+     &          PARIMA)
+c-----------------------------------------------------------------------
+      COMMON /ssrv  / Ap2rv,Bbrv,Bbxrv,Chx2r,Chg2r,Tc2rv,V2r,Tcvrv,Svrv,
+     &                Savrv,Trvrv,Irrvrv,Acm2r,
+     &                Dtcv2r,Iagrrv,Atdrv,Aholrv,AAOrv,ALSrv,ATCrv,
+     &                Asorv,Asearv,Acycrv,Ausrrv,Ncxy2r,Nct2rv,Nbbrv,
+     &                Ksw2rv,Ncus2r,Ktc2rv,Kfm2rv,If2rv,Lt2rv,Clptrv,
+     &                Ngr2rv,Ngrt2r,G2rv,Gptrrv,Rgv2rv,Nr2rv,Pri2rv,
+     &                Irfx2r,Ngx2rv,Ngrx2r,Nxxy2r,Nbbxrv,Ncx2rv,Cxptrv,
+     &                Gx2rv,Gptxrv,Rgvx2r,Nxr2rv,Ncxu2r,Ifxx2r,Xbxyrv,
+     &                Nint2r,Next2r,Mxdf2r,Mxar2r,Mxma2r,Flltdr,Fxarv,
+     &                Fnholr,FnAOrv,FnLSrv,FnTCrv,Fnusrv,Rgfx2r,Rxfx2r,
+     &                Lma2r,Lar2r,Pktd2r,Cttlrv,Gttlrv,Cttxrv,Gttxrv,
+     &                Ntcnrv,Ntcdrv,Nsnrv,Nsdrv,Nsanrv,Nsadrv,Ntrnrv,
+     &                Ntrdrv,Ntcwkr,Nsawkr,Nswkrv,Ntrwkr,Nirwkr
+      COMMON /ssrv2 / Nsporv,Lsprv,Nbk2rv,Ly0rv,Lstyrv,Lyrrv,
+     &                Bspnrv,Espnrv,Frstrv,Bmdlrv,Emdlrv,Ixrgrv,Bxrgrv,
+     &                Exrgrv,Kholrv,Keasrv,A1strv,Bgxyrv,Lgnxrv,Ltaorv,
+c     &                Ltlsrv,Lttcrv,Ltsorv,Htrrv,Hsfrv,Hirrv,Hsarv,
+     &                Ltlsrv,Lttcrv,Htrrv,Hsfrv,Hirrv,Hsarv,
+     &                Hcyrv,Hftrrv,Hfsfrv,Hfirrv,Hfsarv,Hfcyrv,Hsftrv,
+     &                Hsfsrv,Hsforv,Hsfarv,Hsfcrv,Hrftrv,Hrfsrv,Hrfarv,
+     &                Hrfcrv,Hstarv,Hstirv,Hsttrv,Hstsrv,Hstorv,Hstdrv,
+     &                Hstcrv
+      COMMON /ssrvtb/ Prtbrv
+c-----------------------------------------------------------------------
+

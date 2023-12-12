@@ -1,0 +1,24 @@
+c-----------------------------------------------------------------------
+c     These variables are all duplicates for other variables that are
+c     changed during the sliding spans and revisions history analysis.
+c     They are used to reset these variables after each span has been
+c     run.  
+c-----------------------------------------------------------------------
+      CHARACTER Cttl*(PCOLCR*PB),Gttl*(PGRPCR*PGRP)
+      DOUBLE PRECISION Bb,Ap2,Tc2,V2,Chx2,Chg2,Acm2,Dtcv2
+      INTEGER Clptr,Ngr2,Ngrt2,Gptr,G2,Nbb,Kfm2,Ksw2,Ncxy2,Pri2,
+     &        Atd,Ahol,AAO,ALS,ATC,Aso,Asea,Ausr,Nct2,Lt2,Rgv2,Nr2,
+     &        Ktc2,Ncusr2,Irfx2,Nintv2,Nextv2,Mxdfl2,Mxarl2,Mxmal2,Acyc
+      LOGICAL Flltd,Fxa,Fnhol,FnAO,FnLS,FnTC,Fnusr,Pktd2,Regfx2,Lma2,
+     &        Lar2
+      DIMENSION Ap2(PARIMA),Clptr(0:PB),Gptr(0:PGRP),G2(0:PGRP),Bb(PB),
+     &          Fxa(PARIMA),Lt2(12),Rgv2(PB),Regfx2(PB),Chx2(PXPX),
+     &          Chg2(PGPG),Acm2(PLEN+2*PORDER,PARIMA)
+c-----------------------------------------------------------------------
+      COMMON /ssprp / Ap2,Bb,Chx2,Chg2,Tc2,V2,Acm2,Dtcv2,Atd,Ahol,AAO,
+     &                ALS,ATC,Aso,Asea,Acyc,Ausr,Ncxy2,Nct2,Nbb,Ksw2,
+     &                Ncusr2,Ktc2,Kfm2,Lt2,Clptr,Ngr2,Ngrt2,G2,Gptr,
+     &                Rgv2,Nr2,Pri2,Irfx2,Nintv2,Nextv2,Mxdfl2,Mxarl2,
+     &                Mxmal2,Flltd,Fxa,Fnhol,FnAO,FnLS,FnTC,Fnusr,
+     &                Regfx2,Pktd2,Lma2,Lar2,Cttl,Gttl
+c-----------------------------------------------------------------------

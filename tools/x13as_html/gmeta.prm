@@ -1,0 +1,23 @@
+c-----------------------------------------------------------------------
+c     data dictionary for descriptions of series and output dealing with
+c     graphics meta files.  See gmeta.var for pointers.
+c-----------------------------------------------------------------------
+      CHARACTER GMTDIC*901
+      INTEGER gmtptr,PGMT
+      PARAMETER(PGMT=395)
+      DIMENSION gmtptr(0:PGMT)
+c-----------------------------------------------------------------------
+      PARAMETER(GMTDIC='orimvadjcadoadadororicntpriorppriortpriorpadjppr
+     &adjpadjtppradjtotlaolstcsortdrholusrdefrgseastrancmpidacfidpacfmdl
+     &estregrsdfintstacfpacfacf2ftrfctbtrbctsporsprsdspsaspirspcssaspcsi
+     &rspexrsdindspsaindspircmpsporsptukorsptukrsdsptuksasptukirspctukss
+     &aspctuksirsptukexrsdindsptuksaindsptukircmpsptukormorimsamirrsisio
+     &xrsisfsfrsfshnksasactrnirrirrwtxtrmxeastrcholcafcalarattadjsatsarf
+     &rfcptdxtdctdxholxcalccalahstcsahstindahsttrnhstctrhstsfhstaichstfc
+     &thstcfchstarmahsttdhstsfssindsfsschssindchsssassindsassyyssindyyss
+     &tdsscmporicmppadjadjcoricmpcadcmpoadindsiindrsiindsfindsaindtrnind
+     &irrindmoriindmsaindmirrindaratindtadjindsatindsarindlsindaoindcali
+     &ndcafindfrfcseattrnsettrcseatsfseatirrseatsasetsacsettrnsseataftrn
+     &fctdsffctdorifctdsafctdtranfcdsetaratsettadjsgsafsgsacsgtrnfsgtrnc
+     &tssactstrncfltsaffltsacflttrnfflttrncseatdoriseatdsaseatdtrseatssm
+     &seatcycseatlttseatsseseataseseattseseatcseseatsaotlseatirrotl')

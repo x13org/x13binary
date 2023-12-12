@@ -1,0 +1,49 @@
+c-----------------------------------------------------------------------
+c     Easgrp - Indicator variable that signals the presence of an 
+c              Easter regressor
+c     Holgrp - Indicator variable that signals the presence of any
+c              holiday regressor
+c     Tdgrp  - Indicator variable that signals the presence of a trading 
+c              day regressor
+c     Stdgrp - Indicator variable that signals the presence of a Stock 
+c              trading day regressor
+c     Xtdtst - Indicator variable specifying whether an AIC-test will
+c              be performed for the trading day regression variables
+c              for the irregular regression (1=td,3=tdstock)
+c     Xaicst - Stock day given in tdstock selected for TD AIC-test
+c     Xaicrg - Displacement for change of regime given for TD AIC-test
+c     Begxrg - Starting date for the span of data used in the irregular
+c              regression
+c     Endxrg - Ending date for the span of data used in the irregular
+c              regression
+c     Fxprxr - Period every year for which the irregular regression will 
+c              be estimated in the revisions history.  Every other 
+c              period, the model parameters will be fixed to what they 
+c              were at the last value of Fxprxr
+c     Begxot - Starting date for the outlier testing procedure used in 
+c              the irregular regression
+c     Endxot - Ending date for the outlier testing procedure used in 
+c              the irregular regression
+c     Xeasvc - Vector for Easter windows used for Easter AIC-test for
+c              the irregular regression
+c     Neasvx - Number of Easter windows used for Easter AIC-test for
+c              the irregular regression
+c-----------------------------------------------------------------------
+      INTEGER Ixrgtd,Ixrghl,Easgrp,Holgrp,Tdgrp,Stdgrp,Xtdtst,Xaicrg,
+     &        Xaicst,Begxrg,Endxrg,Fxprxr,Xdsp,Begxot,Endxot,Xeasvc,
+     &        Neasvx
+c-----------------------------------------------------------------------
+c     Critxr - critical value for automatic AO detection for X-11 
+c              Regression 
+c     Sigxrg - sigma limit for X-11 Regression (only done if td)
+c     Dwt - Prior trading day weights (expressed as in X-11)
+c     Dx11 - Trading day weights (expressed as in X-11)
+c-----------------------------------------------------------------------
+      DOUBLE PRECISION Critxr,Sigxrg,Dwt,Dx11
+c-----------------------------------------------------------------------
+      DIMENSION Xaicrg(2),Dwt(7),Dx11(7),Begxrg(2),Endxrg(2),Begxot(2),
+     &          Endxot(2),Xeasvc(4)
+c-----------------------------------------------------------------------
+      COMMON /cxropt/ Critxr,Sigxrg,Dwt,Dx11,Easgrp,Holgrp,Tdgrp,Stdgrp,
+     &                Xtdtst,Xaicrg,Xaicst,Begxrg,Endxrg,Fxprxr,Xdsp,
+     &                Begxot,Endxot,Xeasvc,Neasvx,Ixrgtd,Ixrghl

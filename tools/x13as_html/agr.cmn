@@ -1,0 +1,18 @@
+C-----------------------------------------------------------------------
+C     Variables needed for composite seasonal adjustment
+C-----------------------------------------------------------------------
+c     Iagr - indicator variable for composite adjustment
+c     Iag - indicator variable for type of compositing
+c           (0=add, 1=sub, 2=mult, 3=div)
+c     Itest - vector used to check composite series
+c     W - weight used in composite adjustment
+C-----------------------------------------------------------------------
+      DOUBLE PRECISION W
+      LOGICAL LindAO,LindLS,LindCl,Lindot
+      INTEGER Iagr,Itest,Ncomp,Indnfc,Indnbc,Iag,Ind1bk,Ind1ob,Indfob,
+     &        Indffc,Ibgbk,Ibgbk2,Dirnfc,Dirnbc
+      DIMENSION Itest(5),Ibgbk(2),Ibgbk2(2)
+C-----------------------------------------------------------------------
+      COMMON /mq11  / W,Iagr,Iag,Itest,Ncomp,Indnfc,Indnbc,Ind1bk,
+     &                Ind1ob,Indfob,Indffc,Ibgbk,Ibgbk2,Dirnfc,Dirnbc,
+     &                LindAO,LindLS,LindCl,Lindot

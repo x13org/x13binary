@@ -1,0 +1,28 @@
+C-----------------------------------------------------------------------
+C     Series needed for composite seasonal adjustment
+C-----------------------------------------------------------------------
+c     O - aggregated original series for composite adjustment
+c     O1 - aggregated original series for composite adjustment, with
+c          all user specified prior adjustments removed.
+c     O2 - aggregated original series for composite adjustment, with 
+c          permanent prior adjustments removed.
+c     O3 - aggregated original series for composite adjustment, with 
+c          level shift effects removed.
+c     O4 - aggregated original series for composite adjustment, with 
+c          AO and TC effects removed.
+c     O5 - aggregated original series for composite adjustment, with 
+c          permanent prior adjustments and calendar effects removed.
+c     Ci - aggregated seasonally adjusted series for composite 
+c          adjustment
+c     Ci2 - aggregated FORCED seasonally adjusted series for composite 
+c          adjustment
+c     Omod - aggregated original series modified for extremes for 
+c            composite adjustment
+c     Tem - temporary variable used in the composite adjustment 
+c           routines
+C-----------------------------------------------------------------------
+      DOUBLE PRECISION O,O1,O2,O3,O4,O5,Ci,Ci2,Omod,Tem
+      DIMENSION O(PLEN),O1(PLEN),O2(PLEN),O3(PLEN),O4(PLEN),O5(PLEN),
+     &          Ci(PLEN),Ci2(PLEN),Omod(PLEN),Tem(PLEN)
+C-----------------------------------------------------------------------
+      COMMON /agreg / O,O1,O2,O3,O4,O5,Ci,Ci2,Omod,Tem

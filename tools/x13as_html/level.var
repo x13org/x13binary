@@ -1,0 +1,85 @@
+cLast change-Mar 2021:change level(i,4) the several last element to T
+c-----------------------------------------------------------------------
+c     level  - logical variable which defines those tables to be printed
+c              for an X-13 run when a specific print level (none,brief,
+c              default,alltables,all) is specified
+c-----------------------------------------------------------------------
+      DATA(level(i,1),i=1,NTBL)/
+     &   T,T,F,T,T,T,F,F,T,F, T,F,T,F,F,F,F,F,F,F, T,F,T,T,T,T,T,T,T,T,
+     &   T,T,T,T,F,T,T,T,T,F, T,T,T,F,F,F,F,F,F,F, F,F,T,T,T,T,T,T,F,F,
+     &   T,F,T,F,T,F,F,F,F,F, T,T,F,F,T,F,T,T,F,F, T,T,T,T,T,T,T,T,F,T,
+     &   F,F,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,F,F,F,F,
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,T,f,F,F,F,T, F,F,F,F,T,F,F,T,T,T,
+     &   F,F,F,T,F,F,T,T,T,T, T,F,F,T,T,F,T,F,F,F, F,F,T,T,F,F,T,F,F,T,
+     &   T,T,T,T,T,T,T,F,F,F, F,F,T,F,T,F,F,T,F,F, F,F,F,F,F,F,F,F,T,T,
+     &   T,F,T,F,T,T,T,T,F,T, F,T,F,T,F,T,F,T,F,T, F,T,T,F,F,F,F,F,T,T,
+     &   T,F,T,T,F,T,T,F,T,T, F,T,T,F,T,T,F,T,T,F, T,T,F,T,F,T,T,T,F,T,
+     &   T,T,T,F,F,T,T,F,F,F, F,F,F,F,F,F,F,F,T,F, T,F,F,F,T,T,T,T,T,T,
+     &   T,T,T,T,T,F,F,F,T,F, T,F,T,F,T,F,T,F,T,F, F,F,F,F,F,F,F,F,T,T,
+     &   T,T,F,F,F,F,F,F,F,F, T,T,T,T,T,T,T,T,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   F,F,F,F,F,F/ 
+c-----------------------------------------------------------------------
+      DATA(level(i,2),i=1,NTBL)/
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   F,F,F,F,F,F/ 
+c-----------------------------------------------------------------------
+      DATA(level(i,3),i=1,NTBL)/
+     &   T,T,F,T,T,T,F,F,T,F, T,F,T,F,F,F,F,F,F,F, T,F,T,T,T,T,T,T,T,T,
+     &   T,T,T,T,F,T,F,T,F,F, T,T,T,F,F,F,F,F,F,F, F,F,T,T,T,T,T,F,F,F,
+     &   T,F,T,F,T,F,F,F,F,F, F,F,F,F,T,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   F,F,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,F,F,F,F,
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   F,F,F,F,F,F,T,T,T,T, T,F,F,T,T,F,F,F,F,F, F,F,F,F,F,F,F,F,F,T,
+     &   T,T,T,T,T,F,F,F,F,F, F,F,F,F,F,F,F,T,F,F, F,F,F,F,F,F,F,F,T,T,
+     &   F,F,F,F,F,F,T,T,F,F, F,F,F,T,F,T,F,T,F,T, F,T,F,F,F,F,F,F,T,T,
+     &   T,F,F,T,F,F,T,F,F,T, F,F,T,F,F,T,F,F,T,F, T,T,F,T,F,T,T,T,F,F,
+     &   T,T,T,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,T,F, T,F,F,F,T,T,F,F,T,T,
+     &   T,T,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   T,T,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,T,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   F,F,F,F,F,F/ 
+c-----------------------------------------------------------------------
+      DATA(level(i,4),i=1,NTBL)/
+     &   T,T,F,T,T,T,T,T,T,F, T,F,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T,
+     &   T,T,T,T,T,T,F,T,F,T, T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T,
+     &   T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,F,T,F, T,F,F,T,T,T,T,T,T,T,
+     &   T,T,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,T,T,T,T,T,T,T,T,
+     &   T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T,
+     &   T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T,
+     &   T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,F,F, F,F,F,F,F,T,T,T,T,T,
+     &   T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T,
+     &   T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T,
+     &   T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T, T,F,T,T,T,T,T,T,T,T,
+     &   T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T,
+     &   T,T,F,F,F,F,F,F,F,F, T,T,T,T,T,T,T,T,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,T,T,T,T,F,F,F,
+     &   F,F,F,T,F,F/ 
+c-----------------------------------------------------------------------
+      DATA(level(i,5),i=1,NTBL)/
+     &   T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T,
+     &   T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T,
+     &   T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T,
+     &   T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T,
+     &   T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T,
+     &   T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T,
+     &   T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T,
+     &   T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T,
+     &   T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T,
+     &   T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T,
+     &   T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T,
+     &   T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T,
+     &   T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T,T,T,
+     &   T,T,T,T,T,T/ 

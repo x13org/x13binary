@@ -1,0 +1,9 @@
+c-----------------------------------------------------------------------
+c     Adjttl : Title for the prior adjustment factors
+c     Nadjcr : Number of character in title Adjttl
+c-----------------------------------------------------------------------
+      CHARACTER Adjttl*(PSRSCR)
+      INTEGER Nadjcr
+c-----------------------------------------------------------------------
+      COMMON /prittl/ Nadjcr,Adjttl
+

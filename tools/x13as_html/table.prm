@@ -1,0 +1,134 @@
+cLast change: change irregularoutieradj/se3 to irregularoutlieradj/se3
+c-----------------------------------------------------------------------
+c     table name dictionaries and pointers
+c-----------------------------------------------------------------------
+c     BRKDSP, BRKDS2, BRKDS3 =   
+c        table number where break in the table dictionary occurs
+c        this is done to keep the length of the table dictionaries
+c        under 2000 characters, a requirement for the VAX/VMS Fortran
+c-----------------------------------------------------------------------
+c     TB1DIC, TB2DIC, TB3DIC, TB4DIC =  
+c        data dictionaries for X-13ARIMA-SEATS table names and 
+c        abbreviations
+c-----------------------------------------------------------------------
+      INTEGER BRKDSP
+      PARAMETER (BRKDSP=118)
+c-----------------------------------------------------------------------
+      INTEGER BRKDS2
+      PARAMETER (BRKDS2=267)
+c-----------------------------------------------------------------------
+      INTEGER BRKDS3
+      PARAMETER (BRKDS3=348)
+c-----------------------------------------------------------------------
+      CHARACTER TB1DIC*1614
+      INTEGER tb1ptr,PTB1
+      PARAMETER(PTB1=236)
+      DIMENSION tb1ptr(0:PTB1)
+c-----------------------------------------------------------------------
+      PARAMETER(TB1DIC='headerhdrspana1seriesplota1pspecfilespcsavefiles
+     &avseriesmvadjmvcalendaradjoriga18outlieradjoriga19adjoriginalb1adj
+     &origplotb1pseriesconstanta1cseriesconstantplotacppriora2permpriora
+     &2ptemppriora2tprioradjusteda3permprioradjusteda3pprioradjustedptda
+     &4dpermprioradjustedptda4ptransformedtrnaictransformtacregressionma
+     &trixrmxaictestatsoutlierotlaoutlieraolevelshiftlstemporarychangetc
+     &seasonaloutliersotradingdaytdholidayholuserdefusrregseasonala10tra
+     &nsitorya13chi2testctsdailyweightstdwacfiacacfplotacppacfipcpacfplo
+     &tpcpregcoefficientsrgcheaderhdrunitroottesturtautochoiceachunitroo
+     &ttestmdlurmautochoicemdlamdbestfivemdlb5mautooutlierhdraohautooutl
+     &ieritraoiautooutliertestsaotautofinaloutliertestsaftautodefaulttes
+     &tsadtautoljungboxtestalbautofinaltestsaftheaderhdrheaderbcsthdbuse
+     &rmodelsumdpickmdlchoicepchoptionsoptiterationsitriterationerrorsit
+     &emodelmdlregcmatrixrcmestimatesestarmacmatrixacmlkstatslkslformula
+     &slkfrootsrtsregressioneffectsrefresidualsrsdregressionresidualsrrs
+     &averagefcsterrafcheaderhdriterationsoittestsotstemporarylstlsfinal
+     &testsftsacfacfacfplotacppacfpcfpacfplotpcpacfsquaredac2acfsquaredp
+     &lotap2histogramhstnormalitytestnrmdurbinwatsondwfriedmantestfrtinv
+     &pacfinptransformedftrvariancesfvrforecastsfcttransformedbcstbtrbac
+     &kcastsbctspecorigsp0specresidualsprspecsasp1specirrsp2specseatssas
+     &1sspecseatsirrs2sspecextresidualsserspecindsais1specindirris2specc
+     &ompositeis0spectukeyorigst0spectukeyresidualstrspectukeysast1spect
+     &ukeyirrst2spectukeyseatssat1sspectukeyseatsirrt2sspectukeyextresid
+     &ualsterspectukeyindsait1spectukeyindirrit2spectukeycompositeit0qsq
+     &sqsindqsitukeypeakstpkqcheckqchnpsanpanpsaindnpi')
+c-----------------------------------------------------------------------
+      CHARACTER TB2DIC*1983
+      INTEGER tb2ptr,PTB2
+      PARAMETER(PTB2=298)
+      DIMENSION tb2ptr(0:PTB2)
+c-----------------------------------------------------------------------
+      PARAMETER(TB2DIC='adjoriginalcc1adjoriginaldd1modoriginale1mcdmova
+     &vgf1trendb2b2trendc2c2trendd2d2modseasadje2sib3b3modirregulare3rep
+     &lacsib4b4modsic4c4modsid4d4seasonalb5b5seasonalc5c5seasonald5d5ori
+     &gchangese5origchangespctpe5seasadjb6b6seasadjc6c6seasadjd6d6sachan
+     &gese6sachangespctpe6trendb7b7trendc7c7trendd7d7trendchangese7trend
+     &changespctpe7sib8b8unmodsid8unmodsioxd8bcalendaradjchangese8calend
+     &aradjchangespctpe8replacsib9b9replacsic9c9replacsid9seasonalb10b10
+     &seasonalc10c10seasonald10seasonalpctpsfseasonaldifffsdseasonaladjr
+     &egseaarsseasonalnoshrinksnsseasadjb11b11seasadjc11c11seasadjd11sea
+     &sadjconstsacrobustsae11trendd12trendadjlstalbiasfactorbcftrendcons
+     &ttacirregularbb13irregularcc13irregulard13irregularpctpirirregular
+     &adjaoirairrwtbb17irrwtc17extremebb20extremec20x11easterh1combholid
+     &aychladjustfacd16adjustfacpctpafadjustdifffadcalendard18adjustment
+     &ratioe18totaladjustmenttadtdadjorigbb19tdadjorigc19ftestb1b1fx11di
+     &agf2qstatf3yrtotalse4ftestd8d8fmovseasratd9aresidualseasfrsfautosf
+     &asftdaytypetdyorigwsaplote0ratioplotorigra1ratioplotsara2seasonalp
+     &lotsfpseasadjplotsaptrendplottrpirregularplotirpseasadjfcstsaftren
+     &dfcsttrfirrwtfcstiwfseasadjtotsaasaroundrndrevsachangese6arevsacha
+     &ngespctp6arndsachangese6rrndsachangespctp6rcratiocrrratiorrforcefa
+     &ctorffcpriortda4extremevalbb14extremevalc14x11regbb15x11regc15trad
+     &ingdaybb16tradingdayc16combtradingdaybb18combtradingdayc18holidayb
+     &bxhholidayxhlcalendarbbxccalendarxcacombcalendarbbcccombcalendarxc
+     &coutlierhdrxohoutlieriterxoioutliertestsxotoutlierfinaltestsxftxre
+     &gressionmatrixxrmxregressioncmatrixxrcxaictestxatheaderhdroutlierh
+     &istoryrotsfilterhistorysfhsarevisionssarsasummarysassaestimatessae
+     &chngrevisionschrchngsummarychschngestimatescheindsarevisionsiarind
+     &sasummaryiasindsaestimatesiaetrendrevisionstrrtrendsummarytrstrend
+     &estimatestretrendchngrevisionstcrtrendchngsummarytcstrendchngestim
+     &atestcesfrevisionssfrsfsummarysfssfestimatessfelkhdhistorylkhfcste
+     &rrorsfcefcsthistoryfchseatsmdlhistorysmhseasonalfcthistoryssharmah
+     &istoryamhtdhistorytdh')
+c-----------------------------------------------------------------------
+      CHARACTER TB3DIC*1243
+      INTEGER tb3ptr,PTB3
+      PARAMETER(PTB3=162)
+      DIMENSION tb3ptr(0:PTB3)
+c-----------------------------------------------------------------------
+      PARAMETER(TB3DIC='headerhdrssftestssffactormeansfmnindfactormeansf
+     &mipercentpctindpercentpciyypercentpcyindyypercentpiysummarysuminds
+     &ummarysmiyysummarysuyindyysummarysiysfspanssfsindsfspanssischngspa
+     &nschsindchngspanscissaspansadsindsaspansaisychngspansycsindychngsp
+     &ansyistdspanstdscompositesrscmsprioradjcompositeia3adjcompositesrs
+     &b1adjcompositeplotb1pcalendaradjcompositecacoutlieradjcompositeoac
+     &headerhdrindtestittindunmodsiid8indreplacsiid9indseasonalisfindsea
+     &sonalpctipsindseasonaldiffisdindseasadjisaindtrenditnindirregulari
+     &irindirregularpctipiindmodoriginalie1indmodsadjie2indmodirrie3orig
+     &changesie5origchangespctip5indsachangesie6indsachangespctip6indrev
+     &sachangesi6aindrevsachangespctipaindrndsachangesi6rindrndsachanges
+     &pctiprindtrendchangesie7indtrendchangespctip7indcalendaradjchanges
+     &ie8indcalendaradjchangespctip8indrobustsaieeindadjustmentratioi18i
+     &ndtotaladjustmentitaindmcdmovavgif1indx11diagif2indqstatif3indyrto
+     &talsie4indftestd8idfindmovseasratimsindresidualseasfirfindadjsatot
+     &iaaindsadjroundirncompositeplotcmporigwindsaplotie0ratioplotorigir
+     &1ratioplotindsair2indseasonalplotispindseasadjplotiapindtrendploti
+     &tpindirregularplotiipindlevelshiftilsindaoutlieriaoindcalendaricai
+     &ndadjustfaciafindadjustfacpctipfindcratiocriindrratiorriindforcefa
+     &ctoriff')
+c-----------------------------------------------------------------------
+      CHARACTER tb4DIC*797
+      INTEGER tb4ptr,Ptb4
+      PARAMETER(Ptb4=96)
+      DIMENSION tb4ptr(0:Ptb4)
+c-----------------------------------------------------------------------
+      PARAMETER(tb4DIC='trends12trendconststcseasonals10seasonalpctpssir
+     &regulars13irregularpctpsiseasonaladjs11seasadjconstsectransitorys1
+     &4transitorypctpscadjustfacs16adjustfacpctpsatrendfcstdecomptfdseas
+     &onalfcstdecompsfdseriesfcstdecompofdseasonaladjfcstdecompafdtransi
+     &toryfcstdecompyfdadjustmentratios18totaladjustmentstawkendfilterwk
+     &fcomponentmodelsmdcpseudoinnovtrendpicpseudoinnovseasonalpispsuedo
+     &innovtransitorypitpsuedoinnovsadjpiasquaredgainsasymgafsquaredgain
+     &saconcgacsquaredgaintrendsymgtfsquaredgaintrendconcgtctimeshiftsac
+     &onctactimeshifttrendconcttcfiltersasymfaffiltersaconcfacfiltertren
+     &dsymftffiltertrendconcftcdifforiginaldordiffseasonaladjdsadifftren
+     &ddtrseasonalsumssmcyclecyclongtermtrendlttseasonalsesseseasonaladj
+     &seasetrendsetsetransitorysecseseasonaladjoutlieradjse2irregularout
+     &lieradjse3trendadjlsstl')

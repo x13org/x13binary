@@ -1,0 +1,10 @@
+c-----------------------------------------------------------------------
+c     Arrays containing different version of the X-11 seasonally
+c     adjusted series.
+c-----------------------------------------------------------------------
+      DOUBLE PRECISION Stome,Stcime,Stci2,Stcirn
+      DIMENSION Stome(PLEN),Stcime(PLEN),Stci2(PLEN),Stcirn(PLEN)
+C      DOUBLE PRECISION Stcipc,Srspc
+C      DIMENSION Stcipc(PLEN),Srspc(PLEN)
+c-----------------------------------------------------------------------
+      COMMON /adxser/ Stome,Stcime,Stci2,Stcirn

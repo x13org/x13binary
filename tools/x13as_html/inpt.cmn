@@ -1,0 +1,11 @@
+c-----------------------------------------------------------------------
+c     Series - copy of original series
+c     Orig - original series
+c     Orig2 - copy of original series with backcasts and forecasts
+c     Sprior - prior adjustment factors
+c-----------------------------------------------------------------------
+      DOUBLE PRECISION Orig,Series,Sprior,Orig2
+      DIMENSION Orig(PLEN),Series(PLEN),Sprior(PLEN),Orig2(PLEN)
+c-----------------------------------------------------------------------
+      COMMON /inpt1 / Series,Orig,Orig2,Sprior
+      

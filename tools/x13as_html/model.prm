@@ -1,0 +1,169 @@
+c-----------------------------------------------------------------------
+c     Change these parameters as needed
+c-----------------------------------------------------------------------
+c     PB - maximum number of regressors
+c     PUREG - maximum number of user-defined regressors
+c     PUHLGP - maximum number of groups of user-defined holiday
+C              regressors
+c     PEASTR - maximum number of Easter regressors
+c     PORDER - maximum order of ARMA parameters
+c     PDFLG - maximum number of differencing lags
+c-----------------------------------------------------------------------
+      INTEGER PB,PUREG,PDFLG,PORDER,PDIFOR,PEASTR,PUHLGP
+      PARAMETER(PB=80,
+     &          PUREG=52,
+     &          PORDER=3*PSP,
+     &          PDIFOR=4*PORDER,
+     &          PDFLG=3,
+     &          PEASTR=3,
+     &          PUHLGP=5)
+c-----------------------------------------------------------------------
+c     Do not change parameters below this line (or change at your own
+c risk.
+c-----------------------------------------------------------------------
+c     Codes for the different type of regression variables
+c Name                                Code
+c-----------------------------------------------------------------------
+c Constant                                             PRGTCN
+c Seasonal                                             PRGTSE
+c Trigonometric Seasonal                               PRGTTS
+c Trading Day                                          PRGTTD
+c Length-of-Month                                      PRGTLM
+c Length-of-Quarter                                    PRGTLQ
+c Leap Year                                            PRGTLY
+c Stock Trading Day                                    PRGTST
+c Stock Length-of-Month                                PRGTSL
+c Easter                                               PRGTEA
+c Labor Day                                            PRGTLD
+c Thanksgiving                                         PRGTTH
+c AO                                                   PRGTAO
+c LS                                                   PRGTLS
+c Rp                                                   PRGTRP
+c Automatically Identified AO                          PRGTAA
+c Automatically Identified LS                          PRGTAL
+c User Defined                                         PRGTUD
+c Change-of-Regime Seasonal                            PRRTSE
+c Change-of-Regime Trigonometric Seasonal              PRRTTS
+c Change-of-Regime Trading Day                         PRRTTD
+c Change-of-Regime Length-of-Month                     PRRTLM
+c Change-of-Regime Length-of-Quarter                   PRRTLQ
+c Change-of-Regime Leap Year                           PRRTLY
+c Change-of-Regime Stock Trading Day                   PRRTST
+c Change-of-Regime Stock Length-of-Month               PRRTSL
+c User Defined Holiday                                 PRGTUH
+c User Defined Holiday Group 2                         PRGUH2
+c User Defined Holiday Group 3                         PRGUH3
+c User Defined Holiday Group 4                         PRGUH4
+c User Defined Holiday Group 5                         PRGUH5
+c Missing Value Regressor                              PRGTMV
+c Statistics Canada Easter                             PRGTEC
+c Change-of-Regime Seasonal (reg after)                PRATSE
+c Change-of-Regime Trigonometric Seasonal (reg after)  PRATTS
+c Change-of-Regime Trading Day (reg after)             PRATTD
+c Change-of-Regime Length-of-Month (reg after)         PRATLM
+c Change-of-Regime Length-of-Quarter (reg after)       PRATLQ
+c Change-of-Regime Leap Year (reg after)               PRATLY
+c Change-of-Regime Stock Trading Day (reg after)       PRATST
+c Change-of-Regime Stock Length-of-Month (reg after)   PRATSL
+c User Defined Seasonal                                PRGTUS
+c TC                                                   PRGTTC
+c Automatically Identified TC                          PRGTAT
+c Trading Day (1 coef)                                 PRG1TD
+c Change-of-Regime Trading Day (1 coef)                PRR1TD
+c Change-of-Regime Trading Day (1 coef, reg after)     PRA1TD
+c seasonal outlier                                     PRGTSO
+c Stock Trading Day (1 coef)                           PRG1ST
+c Change-of-Regime Stock Trading Day (1 coef)          PRR1ST
+c Change-of-Regime Stock Trading Day
+c    (1 coef, reg after)                               PRA1ST
+c user-defined assigned to the transitory              PRGCYC
+c End of Month Stock Easter                            PRGTES
+c Temporary Level Shift                                PRGTTL
+c Quadratic Ramp, Increasing                           PRGTQI
+c Quadratic Ramp, Decreasing                           PRGTQD
+c AO Sequence                                          PRSQAO
+c LS Sequence                                          PRSQLS
+c-----------------------------------------------------------------------
+      INTEGER PRGTCN,PRGTSE,PRGTTS,PRGTTD,PRGTLM,PRGTLQ,PRGTLY,PRGTST,
+     &        PRGTSL,PRGTEA,PRGTLD,PRGTTH,PRGTAO,PRGTLS,PRGTRP,PRGTAA,
+     &        PRGTAL,PRGTUD,PRRTSE,PRRTTS,PRRTTD,PRRTLM,PRRTLQ,PRRTLY,
+     &        PRRTST,PRRTSL,PRGTUH,PRGTMV,PRGTEC,PRATSE,PRATTS,PRATTD,
+     &        PRATLM,PRATLQ,PRATLY,PRATST,PRATSL,PRGTUS,PRGTTC,PRGTAT,
+     &        PRG1TD,PRR1TD,PRA1TD,PRGTSO,PRG1ST,PRR1ST,PRA1ST,PRGUH2,
+     &        PRGUH3,PRGUH4,PRGUH5,PRGCYC,PRGTES,PRGTTL,PRGTQI,PRGTQD,
+     &        PRSQAO,PRSQLS,PRGUTD,PRGULM,PRGULQ,PRGULY,PRGUAO,PRGULS,
+     &        PRGUSO,PRGUCN,PRGUCY
+      PARAMETER(PRGTCN=1,PRGTSE=2,PRGTTS=3,PRGTTD=4,PRGTLM=5,
+     &          PRGTLQ=6,PRGTLY=7,PRGTST=8,PRGTSL=9,PRGTEA=10,
+     &          PRGTLD=11,PRGTTH=12,PRGTAO=13,PRGTLS=14,PRGTRP=15,
+     &          PRGTAA=16,PRGTAL=17,PRGTUD=18,PRRTSE=19,PRRTTS=20,
+     &          PRRTTD=21,PRRTLM=22,PRRTLQ=23,PRRTLY=24,PRRTST=25,
+     &          PRRTSL=26,PRGTES=27,PRGTMV=28,PRGTEC=29,PRATSE=30,
+     &          PRATTS=31,PRATTD=32,PRATLM=33,PRATLQ=34,PRATLY=35,
+     &          PRATST=36,PRATSL=37,PRGTUS=38,PRGTTC=39,PRGTAT=40,
+     &          PRG1TD=41,PRR1TD=42,PRA1TD=43,PRGTQI=44,PRGTQD=45,
+     &          PRG1ST=46,PRR1ST=47,PRA1ST=48,PRGTUH=49,PRGUH2=50,
+     &          PRGUH3=51,PRGUH4=52,PRGUH5=53,PRGTTL=54,PRGTSO=55,
+     &          PRGCYC=56,PRGUTD=57,PRGULM=58,PRGULQ=59,PRGULY=60,
+     &          PRGUAO=61,PRGULS=62,PRGUSO=63,PRGUCN=64,PRGUCY=65,
+     &          PRSQAO=113,PRSQLS=114)
+c-----------------------------------------------------------------------
+c     Estimation error codes
+c-----------------------------------------------------------------------
+c PUNKER=1  Estimation error with unknown cause
+c PSNGER=2  Xy is singular in rgarma
+c PISNER=3  Xy is singular in the identify spec
+c PINPER=4  Imporper input parameters (should never occur)
+c PMXIER=5  Exceeded the maximum iterations
+c PSCTER=6  Too strict convergence tolerance
+c PSPMER=7  Relative difference in the parameter estimates too strict
+c PCOSER=8  Cosine between the espected values and any column of the
+c            jacobian is too small
+c PNIMER=9  Can't invert the operator because of missing lags
+c PNIFER=10 Can't invert the operator because of fixed lags
+c PGPGER=11 Can't invert the G'G matrix
+c PACFER=12 Can't calculate the ARMA ACFs
+c PVWPER=13 Can't calculate var(w_p|z)
+c PCNTER=14 Convergence tolerance is less than machine precision
+c PDVTER=15 Deviance is less than machine precision
+c PINVER=16 MA operator is not invertibile
+c PMXFER=17 Exceeded the maximum function evaluations
+c PACSER=18 Covariance matrix of the ARMA parameters singular
+c POBFN0=19 Objective function = 0
+c-----------------------------------------------------------------------
+      INTEGER PUNKER,PSNGER,PISNER,PINPER,PMXIER,PSCTER,PSPMER,PCOSER,
+     &        PNIMER,PNIFER,PGPGER,PACFER,PVWPER,PCNTER,PDVTER,PINVER,
+     &        PMXFER,PACSER,POBFN0
+      PARAMETER(PUNKER=1,PSNGER=2,PISNER=3,PINPER=4,PMXIER=5,PSCTER=6,
+     &          PSPMER=7,PCOSER=8,PNIMER=9,PNIFER=10,PGPGER=11,
+     &          PACFER=12,PVWPER=13,PCNTER=14,PDVTER=15,PINVER=16,
+     &          PMXFER=17,PACSER=18,POBFN0=19)
+c-----------------------------------------------------------------------
+c     Parameters for the regression and ARIMA model data structure
+c-----------------------------------------------------------------------
+      INTEGER AR,DIFF,MA,MO,YR,AO,LS,RP,MV,TC,SO,TLS,POTLR,PAICT,PTDAIC,
+     &        PLAIC,PEAIC,PUAIC,QI,QD,PAICEA
+      PARAMETER(AR=2,DIFF=1,MA=3,MO=2,YR=1,AO=1,LS=2,TC=3,RP=4,
+     &          MV=5,TLS=6,SO=7,QI=8,QD=9,POTLR=3,PAICEA=PEASTR+2,
+     &          PAICT=4,PTDAIC=1,PLAIC=2,PEAIC=3,PUAIC=4)
+c     ------------------------------------------------------------------
+      INTEGER PARIMA,PCOLCR,PGRP,PGRPCR,PMDL,PMDLCR,POPRCR,PUSERX
+c* Increased to handle the multi-step-ahead-forecast psi-weight operator
+c      PARAMETER(PARIMA=25,PCOLCR=25,PGRP=PB,PGRPCR=60,PMDL=1,PMDLCR=60,
+c     &          POPRCR=60)
+      PARAMETER(PARIMA=(2*PSP)+PDIFOR-PORDER+1,PCOLCR=23,PGRP=PB,
+     &          PGRPCR=72,PMDL=1,PMDLCR=72,POPRCR=72,PUSERX=PLEN*PUREG)
+C     ------------------------------------------------------------------
+      INTEGER POPR,PGPG,PXPX 
+      PARAMETER (PGPG=PORDER*(PORDER+1)/2,PXPX=(PB+2)*(PB+3)/2,
+     &           POPR=9*PMDL)
+c-----------------------------------------------------------------------
+c     Default convergence parameters for the IGLS, initial nonlinear
+c estimation(s), the rest of the nonlinear estimations.
+c-----------------------------------------------------------------------
+      DOUBLE PRECISION DFTOL,DFNLT0,DFNLTL
+      PARAMETER(DFTOL=1D-5,DFNLT0=100D0*DFTOL,DFNLTL=DFTOL)
+c-----------------------------------------------------------------------
+      INTEGER PFILMD
+      PARAMETER(PFILMD=127)
+c-----------------------------------------------------------------------

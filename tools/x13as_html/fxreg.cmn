@@ -1,0 +1,22 @@
+c-----------------------------------------------------------------------
+c     Cfxttl - data dictionary containing the names of the regression
+c              variables held fixed for this regARIMA model
+c     Bfx    - parameter values of the regression
+c              variables held fixed for this regARIMA model
+c     Fxtype - type of regressor for the regression
+c              variables held fixed for this regARIMA model
+c     Cfxptr - pointer vector for data dictionary of the regression
+c              variables held fixed for this regARIMA model
+c     Nfxttl - number of the regression variables held fixed for this
+c              regARIMA model
+c-----------------------------------------------------------------------
+      CHARACTER Cfxttl*(PCOLCR*PB),Gfxttl*(PGRPCR*PGRP)
+      DOUBLE PRECISION Bfx,Fixfac,Fixfc2
+      INTEGER Cfxptr,Nfxttl,Fxtype,Grpfix,Ngrpfx,Gfxptr,Ngfxtl,Fixind
+      DIMENSION Bfx(PB),Fxtype(PB),Cfxptr(0:PB),Grpfix(0:PGRP),
+     &          Gfxptr(0:PGRP),Fixfac(PLEN),Fixfc2(PLEN),Fixind(PB)
+c-----------------------------------------------------------------------
+      COMMON /Fxreg /Bfx,Fixfac,Fixfc2,Fxtype,Cfxptr,Nfxttl,Gfxptr,
+     &               Ngfxtl,Grpfix,Ngrpfx,Fixind,Cfxttl,Gfxttl
+c-----------------------------------------------------------------------
+

@@ -1,0 +1,26 @@
+c-----------------------------------------------------------------------
+c     data dictionary for descriptions of series and output dealing with
+c     X-11 seasonal adjustment (tables 1-7).  See desx11.var for pointers.
+c-----------------------------------------------------------------------
+      CHARACTER DSXDIC*1110
+      INTEGER dsxptr
+      DIMENSION dsxptr(0:PDSX)
+c-----------------------------------------------------------------------
+      PARAMETER(DSXDIC='modified original data, C iterationmodified orig
+     &inal data, D iterationoriginal data modified for extremesMCD movin
+     &g averagepreliminary trend cycle, B iterationpreliminary trend cyc
+     &le, C iterationpreliminary trend cycle, D iterationmodified season
+     &ally adjusted seriesunmodified SI ratios, B iterationmodified irre
+     &gular seriesreplacement values for extremes of SI componentmodifie
+     &d SI ratios, C iterationmodified SI ratios, D iterationpreliminary
+     & seasonal factors, B iterationpreliminary seasonal factors, C iter
+     &ationpreliminary seasonal factors, D iteration% in the original se
+     &ries% in the original series (saved as percentages if appropriate)
+     &preliminary seasonally adjusted series, B iterationpreliminary sea
+     &sonally adjusted series, C iterationpreliminary seasonally adjuste
+     &d series, D iteration% in seasonally adjusted series (D11)% in sea
+     &sonally adjusted series (D11 - saved as percentages if appropriate
+     &)preliminary trend cycle, B iterationpreliminary trend cycle, C it
+     &erationpreliminary trend cycle, D iteration% in final trend cycle 
+     &(D12)% in final trend cycle (D12 - saved as percentages if appropr
+     &iate )')

@@ -1,0 +1,19 @@
+c-----------------------------------------------------------------------
+c      DATA statement that defines sumtab, the logical variable which 
+c           defines those tables to be saved when the -s flag is used
+c-----------------------------------------------------------------------
+      DATA sumtab/
+     &   T,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   F,F,F,F,F,F,F,F,F,F, T,T,T,F,F,F,F,F,F,F, F,F,T,F,F,F,F,F,F,F,
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,T,T,T,F,F,F,F,
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,T,T,T,T,T,T,F,F,
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   F,F,F,F,F,F,F,F,F,F, T,T,F,F,F,T,T,F,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,T,
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,T,T,T,
+     &   T,T,T,T,T,T,T,T,T,F, F,F,F,F,F,F,F,F,F,F, F,F,F,F,T,T,F,F,F,F,
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,F,T,T,F,F,F,T,
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F,F,F,
+     &   F,F,F,F,F,F/

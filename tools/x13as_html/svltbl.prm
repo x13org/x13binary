@@ -1,0 +1,24 @@
+      CHARACTER SVLDIC*1294
+      INTEGER svlptr,PSVL
+      PARAMETER(PSVL=218)
+      DIMENSION svlptr(0:PSVL)
+      PARAMETER(SVLDIC='autotransformatrautomodelamdautodiffadfbestfivem
+     &dlb5mmeanmufinalunitrootfuralldiagnosticsallautomodelamdaicaicaicc
+     &accbicbichannanquinnhqeiceicaveragefcsterrafcrootsrtsalldiagnostic
+     &sallaictestatschi2testctsidentifiedidnormalitytestnrmseasonalacfsa
+     &cljungboxqlbqboxpierceqbpqseasftestsfttdftesttftdurbinwatsondwfrie
+     &dmantestfrtalldiagnosticsallm1m1m2m2m3m3m4m4m5m5m6m6m7m7m8m8m9m9m1
+     &0m10m11m11qqq2q2movingseasratiomsricratioicrfstableb1fb1fstabled8f
+     &d8movingseasfmsfidseasonalidsalldiagnosticsallaictestatsaveabsrevs
+     &aasaaveabsrevchngachaveabsrevindsaiaaaveabsrevtrendatraveabsrevtre
+     &ndchngatcaveabsrevsfasfaveabsrevsfprojaspavesumsqfcsterrafealldiag
+     &nosticsallpercentpctpercentspcspeaksspkdirpeaksdpkindpeaksipktukey
+     &peakstpkdirtukeypeaksdtpindtukeypeaksitpqsqsdirqsdqsindqsiqsqcheck
+     &qchnpsanpadirnpsadnpindnpsainpalldiagnosticsallindm1im1indm2im2ind
+     &m3im3indm4im4indm5im5indm6im6indm7im7indm8im8indm9im9indm10imtindm
+     &11imeindqiqindq2iq2indmovingseasratioisrindicratioiirindfstabled8i
+     &d8indmovingseasfisfindidseasonaliidindtestittalldiagnosticsallseat
+     &smodelsmdx13modelxmdx12modelx2mnormalitytestnrmtotalsquarederrorts
+     &ecomponentvariancecvrconcurrentesterrorceepercentreductionseprsave
+     &rageabsdiffannualaadoverunderestimationoueoverunderstatisticsousse
+     &asonalsignifssgdurbinwatsondwsfriedmanfrsalldiagnosticsall')

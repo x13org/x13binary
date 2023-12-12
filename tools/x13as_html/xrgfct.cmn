@@ -1,0 +1,11 @@
+c-----------------------------------------------------------------------
+c     Nfcstx - number of forecasts
+c     Nbcstx - number of backcasts
+c     Ladd1x - logical variable indicating whether outliers will be 
+c              added one at a time
+c-----------------------------------------------------------------------
+      LOGICAL Ladd1x
+      INTEGER Nfcstx,Nbcstx
+c-----------------------------------------------------------------------
+      common /cx11fc/ Nfcstx,Nbcstx,Ladd1x
+

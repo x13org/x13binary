@@ -1,0 +1,18 @@
+c     ------------------------------------------------------------------
+c     Usrxtt - data dictionary for the names of the user-defined 
+c              regressor variables.
+c     Usrxpt - pointers for the data dictionary of the names of the 
+c              user-defined regressor variables.
+c     Usxtyp - indicator of what type of regressor for each of the
+c              user-defined regressor variables.
+c     Ncxusx - Number of user-defined regression variables
+c     Nrxusx - Number of observations read in for the user-defined
+c              X-11 regression variables.
+c     ------------------------------------------------------------------
+      CHARACTER Usrxtt*(PCOLCR*PUREG)
+      INTEGER Usxtyp,Ncxusx,Nrxusx,Usrxpt
+      DIMENSION Usxtyp(PUREG),Usrxpt(0:PUREG)
+c     ------------------------------------------------------------------
+      COMMON /usrxrg/ Ncxusx,Nrxusx,Usxtyp,Usrxpt,Usrxtt
+c     ------------------------------------------------------------------
+

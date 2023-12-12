@@ -1,0 +1,12 @@
+c-----------------------------------------------------------------------
+c     common block for user defined metadata
+c-----------------------------------------------------------------------
+      CHARACTER Keystr*(PLMETA),Valstr*(PLMETA)
+      LOGICAL Hvmtdt
+      INTEGER Keyptr,Nkey,Valptr,Nval
+      DIMENSION Keyptr(0:PMTDAT),Valptr(0:PMTDAT)
+c-----------------------------------------------------------------------
+      COMMON /cmtdat/ Keyptr,Nkey,Valptr,Nval,Hvmtdt
+      COMMON /cmtdic/ Keystr,Valstr
+c-----------------------------------------------------------------------
+	  

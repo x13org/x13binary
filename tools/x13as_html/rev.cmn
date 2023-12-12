@@ -1,0 +1,89 @@
+c-----------------------------------------------------------------------
+c     Revptr - Pointer for revisions analyis (which observation is
+c              now the concurrent)
+c     Begrev - Position of the first observation of the revisions 
+c              history analysis
+c     Endrev - Position of the last observation of the revisions history
+c              analysis
+c     Endtbl - Position of the last observation of the revisions history
+c              analysis of seasonal adjustment estimates
+c     Endsa  - Position of the ending observation of the final seasonal
+c              adjustment to be performed for the revisions history
+c              analysis
+c     Beglup - Position of the first observation of the revisions 
+c              history analysis loop
+c     Rfctlg - Integer vector of forecast lags to be analyzed
+c     Rvstrt - Starting date for revisions history analysis specifed
+c              by the user
+c     Lupbeg - Starting date for revisions history analysis loop
+c     Rvend  - Ending date for revisions history analysis of seasonal
+c              adjustment estimates specifed by the user
+c     Nfctlg - Number of forecast lags in Rfctlg
+c     Fixper - Period every year for which the model will be estimated
+c              in the revisions history.  Every other period, the model
+c              parameters will be fixed to what they were at the last 
+c              value of Fixper
+c     Frstsa - pointer for first observation where a seasonal adjustment
+c              will be performed
+c     Otlrev - indicator variable determining how outliers are treated
+c              in revisions history (0=keep,1=remove,2=auto identify)
+c     Otlwin - specifies how many observations before the end of the 
+c              series will be tested for outliers in each adjustment
+c              done by the revisions history analysis
+c     Revnum - Number of observations in the revisions history
+c     Rvfxrg - Integer array that determines which regressors are fixed
+c              during the revisions history analysis (1-td,2-holiday,
+c              3-user defined regressors,4-outlier)
+c     Nrvfxr - number of elements defined in Rvfxrg
+c     Nrvarma- Number of ARMA coefficients saved
+c     Nrvtd  - Number of trading day coefficients saved
+c-----------------------------------------------------------------------
+      INTEGER Revptr,Begrev,Endrev,Endsa,Endtbl,Rfctlg,Rvstrt,Revnum,
+     &        Rvend,Nfctlg,Fixper,Otlrev,Otlwin,Lupbeg,Beglup,Frstsa,
+     &        Rvfxrg,Nrvfxr,Nrcomp,Rvdiff,Fhsfh,Indrev,Indrvs,Nrvarma,
+     &        Nrvtd
+c-----------------------------------------------------------------------
+c     Lrvsa  - Logical variable which indicates if a revisions history
+c              analysis is to be performed on the seasonally adjusted
+c              series.
+c     Lrvsf  - Logical variable which indicates if a revisions history
+c              analysis is to be performed on the seasonal factors,
+c              both concurrent and projected
+c     Lrvch  - Logical variable which indicates if a revisions history
+c              analysis is to be performed on the month-to-month changes
+c              of the seasonally adjusted series
+c     Lrvtrn - Logical variable which indicates if a revisions history
+c              analysis is to be performed on the final trend
+c     Lrvtch - Logical variable which indicates if a revisions history
+c              analysis is to be performed on the month-to-month changes
+c              of the final trend
+c     Lrvfct - Logical variable which indicates if a revisions history
+c              analysis is to be performed on the forecasts
+c     Lrvaic - Logical variable which indicates if a revisions history
+c              analysis is to be performed on the AIC statistic
+c     Revfix - Logical variable which indicates if REGARIMA model
+c              parameters will be fixed for this revisions history
+c              analysis
+c     Lrfrsh - Logical variable which indicates if REGARIMA model
+c              parameters will be refreshed at the beginning of each 
+c              estimation during this revisions history analysis
+c     Rvtran - Do not print out tables from transparent modeling and
+c              seasonal adjustments generated during history analysis 
+c              (if true)
+c     Cnctar - Concurrent adjustments are the target for target lags
+c              (if true), else final adjustments are targets
+c-----------------------------------------------------------------------
+      LOGICAL Lrvsa,Lrvsf,Lrvch,Lrvtrn,Lrvaic,Lrvfct,Lrvarma,Lrvtdrg,
+     &        Revfix,Revfxx,Lrfrsh,Lrvtch,Rvtran,Cnctar,Rvxotl,Rvtrfc
+c-----------------------------------------------------------------------
+      DIMENSION Rfctlg(PFCLAG),Rvstrt(2),Rvend(2),Lupbeg(2),Rvfxrg(4),
+     &          Indrvs(2)
+c-----------------------------------------------------------------------
+      COMMON /revcmn/ Begrev,Endrev,Endsa,Endtbl,Revptr,Rfctlg,Nfctlg,
+     &                Fixper,Rvstrt,Rvend,Lupbeg,Beglup,Frstsa,Otlrev,
+     &                Otlwin,Revnum,Rvfxrg,Nrvfxr,Nrcomp,Rvdiff,Fhsfh,
+     &                Indrev,Indrvs,Nrvarma,Nrvtd
+      COMMON /revlog/ Lrvsa,Lrvsf,Lrvch,Lrvtrn,Lrvtch,Lrvaic,Lrvfct,
+     &                Lrvarma,Lrvtdrg,Lrfrsh,Revfix,Revfxx,Rvtran,
+     &                Cnctar,Rvxotl,Rvtrfc
+

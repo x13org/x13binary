@@ -1,0 +1,7 @@
+c-----------------------------------------------------------------------
+      DOUBLE PRECISION Fstabl,Fmove,Fpres,Chikw,P1,P2,P3,P5,Test1,Test2
+      INTEGER Iqfail
+c-----------------------------------------------------------------------
+      COMMON /tests / Fstabl,Fmove,Fpres,Chikw,P1,P2,P3,P5,Test1,Test2,
+     &                Iqfail
+      

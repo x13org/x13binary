@@ -1,0 +1,47 @@
+c     Sstran - Do not print out tables from transparent modeling and
+c              seasonal adjustments generated during sliding spans
+c              analysis (if true)
+c-----------------------------------------------------------------------
+      LOGICAL Sstran
+c-----------------------------------------------------------------------
+c     Ncol - number of sliding spans
+c     Nlen - length of sliding spans
+c     Ssotl  - indicator variable determining how outliers are treated
+c              in sliding spans (0=keep,1=remove,2=auto identify)
+c     Ssinit - indicator variable determining how REGARIMA parameter
+c              estimates are initialized and whether they are fixed
+c              during the sliding spans analysis
+c     Strtss - Starting date for sliding spans analysis specifed by the
+c              user
+c     Ssfxrg - Integer array that determines which regressors are fixed
+c              during the sliding spans analysis for the regARIMA model
+c              (1-td, 2-holiday, 3-user defined regressors, 4-outlier)
+c     Nssfxr - number of elements defined in Ssfxrg
+c     Ssfxxr - Integer array that determines which regressors are fixed
+c              during the sliding spans analysis for the irregular
+c              regression model
+c              (1-td, 2-holiday, 3-user defined regressors, 4-outlier)
+c     Nssfxx - number of elements defined in Ssfxxr
+c-----------------------------------------------------------------------
+      INTEGER Ssfxrg,Nssfxr,Ssfxxr,Nssfxx,Ncol,Nlen,Ssotl,Ssinit,Strtss
+c-----------------------------------------------------------------------
+c     Ssdiff - logical indicator variable in sliding spans that
+c	           differences are to be analyzed for additive adjustments
+c     Ssidif - logical indicator variable in sliding spans that
+c	           differences are to be analyzed for additive indirect
+c              adjustments
+c     Ssxotl - logical indicator variable determining how irregular
+c              regression outliers are treated in sliding spans
+c     Ssxint - indicator variable determining how irregular regression
+c              parameter estimates are initialized and whether they are
+c              fixed during the sliding spans analysis
+c-----------------------------------------------------------------------
+      LOGICAL Ssdiff,Ssidif,Ssxotl,Ssxint
+c-----------------------------------------------------------------------
+      DIMENSION Ssfxrg(4),Ssfxxr(4),Strtss(2)
+c-----------------------------------------------------------------------
+      COMMON /sspinp/ Ncol,Nlen,Ssotl,Ssinit,Ssfxrg,Nssfxr,Ssfxxr,
+     &                Nssfxx,Strtss,Sstran
+      COMMON /ssplog/ Ssdiff,Ssidif,Ssxotl,Ssxint
+
+

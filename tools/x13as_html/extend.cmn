@@ -1,0 +1,16 @@
+c-----------------------------------------------------------------------
+c  Nobspf - number of observations copied
+c  Nofpob - number of forecasts plus observations
+c  Nbfpob - number of backcasts plus forecasts plus observations
+c  Nfcst  - number of forecasts
+c  Nbcst  - number of backcasts
+c  Nbcst2  - number of backcasts + Number of observations from start 
+c            of series to January of first year
+c  Begbak - beginning date of backcast extended series
+c  Begbk2 - beginning date of data vectors (first period of Begbak)
+c-----------------------------------------------------------------------
+      INTEGER Begbak,Begbk2,Nbcst2,Nobspf,Nfcst,Nbcst,Nofpob,Nbfpob,
+     &        Nfdrp
+      DIMENSION Begbak(2),Begbk2(2)
+      COMMON /fctcmn / Begbak,Begbk2,Nfcst,Nbcst,Nbcst2,Nobspf,Nofpob,
+     &                 Nbfpob,Nfdrp

@@ -1,0 +1,34 @@
+c-----------------------------------------------------------------------
+c     Thtapr - taper for spectrum
+c     Bgspec - Starting date for spectral plots
+c     Spctyp - indicator variable = 0 if AR-spectrum is computed, 1 if
+c              periodogram is computed.
+c     Spcsrs - indicator variable = 0 if original series used, 1 if
+c              outlier adjusted series is used, 2 if adjusted original
+c              series is used.
+c     Cspeak - character string of series with seasonal peaks in
+c              spectrum
+c     Ctpeak - character string of series with td peaks in spectrum
+c     Nspeak - string length of Cspeak
+c     Ntpeak - string length of Ctpeak
+c     Lsavpk - logical variable for whether information on spectral
+c              peaks are to be saved
+c     Spcdff - Logical variable which indicates when a difference is  
+c              performed on the original series and/or seasonally adj.
+c              series prior to generating spectral estimates
+c-----------------------------------------------------------------------
+      CHARACTER Cspeak*35,Ctpeak*35
+      DOUBLE PRECISION Thtapr,Spclim,Plocal
+      INTEGER Bgspec,Spctyp,Nspeak,Ntpeak,Spcsrs,Mxarsp,Peakwd,Spdfor,
+     &        Ntukfq
+      LOGICAL Lsavpk,Spcdff,Lfqalt,Axsame,Svallf,Ldecbl,Lstdff,Lprsfq,
+     &        Llogqs,Ltk120,Lqchk,Lrbstsa
+c-----------------------------------------------------------------------
+      DIMENSION Bgspec(2)
+c-----------------------------------------------------------------------
+      COMMON /rho   / Thtapr,Spclim,Plocal,Bgspec,Spctyp,Nspeak,Ntpeak,
+     &                Spcsrs,Mxarsp,Peakwd,Spdfor,Lsavpk,Spcdff,Lfqalt,
+     &                Svallf,Ldecbl,Axsame,Lstdff,Lprsfq,Llogqs,Ltk120,
+     &                Lqchk,Lrbstsa
+      COMMON /crho  / Cspeak,Ctpeak
+c-----------------------------------------------------------------------

@@ -1,0 +1,17 @@
+c-----------------------------------------------------------------------
+      CHARACTER I1*1,I3*1,I4*1,I7*1,I8*1,I9*1,I10*1,I11*1,I12*1,Ia*1,
+     &          Ip*1,Ialpha*1,Ialphq*1
+      INTEGER Ibeg2,Ienda,Ixy,Nseas,Nyr,Npts,N1,Ifrst,Last,Llyr,Lastyr,
+     &        Imid,Icmax,Iyear,Inyr,Ibottm,Ifact2
+      DOUBLE PRECISION Ab1,Ser1,Xdata3,Xyvec,Y1,Y2,Ydiff,Ymax,Ymin,Ymid,
+     &                 Fact1
+      DIMENSION Y1(PLEN),Y2(PLEN),Xdata3(61),Ia(110,55),Ip(10),Ymid(14),
+     &          Imid(14),Ialpha(12),Ialphq(4),Ser1(61,12),Ab1(61),
+     &          Iyear(61)
+c-----------------------------------------------------------------------
+      COMMON /chrtcr / Ia,Ialpha,Ip,Ialphq,I1,I3,I4,I7,I8,I9,I10,I11,I12
+      COMMON /chrtdp / Ab1,Fact1,Ser1,Xyvec,Y1,Y2,Xdata3,Ymin,Ymax,
+     &                 Ydiff,Ymid
+      COMMON /chrtin / Nyr,Npts,N1,Ifrst,Last,Llyr,Lastyr,Nseas,Ixy,
+     &                 Ibeg2,Ienda,Iyear,Inyr,Icmax,Ibottm,Imid,Ifact2
+     

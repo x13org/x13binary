@@ -1,0 +1,39 @@
+c-----------------------------------------------------------------------
+c     data dictionary for descriptions of series and output dealing with
+c     SEATS seasonal adjustment.  See desset.var for pointers.
+c-----------------------------------------------------------------------
+      CHARACTER DSEDIC*1973
+      INTEGER dseptr
+      DIMENSION dseptr(0:PDSE)
+c-----------------------------------------------------------------------
+      PARAMETER(DSEDIC='final trend component (SEATS)final trend cycle w
+     &ith constant value added (SEATS)final seasonal component (SEATS)fi
+     &nal seasonal component (SEATS, saved as a percent if log transform
+     &ation used)final irregular component (SEATS)final irregular compon
+     &ent (SEATS, saved as a percent if log transformation used)final se
+     &asonally adjusted series (SEATS)final seasonally adjusted series w
+     &ith constant value added (SEATS)final transitory component (SEATS)
+     &final transitory component (SEATS, saved as a percent if log trans
+     &formation used)final combined adjustment factors (SEATS)final comb
+     &ined adjustment factors (SEATS, saved as a percent if log transfor
+     &mation used)final trend component forecast decomposition (SEATS)fi
+     &nal seasonal component forecast decomposition (SEATS)series foreca
+     &st decomposition (SEATS)final seasonally adjusted series forecast 
+     &decomposition (SEATS)final transitory component forecast decomposi
+     &tion (SEATS)final adjustment ratios (SEATS)total adjustment factor
+     &s (SEATS)Wiener-Kolmogorov end filtercomponent modelspseudo innova
+     &tions in trend-cyclepseudo innovations in seasonalpseudo innovatio
+     &ns in transitory componentpseudo innovations in seasonally adjuste
+     &d seriessquared gain of the symmetric seasonal adjustment filtersq
+     &uared gain of the concurrent seasonal adjustment filtersquared gai
+     &n of the symmetric trend filtersquared gain of the concurrent tren
+     &d filtertime shift of the concurrent seasonal adjustment filtertim
+     &e shift of the concurrent trend filtersymmetric seasonal adjustmen
+     &t filterconcurrent seasonal adjustment filtersymmetric trend filte
+     &rconcurrent trend filterdifferenced original series after transfor
+     &mation, prior adjustment (SEATS)differenced final seasonally adjus
+     &ted series (SEATS)differenced final trend (SEATS)sum of final seas
+     &onal component (SEATS)final cyclefinal long term trendstandard err
+     &or of final seasonal component (SEATS)standard error of final seas
+     &onally adjusted series (SEATS)standard error of final trend compon
+     &ent (SEATS)')

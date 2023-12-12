@@ -1,0 +1,37 @@
+c-----------------------------------------------------------------------
+c     data dictionary for descriptions of series and output dealing with
+c     series forecasts and other additional tables.  See desfct.var for pointers.
+c-----------------------------------------------------------------------
+      CHARACTER DSFDIC*1821
+      INTEGER dsfptr,PDSF
+      PARAMETER(PDSF=348)
+      DIMENSION dsfptr(0:PDSF)
+c-----------------------------------------------------------------------
+      PARAMETER(DSFDIC='forecasts of (prior adjusted) original seriesreg
+     &ARIMA outlier componentregARIMA temporary change outlier component
+     &regARIMA temporary change outlier componentregARIMA trading day co
+     &mponent forecastsregARIMA holiday component forecastsregARIMA user
+     &-defined regression component forecastsregARIMA seasonal component
+     & forecastsregARIMA transitory component forecastsfinal seasonal co
+     &mponent forecastsfinal seasonal component forecastsfinal seasonal 
+     &difference forecastsfinal seasonal component forecasts, adjusted f
+     &or regARIMA seasonal componentseasonal factors forecasts, before s
+     &hrinkage appliedX-11 Easter adjustment factor forecastscombined ho
+     &liday component forecastscombined adjustment component forecastsco
+     &mbined adjustment component forecastsfinal adjustment difference f
+     &orecastscombined calendar adjustment component forecastsfinal adju
+     &stment ratio forecaststotal adjustment factor forecastsforecasted 
+     &factors applied to get adjusted series with forced yearly totalspr
+     &ior trading day component forecastsfinal irregular component regre
+     &ssion trading day component forecastsfinal irregular component reg
+     &ression trading day component forecastsfinal irregular component r
+     &egression holiday component forecastsfinal irregular component reg
+     &ression calendar component forecastsfinal irregular component regr
+     &ession combined calendar component forecastsforecasts of (prior ad
+     &justed) original seriesfinal indirect seasonal component forecasts
+     &final indirect seasonal component forecastsindirect final seasonal
+     & difference forecastsfinal indirect adjustment ratio forecastsindi
+     &rect total adjustment factor forecastsfinal indirect calendar comp
+     &onent forecastsfinal indirect adjustment component forecastsfinal 
+     &indirect adjustment component forecastsforecasted factors applied 
+     &to get indirect adjusted series with forced yearly totals')

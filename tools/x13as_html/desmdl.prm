@@ -1,0 +1,38 @@
+c-----------------------------------------------------------------------
+c     data dictionary for descriptions of series and output dealing with
+c     regARIMA modelling.  See desmdl.var for pointers.
+c-----------------------------------------------------------------------
+      CHARACTER DSMDIC*1943
+      INTEGER dsmptr
+      DIMENSION dsmptr(0:PDSM)
+c-----------------------------------------------------------------------
+      PARAMETER(DSMDIC='matrix of regression variablesregARIMA combined 
+     &outlier componentregARIMA AO outlier componentregARIMA level chang
+     &e outlier componentregARIMA temporary change outlier componentregA
+     &RIMA seasonal outlier componentregARIMA trading day componentregAR
+     &IMA holiday componentregARIMA user-defined regression componentreg
+     &ARIMA user-defined seasonal componentregARIMA transitory component
+     &regression trading day weightsresidual autocorrelations for differ
+     &ent orders of differencingautocorrelation for different orders of 
+     &differencingresidual partial autocorrelations for different orders
+     & of differencingpartial autocorrelation for different orders of di
+     &fferencingautomatic ARIMA model selectionmodel identification (for
+     &ecast)model identification (backcast)detailed output for the estim
+     &ation iterationsmodel specifications (regression and arima specs)c
+     &orrelation matrix of regression parameter estimatesregression and 
+     &ARMA parameter estimatescorrelation matrix of ARMA parameter estim
+     &atesmaximized log-likelihood and model selection criteriaroots of 
+     &the AR and MA operatorsestimated regression effects (X''beta)resid
+     &uals from the estimated modelresiduals from the estimated regressi
+     &on effectsoutlier detection results, by iterationoutlier AO and LS
+     & test statisticsfinal outlier test statisticsresidual autocorrelat
+     &ionsresidual autocorrelationresidual partial autocorrelationresidu
+     &al partial autocorrelationsquared residual autocorrelationssquared
+     & residual autocorrelationhistogram of the regARIMA residualsnormal
+     &ity statistics for regARIMA residualsDurbin-Watson statistic for m
+     &odel residualsFriedman non-parametric test for residual seasonalit
+     &yInverse PACF Diagnosticpoint forecasts and standard errors for th
+     &e transformed dataforecast error variances (transformed scale)poin
+     &t forecasts and prediction intervals on the original scalepoint ba
+     &ckcasts and standard errors for the transformed datapoint backcast
+     &s and prediction intervals on the original scale')

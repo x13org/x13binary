@@ -1,0 +1,26 @@
+c-----------------------------------------------------------------------
+c     data dictionary for descriptions of series and output dealing with
+c     forecasts for SEATS adjustments.  See desfc2.var for pointers.
+c-----------------------------------------------------------------------
+      CHARACTER DF2DIC*1040
+      INTEGER df2ptr,PDF2
+      PARAMETER(PDF2=48)
+      DIMENSION df2ptr(0:PDF2)
+c-----------------------------------------------------------------------
+      PARAMETER(DF2DIC='Final trend component forecast (SEATS)Final tren
+     &d component forecast with constant added (SEATS)Final seasonal com
+     &ponent forecast (SEATS)Final seasonal component forecast (SEATS)Fi
+     &nal irregular component forecast (SEATS)Final irregular component 
+     &forecast (SEATS)Final seasonally adjusted series forecast (SEATS)F
+     &inal seasonally adjusted series forecast with constant added (SEAT
+     &S)Final transitory component forecast (SEATS)Final transitory comp
+     &onent forecast (SEATS)Final combined adjustment factor forecast (S
+     &EATS)Final combined adjustment factor forecast (SEATS)final adjust
+     &ment ratio forecasts (SEATS)total adjustment factor forecasts (SEA
+     &TS)Final differenced forecast after transformation, prior adjustme
+     &nt (SEATS)Final differenced seasonally adjusted series forecast (S
+     &EATS)Final differenced trend forecast (SEATS)Final seasonal compon
+     &ent forecast (SEATS)final cycle forecastfinal long term trend fore
+     &castFinal seasonally adjusted series forecast adjusted for outlier
+     &s (SEATS)Final irregular component forecast outlier adjusted (SEAT
+     &S)')

@@ -1,0 +1,8 @@
+c-----------------------------------------------------------------------
+c     pointers for descriptions of series and output dealing with
+c     sliding spans analysis.  See desdg2.prm for data dictionaries.
+c-----------------------------------------------------------------------
+      DATA dd2ptr / 
+     &    1,   1,   1,   1,   1,   1,   1,   1,   1,   1,
+     &    1,   1,   1,  38,  84, 146, 217, 264, 320, 395,
+     &  479, 519 /

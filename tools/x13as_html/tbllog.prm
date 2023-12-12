@@ -1,0 +1,12 @@
+c-----------------------------------------------------------------------
+c     Note NTBL (the number of tables) is half PTBL because each table 
+c has a long and short name.  In the table dictionaries the short name 
+c is written after each long name so the 2i-1 and 2i entries relate to 
+c table i. 
+c-----------------------------------------------------------------------
+c Note:  Look in filext.var to find the extension names of the files
+c that are saved.  The variable is tbxdic.
+c-----------------------------------------------------------------------
+      INTEGER NTBL
+      PARAMETER(NTBL=396)
+

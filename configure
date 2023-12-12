@@ -22,90 +22,12 @@
 
 set -e
 
-## Check that we are on Unix
-if [ x`command -v uname` = x ]; then
-    echo "You do not have 'uname' so this is unlikely to be a Unix system. Exiting."
-    exit 1
-fi
+cd "$(dirname "$0")"
+root="$(pwd)"
 
-## Check for Linux or OSX
-: ${R_HOME=`R RHOME`}
-sysname=`${R_HOME}/bin/Rscript -e 'cat(Sys.info()["sysname"])'`
-if [ ${sysname} = "Linux" ]; then
-    platform="linux"
-    arch=`uname -m`
-    if [ "${arch}" = "x86_64" ]; then
-        flavour="64"
-    elif [ "${arch}" = "armv7l" ]; then
-        flavour="armv7l"
-    else
-        echo "Unknown Linux architecture: ${arch}. Exiting."
-        exit 2
-    fi
-elif [ ${sysname} = "Darwin" ]; then
-    platform="mac"
-    arch=`uname -m`
-    if [ "${arch}" = "x86_64" ]; then
-        flavour="64"
-    elif [ "${arch}" = "arm64" ]; then
-        flavour="arm64"
-    else
-        echo "Unknown Darwin (macOS) architecture: ${arch}. Exiting."
-        exit 2
-    fi
-else
-    platform=${sysname}
-    echo "Unusual platform: ${sysname}"
-    echo ""
-    echo "For this platform and release, there are currently no binaries of X-13ARIMA-SEATS available. If"
-    echo "you have binaries or building scripts, you are invited to contribute to the project."
-    echo ""
-    echo "Visit https://github.com/x13org/x13prebuilt for the repository of pre-made binaries, and see eg"
-    echo "https://github.com/x13org/x13binary/blob/master/inst/tools/build.sh for an earlier attempt."
-    echo ""
-    exit 3
-fi
+cd ./tools/x13as_html
+make -f makefile.gf
 
-## Helper function to not rely on curl which at least on OS X fails to follow redirects
-download() {
-    url=${1}
-    ## sadly, for Travis we cannot rely on R as it lacks libcurl
-    libcurl=`${R_HOME}/bin/Rscript -e 'cat(capabilities()[["libcurl"]])'`
-    ## so when we have libcurl in R, use it -- else fall back to curl
-    if [ ${libcurl} = "TRUE" ]; then
-        file=`basename ${url}`
-        ${R_HOME}/bin/Rscript -e "options(timeout = max(300, getOption(\"timeout\"))); download.file(\"${url}\", \"${file}\", quiet=TRUE)"
-    else
-        curl -s -k -L -O ${url}
-    fi
-}
+cp x13as_html $root/inst/bin/x13ashtml
 
-## Check that X13_PATH does not already point at a binary
-if [ x${X13_PATH} != x ]; then
-    if test -d ${X13_PATH} && test -f ${X13_PATH}/x13ashtml; then
-        echo "*** existing x13 binary found, not downloading"
-        exit 0
-    fi
-fi
-
-## On Linux or mac, download binary
-cwd=`pwd`
-if [ ${platform} = "linux" ]; then
-    cd inst/bin
-    download https://github.com/x13org/x13prebuilt/raw/master/v1.1.57/linux/${flavour}/x13ashtml
-    chmod 0775 x13ashtml
-    echo "*** downloaded Linux binary"
-    cd ${cwd}
-elif [ ${platform} = "mac" ]; then
-    cd inst
-    download https://github.com/x13org/x13prebuilt/raw/master/v1.1.57/mac/${flavour}/x13ashtml.tar.gz
-    tar -zxvf x13ashtml.tar.gz
-    cp -r x13ashtml/bin .
-    cp -r x13ashtml/lib .
-    rm -r x13ashtml
-    rm x13ashtml.tar.gz
-    cd ${cwd}
-fi
-    
 exit 0
-

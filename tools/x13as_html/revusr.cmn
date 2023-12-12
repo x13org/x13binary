@@ -1,0 +1,20 @@
+c-----------------------------------------------------------------------
+c     Rusttl - data dictionary containing the names of the user-defined 
+c              regressors deleted during the revisions/sliding spans 
+c              analysis
+c     Buser  - parameter values for the user-defined regressors deleted 
+c              during the revisions/sliding spans analysis
+c     Rusptr - pointer vector for data dictionary for user-defined 
+c              regressors deleted during the revisions/sliding spans 
+c              analysis
+c     Nrustl - number of user-defined regressors deleted during the 
+c              revisions/sliding spans analysis
+c-----------------------------------------------------------------------
+      CHARACTER Rusttl*(PCOLCR*PB)
+      DOUBLE PRECISION Buser
+      INTEGER Rusptr,Nrustl,Nzero,Nusadd,Usradd
+      DIMENSION Rusptr(0:PUREG),Buser(PUREG),Nzero(PUREG),Usradd(PUREG)
+c-----------------------------------------------------------------------
+      COMMON /revusr/ Buser,Rusptr,Nzero,Nrustl,Usradd,Nusadd,Rusttl
+c-----------------------------------------------------------------------
+

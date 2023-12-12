@@ -1,0 +1,56 @@
+c-----------------------------------------------------------------------
+c     Common blocks for the adjustment factors derived from regression 
+c     effects estimated in the REG-ARIMA routines
+c-----------------------------------------------------------------------
+c     FinAO  - Logical variable indication whether to adjust the
+c              final seasonally adjusted series with Regarima AO factors
+c     FinLS  - Logical variable indication whether to adjust the 
+c              final seasonally adjusted series with Regarima LS factors
+c     FinTC  - Logical variable indication whether to adjust the
+c              final seasonally adjusted series with Regarima TC factors
+c     Finusr - Logical variable indication whether to adjust the 
+c              final seasonally adjusted series with Regarima factors 
+c              derived from user-defined regression variables
+c     Finhol - Logical variable indication whether to adjust the 
+c              final seasonally adjusted series with either Regarima 
+c              or X-11 holiday factors
+c-----------------------------------------------------------------------
+      LOGICAL Finhol,FinAO,FinLS,FinTC,Finusr
+c-----------------------------------------------------------------------
+c     Adjtd  - Integer variable indication whether to adjust the
+c              original series with Regarima TD factors
+c     AdjAO  - Integer variable indication whether to adjust the 
+c              original series with Regarima AO factors
+c     AdjLS  - Integer variable indication whether to adjust the 
+c              original series with Regarima LS factors
+c     AdjTC  - Integer variable indication whether to adjust the
+c              original series with Regarima TC factors
+c     AdjSO  - Integer variable indication whether to adjust the
+c              original series with Regarima SO factors
+c     Adjsea - Integer variable indication whether to adjust the 
+c              original series with Regarima seasonal factors
+c     Adjusr - Integer variable indication whether to adjust the 
+c              original series with Regarima factors derived from
+c              user-defined regression variables
+c     Adjhol - Integer variable indication whether to adjust the
+c              original series with Regarima holiday factors
+c     Adjcyc - Integer variable indication whether to adjust the
+c              original series with a user-defined transitory component
+c              estimated from the regARIMA model (only used with SEATS)
+c     NAO - Number of AO outliers
+c     NTC - Number of TC outliers
+c     NLS - Number of LS outliers
+c     NSO - Number of SO outliers
+c     Nhol - Number of holiday regressors
+c     Neas - Number of Easter regressors
+c     Nusrrg - Number of user defined regression types specified
+c     Nflwtd - Number of flow trading day regressors
+c-----------------------------------------------------------------------
+      INTEGER Adjtd,Adjhol,AdjAO,AdjLS,AdjTC,AdjSO,Adjsea,Adjusr,Adjcyc,
+     &        NAO,NLS,NTC,NSO,NRamp,Nusrrg,Nhol,Neas,Nln,Nsln,Nlp,
+     &        Nflwtd,Nseq
+c-----------------------------------------------------------------------
+      COMMON / x11adj / Adjtd,Adjhol,AdjAO,AdjLS,AdjTC,AdjSO,Adjsea,
+     &                  Adjcyc,Adjusr,Finhol,FinAO,FinLS,FinTC,Finusr
+      COMMON / numotl / Nusrrg,NAO,NLS,NTC,NSO,NRamp,Nhol,Neas,Nln,Nsln,
+     &                  Nlp,Nflwtd,Nseq

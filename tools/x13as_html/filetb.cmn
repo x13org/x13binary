@@ -1,0 +1,8 @@
+c     ------------------------------------------------------------------
+c     common block to control printing of file table.
+c-----------------------------------------------------------------------
+      INTEGER Fhandl
+      LOGICAL Lexist,Lexout,Lexerr,Lfrtop,Lnoind
+c-----------------------------------------------------------------------
+      COMMON /filetb/ Fhandl,Lexist,Lexout,Lexerr,Lfrtop,Lnoind
+c-----------------------------------------------------------------------

@@ -1,0 +1,12 @@
+c-----------------------------------------------------------------------
+c     variables associated with the user defined mean used in the
+c     x11regression spec
+c-----------------------------------------------------------------------
+      LOGICAL Haveum,Noxfac
+      DOUBLE PRECISION Umean
+      INTEGER Begum
+c-----------------------------------------------------------------------
+      DIMENSION Umean(PLEN),Begum(2)
+c-----------------------------------------------------------------------
+      COMMON /cxrum / Umean,Begum,Haveum,Noxfac
+

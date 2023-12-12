@@ -1,0 +1,12 @@
+c-----------------------------------------------------------------------
+c	 Store peak indexes, frequencies for spectral estimates
+c-----------------------------------------------------------------------
+      DOUBLE PRECISION Sfreq,Tfreq,Frq,Frqpk
+      INTEGER Slow,Sup,Tlow,Tup,Speak,Nsfreq,Tpeak,Ntfreq,Nfreq
+c-----------------------------------------------------------------------
+      DIMENSION Slow(6),Sup(5),Tlow(5),Tup(5),Speak(6),Tpeak(6),
+     &          sfreq(6),tfreq(6),Frq(61),Frqpk(76)
+c-----------------------------------------------------------------------
+      COMMON /cspcid/ Frq,Frqpk,Sfreq,Tfreq,Slow,Sup,Tlow,Tup,Speak,
+     &                Tpeak,Nsfreq,Ntfreq,Nfreq
+c-----------------------------------------------------------------------

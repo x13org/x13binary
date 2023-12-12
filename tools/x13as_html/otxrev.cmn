@@ -1,0 +1,19 @@
+c-----------------------------------------------------------------------
+c     Otxttl - data dictionary containing the names of the outliers 
+c              deleted during the revisions/sliding spans analysis
+c     Botx   - parameter values for the outliers deleted during the
+c              revisions/sliding spans analysis
+c     Otxptr - pointer vector for data dictionary for outliers deleted 
+c              during the revisions/sliding spans analysis
+c     Notxtl - number of outliers deleted during the revisions/sliding 
+c              spans analysis
+c-----------------------------------------------------------------------
+      CHARACTER Otxttl*(PCOLCR*PB)
+      LOGICAL Fixotx
+      DOUBLE PRECISION Botx
+      INTEGER Otxptr,Notxtl
+      DIMENSION Otxptr(0:PB),Botx(PB),Fixotx(PB)
+c-----------------------------------------------------------------------
+      COMMON /Otxrev/Botx,Otxptr,Notxtl,Fixotx,Otxttl
+c-----------------------------------------------------------------------
+

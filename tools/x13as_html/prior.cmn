@@ -1,0 +1,17 @@
+c-----------------------------------------------------------------------
+c     Priadj : Indicator variable indicating predefined adjustments
+c              (0=none,1=lom,2=loq,3=lpyear)
+c     Percnt : Indicator vector indicating the mode of the adjustment
+c              factors (0=percent,1=ratio,2=diff)
+c     Prtype : Vector containing type of Prior Adjustment Factor 
+c              (1=temporary, 2=permanent)
+c     Nprtyp : Number of sets of prior adjustment factors
+c     Kfmt   : Indicator variable indicating prior adjustment is done
+c              (0=no,1=yes)
+c-----------------------------------------------------------------------
+      INTEGER Kfmt,Priadj,Percnt,Prtype,Nprtyp
+      LOGICAL Lpradj,Lprntr
+c-----------------------------------------------------------------------
+      DIMENSION Prtype(PNAD),Percnt(PNAD)
+c-----------------------------------------------------------------------
+      COMMON /pradj/ Priadj,Percnt,Prtype,Nprtyp,Kfmt,Lpradj,Lprntr

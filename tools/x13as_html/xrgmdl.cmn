@@ -1,0 +1,55 @@
+c-----------------------------------------------------------------------
+c     Common for model description that is independant of the data.
+c-----------------------------------------------------------------------
+c     Colttx - data dictionary for the names of the regression variables
+c     Grpttx - data dictionary for the names of groups of regression
+c              variables
+c-----------------------------------------------------------------------
+      CHARACTER Colttx*(PCOLCR*PB),Grpttx*(PGRPCR*PGRP)
+c-----------------------------------------------------------------------
+c     Pckxtd - logical scalar which indicates that "td" was selected
+c              as one of the X-11 trading day regressors
+c-----------------------------------------------------------------------
+      LOGICAL Pckxtd,Xrgmtd,Fulxtd,Regfxx,Usrxfx
+c-----------------------------------------------------------------------
+c     Clxptr - pointers for the X-11 regression variable data dictionary
+c     Grpx - pointers for X-11 regression groups
+c     Gpxptr - pointers for X-11 regression groups names data dictionary
+c     Nbx - number of X-11 regression variables
+c     Ncoltx - length of Colttx
+c     Nxcxy - number of columns in Xy X-11 regression matrix
+c     Nxgrp - number of regression variable groups
+c     Ngrptx - length of Grpttx
+c     Rgxvtp - indicator variable denoting X-11 regression variable
+c              type - see model.prm for more details
+c     Bgxusx - Starting date for the user-defined X-11 regression
+c              variables.
+c     Nxrxy - Number of rows in Xy X-11 regression matrix
+c     Xbegxy - Beginning date of Xy X-11 regression matrix
+c     Nusxrg - number of user-defined X-11 regression types
+c     Priadx - indicator for prior adjustment for X-11 regressors.
+c     Xeasid - Integer idicator variable for type of Easter regressor
+c              (0=default,1=sunday,2=monday,3=statcan)
+c     Irgxfx - Integer indicator variable for fixed X-11 regressors
+c              (0=default,1=initial values specified for regressors,
+c               2=regressors fixed at initial values)
+c-----------------------------------------------------------------------
+      INTEGER Bgxusx,Clxptr,Grpx,Gpxptr,Irgxfx,Nbx,Ncoltx,Ngrptx,Nusxrg,
+     &        Nxcxy,Nxgrp,Nxrxy,Priadx,Rgxvtp,xBegxy,Xeasid,Xtdzro,
+     &        Xtddat
+c-----------------------------------------------------------------------
+c     Xuserx  : User-defined X-11 regression variables
+c     Bx - vector of X-11 regression parameter estimates
+c-----------------------------------------------------------------------
+      DOUBLE PRECISION Bx,Xuserx,Xraicd,Cvxalf,Cvxrdc
+c-----------------------------------------------------------------------
+      DIMENSION Bgxusx(2),Bx(PB),Clxptr(0:PB),Grpx(0:PGRP),
+     &          Gpxptr(0:PGRP),Regfxx(PB),Rgxvtp(PB),Xbegxy(2),
+     &          Xtddat(2),Xuserx(PUSERX)
+c-----------------------------------------------------------------------
+      COMMON /cx11rg/ Clxptr,Grpx,Gpxptr,Nbx,Ncoltx,Nxcxy,Nxgrp,Ngrptx,
+     &                Rgxvtp,Bgxusx,Nxrxy,Xbegxy,Nusxrg,Priadx,Irgxfx,
+     &                Xeasid,Regfxx,Usrxfx
+      COMMON /cmnttx/ Colttx,Grpttx
+      COMMON /cxpktd/ Xtdzro,Xtddat,Pckxtd,Xrgmtd,Fulxtd
+      COMMON /cx11rd/ Bx,Xraicd,Xuserx,Cvxalf,Cvxrdc

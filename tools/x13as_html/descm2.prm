@@ -1,0 +1,26 @@
+c-----------------------------------------------------------------------
+c     data dictionary for descriptions of series and output dealing with
+c     composite seasonal adjustment.  See descm2.var for pointers.
+c-----------------------------------------------------------------------
+      CHARACTER DC2DIC*1162
+      INTEGER dc2ptr
+      DIMENSION dc2ptr(0:PDC2)
+c-----------------------------------------------------------------------
+      PARAMETER(DC2DIC='MCD moving average for indirect adjustmentsummar
+     &y measures (indirect)monitoring and quality assessment statistics 
+     &(indirect)ratios of annual totals for indirect adjustmentF-tests f
+     &or seasonalitymoving seasonality ratiofinal indirect seasonally ad
+     &justed series with forced yearly totalsrounded indirect final seas
+     &onally adjusted seriescomposite seriesoriginal series,@-indirect s
+     &easonally adjusted series,coincidence of points^ of the composite 
+     &series modified for extremes^ of the S. A. series modified for ext
+     &remesfinal indirect seasonal factors with one year forecastsfinal 
+     &indirect seasonally adjusted seriesfinal trend cycle from the indi
+     &rect seasonal adjustmentfinal indirect irregular componentindirect
+     & level change adjustment factorsindirect additive outlier adjustme
+     &nt factorsindirect calendar componentindirect combined adjustment 
+     &factorsindirect combined adjustment factors (saved as percentages 
+     &if multiplicative adj)factors applied to adjusted series to get ad
+     &justed series with forced yearly totalsratios or differences in an
+     &nual totals and indirect seasonally adjusted seriesfactors applied
+     & to get indirect adjusted series with forced yearly totals')

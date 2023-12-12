@@ -1,0 +1,9 @@
+C-----------------------------------------------------------------------
+c     Arg : Character vector containing command line arguments
+c     Ptr : Pointer vector for arguments
+c     Narg : Number of arguments in Arg
+C-----------------------------------------------------------------------
+      CHARACTER Arg*(CLEN)
+      INTEGER Ptr(0:NUMARG),Narg
+      COMMON / argcmn / Narg,Ptr,Arg
+

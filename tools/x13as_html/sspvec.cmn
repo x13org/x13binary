@@ -1,0 +1,10 @@
+      DOUBLE PRECISION Aobs,Ayr,Aobsmx,Ayrmx
+      INTEGER Chsgn,Iturn,SSnobs,SSnyr,Csign,Cturn,Per
+c-----------------------------------------------------------------------
+      DIMENSION Aobs(PSP,NEST),Ayr(MXYR,NEST),Chsgn(NEST),Iturn(NEST),
+     &          Csign(MXLEN,NEST),Cturn(MXLEN,NEST),Per(MXLEN,NEST),
+     &          SSnobs(PSP,NEST),SSnyr(MXYR,NEST),Aobsmx(NEST),
+     &          Ayrmx(NEST)
+c-----------------------------------------------------------------------
+      COMMON /ssvec  / Aobs,Ayr,Aobsmx,Ayrmx,Chsgn,Iturn,SSnobs,SSnyr,
+     &                 Csign,Per,Cturn

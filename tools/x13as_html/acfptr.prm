@@ -1,0 +1,8 @@
+c-----------------------------------------------------------------------
+c LACF,LACP,LPCF, and LPCP are displacements from the
+c spec pointers so that prtacf can print the right combination
+c of acf's and plots whether they are for the identify or the check.
+c-----------------------------------------------------------------------
+      INTEGER LACF, LACP, LPCF, LPCP
+      PARAMETER (LACF=1, LACP=2, LPCF=3, LPCP=4)     
+

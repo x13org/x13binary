@@ -1,0 +1,9 @@
+c-----------------------------------------------------------------------
+      DOUBLE PRECISION Pbar,Autoc,Qu,Q2m2,Psq,Qual
+      INTEGER Nn,Kfail,Nyrs
+      LOGICAL Lstabl,L3x5
+      DIMENSION Psq(PSP),Pbar(PSP),Autoc(PSP+2),Qu(11)
+c-----------------------------------------------------------------------
+      COMMON /work2 / Pbar,Autoc,Qu,Q2m2,Psq,Qual,Nn,Kfail,Nyrs,Lstabl,
+     &                L3x5
+      

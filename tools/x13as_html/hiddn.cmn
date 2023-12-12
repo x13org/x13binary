@@ -1,0 +1,26 @@
+c-----------------------------------------------------------------------
+c     Issap : Indicator variable for the sliding spans analysis
+c             (0=no sliding spans, 1=sliding spans analysis to be done,
+c              2=hidden adjustments for sliding spans being done)
+c     Irev  : Indicator variable for the revisions history analyis
+c             (0=no revisions history, 1=revisions history to be done,
+c              2=revisions history for a given period to be done,
+c              4=hidden adjustments for revisions history done)
+c     Ixreg  - indicates that a regression will be performed on the 
+c              X-11 irregular
+c             (0=no irregular regression, 1=irregular regression done as 
+c              part of regular seasonal adjustment, 2=irregular 
+c              regression done as prior adjustment, 3=irregular
+c              regression already done as prior adjustment)
+c     Lnoprt : Logical variable which indicates when output should be 
+c              suppressed 
+c     Lhiddn : Logical variable which indicates when output should be 
+c              turned off during special runs
+c     Lsumm  : Indicator variable for saving the diagnosics file
+c-----------------------------------------------------------------------
+      CHARACTER Crvend*(10)
+      INTEGER Issap,Irev,Irevsa,Ixreg,Ierhdr,Lsumm,Nrvend
+      LOGICAL Lhiddn,Lnoprt,Ltimer
+      COMMON /hiddn / Issap,Irev,Irevsa,Ixreg,Ierhdr,Lsumm,Nrvend,
+     &                Lhiddn,Lnoprt,Ltimer,Crvend
+

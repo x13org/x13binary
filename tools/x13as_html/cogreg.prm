@@ -1,0 +1,7 @@
+      CHARACTER COGDIC*130
+      INTEGER cogptr,PCOG
+      PARAMETER(PCOG=9)
+      DIMENSION cogptr(0:PCOG)
+      PARAMETER(COGDIC='seasonaltrigonometric seasonaltrading daylength-
+     &of-monthlength-of-quarterleap yearstock trading daystock length-of
+     &-monthregression')

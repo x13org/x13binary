@@ -1,0 +1,14 @@
+c-----------------------------------------------------------------------
+c     Kh2 - duplicate of holiday adjustment indicator variable
+c     L0 - pointer to first observation of the first span in a sliding
+c          spans, revisions history analysis
+c     Lsp - pointer to first observation of the current span in a 
+c           sliding spans, revisions history analysis
+c     Ly0 - first year of original span
+c     Axhol - Logical variable which determines if X-11 holiday 
+c             adjustment was used to adjust the series
+c-----------------------------------------------------------------------
+      INTEGER Kh2,L0,Ly0,Lsp
+      LOGICAL Axhol
+      COMMON /lzero / L0,Ly0,Lsp,Kh2,Axhol
+

@@ -1,0 +1,6 @@
+      CHARACTER XRGDIC*91
+      INTEGER xrgidx,xrgptr,PXRG
+      PARAMETER(PXRG=16)
+      DIMENSION xrgptr(0:PXRG)
+      PARAMETER(XRGDIC='variablesuserdatastartfileformatbprintsaveuserre
+     &gsigmacriticalusermeanumstartumfileumformat')

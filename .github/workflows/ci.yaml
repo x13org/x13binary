@@ -1,6 +1,6 @@
 # Run CI for R using https://eddelbuettel.github.io/r-ci/
 
-name: ci
+name: ci Mac, Ubuntu
 
 on:
   push:
@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         include:
-          #- {os: macOS-latest}
+          - {os: macos-latest}
           - {os: ubuntu-latest}
 
     runs-on: ${{ matrix.os }}
@@ -29,11 +29,28 @@ jobs:
           chmod 0755 run.sh
           ./run.sh bootstrap
 
+      - uses: fortran-lang/setup-fortran@v1
+        id: setup-fortran
+
+      - run: ${{ env.FC }} --version
+        env:
+          FC: ${{ steps.setup-fortran.outputs.fc }}
+
+      - name: Recon
+        run:
+          which gfortran || true
+          ls -l /opt/homebrew/bin/gfortran || true
+          echo $PATH
+
       - name: Dependencies
         run: ./run.sh install_deps
 
       - name: Test
         run: ./run.sh run_tests
+
+      - name: Dump logs
+        if: always()
+        run: ./run.sh dump_logs
 
       #- name: Coverage
       #  if: ${{ matrix.os == 'ubuntu-latest' }}

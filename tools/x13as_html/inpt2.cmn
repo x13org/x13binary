@@ -1,0 +1,18 @@
+c-----------------------------------------------------------------------
+      DOUBLE PRECISION Adrc,Adrci,Adri,Adrmcd,Cbar,Cbar2,Cibar,Cibar2,
+     &                 Cimbar,Cisd,Csd,Csq,Ibar,Ibar2,Isq,Isd,Imbar,
+     &                 Obar,Obar2,Ombar,Osd,Osq,Osq2,Rv,Sbar,Sbar2,
+     &                 Smbar,Smbar2,Smic,Smsd,Ssd,Ssq,Tdbar,Tdsq,Vc,Vi,
+     &                 Vp,Vs,Vtd
+c-----------------------------------------------------------------------
+      DIMENSION Tdbar(PSP),Tdsq(PSP),Sbar(PSP),Sbar2(PSP),Ssq(PSP),
+     &          Ssd(PSP),Ibar(PSP),Ibar2(PSP),Isq(PSP),Isd(PSP),
+     &          Imbar(PSP),Cbar(PSP),Cbar2(PSP),Csq(PSP),Csd(PSP),
+     &          Obar(PSP),Obar2(PSP),Osq(PSP),Osd(PSP),Osq2(PSP),
+     &          Smbar(PSP),Smbar2(PSP),Smsd(PSP),Ombar(PSP),Cimbar(PSP),
+     &          Cibar(PSP),Cibar2(PSP),Cisd(PSP),Smic(PSP)     
+c-----------------------------------------------------------------------
+      COMMON /inpt2 / Tdbar,Tdsq,Sbar,Sbar2,Ssq,Ssd,Ibar,Ibar2,Isq,Isd,
+     &                Imbar,Cbar,Cbar2,Csq,Csd,Obar,Obar2,Osq,Osd,Osq2,
+     &                Smbar,Smbar2,Smsd,Ombar,Cimbar,Cibar,Cibar2,Cisd,
+     &                Smic,Vi,Vc,Vs,Vp,Vtd,Rv,Adrci,Adri,Adrc,Adrmcd

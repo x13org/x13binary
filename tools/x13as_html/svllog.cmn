@@ -1,0 +1,8 @@
+c-----------------------------------------------------------------------
+c     Svltab - Logical vector indicating which diagnostic will be stored
+c              in the log file.
+c-----------------------------------------------------------------------
+      LOGICAL Svltab
+      DIMENSION Svltab(NSVLOG)
+c-----------------------------------------------------------------------
+      COMMON /csvllg/Svltab

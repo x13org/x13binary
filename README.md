@@ -75,4 +75,4 @@ As stated in the manual of
 > United States/Commerce expressly reserve all rights and remedies.
 
 
-The R Package was created by Dirk Eddelbuettel, Christoph Sax, Kirill Müller and Michael Antonov and is licensed under GPL (>= 2) and LICE
+The R Package was created by Dirk Eddelbuettel, Christoph Sax, Kirill Müller and Michael Antonov and is licensed under GPL (>= 2).

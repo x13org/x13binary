@@ -1,12 +1,8 @@
 #!/bin/sh
 set -e
 
-cd "$(dirname "$0")"
-root="$(pwd)"
-
-cd ./tools/x13as_html
+cd tools/x13as_html
 make -f makefile.gf
-
-cp x13as_html.exe $root/inst/bin/x13ashtml.exe
+cp x13as_html.exe ../../inst/bin/x13ashtml.exe
 
 exit 0

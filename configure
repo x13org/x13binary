@@ -22,12 +22,8 @@
 
 set -e
 
-cd "$(dirname "$0")"
-root="$(pwd)"
-
-cd ./tools/x13as_html
+cd tools/x13as_html
 make -f makefile.gf
-
-cp x13as_html $root/inst/bin/x13ashtml
+cp x13as_html ../../inst/bin/x13ashtml
 
 exit 0

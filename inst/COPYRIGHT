@@ -1,9 +1,9 @@
 
 Overall license:
 ================
-The actual X-13ARIMA-SEATS binary is provided under these terms
+The actual X-13ARIMA-SEATS Fortran source code is provided under these terms
 
-  License Information and Disclaimer (March 1, 2016):
+  License Information and Disclaimer (June 12, 2023):
 
   This Software was created by U.S. Government employees and therefore is not
   subject to copyright in the United States (17 U.S.C. §105). The United
@@ -49,10 +49,10 @@ Details:
 ========
 
 Files: *
-Copyright: 2015 - 2016  Dirk Eddelbuettel and Christoph Sax
+Copyright: 2015 - 2023  R package authors
 License: GPL (>= 2)
 
-Files: inst/bin/x13*:
+Files: tools/x13as_html/*:
 Copyright: This Software was created by U.S. Government employees and therefore 
   is not subject to copyright in the United States (17 U.S.C. §105). The United
   States/U.S. Department of Commerce (“Commerce”) reserve all rights to seek and
@@ -60,4 +60,4 @@ Copyright: This Software was created by U.S. Government employees and therefore
   United States/Commerce hereby grant to User a royalty-free, nonexclusive
   license to use, copy, and create derivative works of the Software outside of
   the United States.
-License: See above, and https://www.census.gov/srd/www/x13as/
+License: See above, and https://www2.census.gov/software/x-13arima-seats/x13as/windows/documentation/docx13as.pdf

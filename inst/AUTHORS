@@ -1,0 +1,9 @@
+X-13ARIMA-SEATS Seasonal Adjustment Program
+Developed by the U.S. Census Bureau
+
+This R package uses Fortran code from the X-13ARIMA-SEATS Seasonal Adjustment Program.
+The version used is Version 1.1, Build 60, last updated in July 10, 2023, available at: https://www.census.gov/data/software/x13as.X-13ARIMA-SEATS.html
+
+U.S. Census Bureau
+
+The R Package was created by Dirk Eddelbuettel, Christoph Sax, Kirill Müller and Michael Antonov.

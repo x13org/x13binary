@@ -1,9 +1,6 @@
-if (R.version$arch != "aarch64") {
-  x13binary::checkX13binary()
+x13binary::checkX13binary()
 
 
-  library(x13binary)
+library(x13binary)
 
-  checkX13binary()
-
-}
+checkX13binary()

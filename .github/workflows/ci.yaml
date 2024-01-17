@@ -29,18 +29,22 @@ jobs:
           chmod 0755 run.sh
           ./run.sh bootstrap
 
+      - name: Install CRAN fortran
+        if: runner.os == 'macos'
+        run: |
+          curl --retry 3 -fsSLO https://github.com/R-macos/gcc-12-branch/releases/download/12.2-darwin-r0.1/gfortran-12.2-universal.pkg
+          sudo installer -pkg "gfortran-12.2-universal.pkg" -target /
+          rm -f gfortran-12.2-universal.pkg
+          echo "/opt/gfortran/bin" >> $GITHUB_PATH
+
       - uses: fortran-lang/setup-fortran@v1
+        if: runner.os != 'macos'
         id: setup-fortran
 
       - run: ${{ env.FC }} --version
+        if: runner.os != 'macos'
         env:
           FC: ${{ steps.setup-fortran.outputs.fc }}
-
-      - name: Recon
-        run:
-          which gfortran || true
-          ls -l /opt/homebrew/bin/gfortran || true
-          echo $PATH
 
       - name: Dependencies
         run: ./run.sh install_deps

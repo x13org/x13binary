@@ -1,8 +1,0 @@
-#!/bin/sh
-set -e
-
-cd tools/x13as_html
-make -f makefile.gf
-cp x13as_html.exe ../../inst/bin/x13ashtml.exe
-
-exit 0

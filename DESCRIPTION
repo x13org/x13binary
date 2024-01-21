@@ -6,6 +6,7 @@ Authors@R: c(
     person("Dirk", "Eddelbuettel", email = "edd@debian.org", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-6419-907X")),
     person("Christoph", "Sax", role = "aut", comment = c(ORCID = "0000-0002-7192-7044")),
     person("Kirill", "Müller", role = "ctb", comment = c(ORCID = "0000-0002-1416-3412")),
+    person("Jeroen", "Ooms", role = "ctb", comment = c(ORCID = "0000-0002-4035-0289")),
     person("Michael", "Antonov", role = "ctb")
     )
 Description: The US Census Bureau provides a seasonal adjustment program now

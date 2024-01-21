@@ -7,7 +7,7 @@
 supportedPlatform()
 }
 \description{
-Returns \code{TRUE} is the platform is supported, \code{FALSE} otherwise.
+Always returns \code{TRUE}.
 }
 \examples{
 supportedPlatform()

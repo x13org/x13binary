@@ -1,3 +1,46 @@
+2024-01-21  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 1.1.60
+
+	* src/install.libs.R: Use install_name_tool on macOS to update
+	dynamoc library registration of quadmath library for binary
+
+2024-01-21  Christoph Sax  <christoph.sax@gmail.com>
+
+	* R/supportedPlatform.R: Simplify check
+	* man/supportedPlatform.Rd: Documentation
+
+2024-01-20  Jeroen Ooms  <jeroenooms@gmail.com>
+
+	* src/install.libs.R: Use install_name_tool on macOS to update
+	dynamoc library registration of Fortran library for binary
+
+2024-01-18  Jeroen Ooms  <jeroenooms@gmail.com>
+
+	* configure: Use the CRAN-supplied Fortran compiler on macOS
+	* configure.win: Idem
+	* src/Makefile: Idem
+	* src/Makefile.win: Idem
+	* src/install.libs.R: Idem
+	* tools/x13as_html/makefile.gd: Idem
+
+2024-01-16  Christoph Sax  <christoph.sax@gmail.com>
+
+	* tests/simpleTest.R: Tweak
+	* DESCRIPTION: Roll micro version
+
+2024-01-10  Christoph Sax  <christoph.sax@gmail.com>
+
+	* various: Miscellaneous package meta data updates (PR 70)
+
+2023-12-12  Christoph Sax  <christoph.sax@gmail.com>
+
+	* DESCRIPTION: Update Description
+	* README.md: Idem
+
+	* various: Merge extended work by Michael and Kirill taking first
+	stab at building from Fortran source (PR #67)
+
 2023-09-07  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 1.1.57-4

@@ -86,7 +86,7 @@ C-----------------------------------------------------------------------
       Ierhdr=NOTSET
       Crvend=CNOTST
       dattim='                        '
-      CALL fdate(dattim)
+      CALL date_and_time(dattim)
       dattim=cvdttm(dattim)
 cunix
       CHREOF=char(4)
@@ -245,7 +245,7 @@ C-----------------------------------------------------------------------
 c-----------------------------------------------------------------------
        ELSE IF(.not.lchkin)THEN
         dattim='                        '
-        CALL fdate(dattim)
+        CALL date_and_time(dattim)
         dattim=cvdttm(dattim)
         WRITE(STDOUT,1020)' Execution complete for '//Infile(1:n1)//
      &                    '.spc at '//dattim

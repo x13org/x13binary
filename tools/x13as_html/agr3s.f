@@ -68,7 +68,7 @@ c     ------------------------------------------------------------------
        CALL genSkip(LCMPAH)
        WRITE(Mt1,1010)PRGNAM,Cbr,Cbr,VERNUM,BUILD
        WRITE(Mt1,1020)Title,Cbr,Serno(1:Nser)
-       CALL fdate(dattim)
+       CALL date_and_time(dattim)
        dattim=cvdttm(dattim)
        CALL mkPOneLine(Mt1,'@',dattim)
        WRITE(Mt1,1040)'<p>',Begspn(MO),Begspn(YR),Lstmo,Lstyr 

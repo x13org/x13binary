@@ -44,7 +44,8 @@ checkX13binary <- function(fail.unsupported = FALSE, verbose = TRUE) {
                      paste(strwrap(sout, indent = 2, exdent = 2), collapse = "\n"), "\n\n")
             }
         } else {
-            sout <- system(paste(x13.bin, file.path(tdir, "Testairline")), intern = TRUE)
+            sout <- system(paste(x13.bin, file.path(tdir, "Testairline")),
+                           intern = TRUE, ignore.stderr = TRUE)
             if (isTRUE(attr(sout,"status") != 0)) {
                 stop("When running\n\n  ", x13.bin,
                      "\n\nthe system returned the following message:\n\n",

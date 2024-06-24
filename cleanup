@@ -2,3 +2,5 @@
 
 rm -f tools/x13as_html/*.o tools/x13as_html/x13as_html tools/x13as_html/x13as_html.exe \
    inst/bin/x13as_html inst/bin/x13as_html.exe
+
+cd src && make clean

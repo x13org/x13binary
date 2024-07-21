@@ -2,9 +2,9 @@
 
 [![ci Mac, Ubuntu](https://github.com/x13org/x13binary/actions/workflows/ci.yaml/badge.svg)](https://github.com/x13org/x13binary/actions/workflows/ci.yaml)
 [![ci Windows](https://github.com/x13org/x13binary/actions/workflows/ci-win.yaml/badge.svg)](https://github.com/x13org/x13binary/actions/workflows/ci-win.yaml)
-[![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) 
-[![CRAN](http://www.r-pkg.org/badges/version/x13binary)](https://cran.r-project.org/package=x13binary) 
-[![Downloads](http://cranlogs.r-pkg.org/badges/x13binary?color=brightgreen)](https://cran.r-project.org/package=x13binary)
+[![License](https://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) 
+[![CRAN](https://www.r-pkg.org/badges/version/x13binary)](https://cran.r-project.org/package=x13binary) 
+[![Downloads](https://cranlogs.r-pkg.org/badges/x13binary?color=brightgreen)](https://cran.r-project.org/package=x13binary)
 
 ### About
 

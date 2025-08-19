@@ -5,6 +5,8 @@
 	* tools/x13as_html/htmlout.f (tablePeakHtm): Add a missing comma
 	as detected by recent gfortran-15 version
 
+	* README.md: Update URL to 'internet archiv'-ed version of pdf file
+
 2024-07-21  Dirk Eddelbuettel  <edd@debian.org>
 
 	* README.md: Switch some URLs from http to https

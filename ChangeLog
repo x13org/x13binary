@@ -1,3 +1,10 @@
+2025-08-19  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 1.1.61.1
+
+	* tools/x13as_html/htmlout.f (tablePeakHtm): Add a missing comma
+	as detected by recent gfortran-15 version
+
 2024-07-21  Dirk Eddelbuettel  <edd@debian.org>
 
 	* README.md: Switch some URLs from http to https

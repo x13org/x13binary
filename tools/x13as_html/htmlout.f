@@ -3107,7 +3107,7 @@ c -------------------
 c
       if (isTable.eq.0) then
         write (u,'(''<table>'')')
-        write (u,'("<caption>Spectral Diagnostics ",A
+        write (u,'("<caption>Spectral Diagnostics ",A,
      $                       "</caption>")') CompName
       else
        call WriteDoctype(u,1)

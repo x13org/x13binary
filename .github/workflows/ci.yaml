@@ -21,13 +21,10 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
 
-      - name: Bootstrap
-        run: |
-          curl -OLs https://eddelbuettel.github.io/r-ci/run.sh
-          chmod 0755 run.sh
-          ./run.sh bootstrap
+      - name: Setup
+        uses: eddelbuettel/gihub-actions/r-ci@master
 
       - name: Install CRAN fortran
         if: runner.os == 'macos'

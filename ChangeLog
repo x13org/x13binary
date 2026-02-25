@@ -1,3 +1,8 @@
+2026-02-24  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .github/workflows/ci.yaml: Switch checkout action to v6, use
+	r-ci setup with embedded bootstrap step
+
 2025-08-19  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 1.1.61.1

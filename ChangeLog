@@ -1,5 +1,9 @@
 2026-02-26  Dirk Eddelbuettel  <edd@debian.org>
 
+	* src/Makefile: Display '${FC}' --version per CRAN request, use
+	explicit 'cd' instead of '--directory' for poorer 'make' versions
+	* src/Makefile.win: Idem
+
 	* .github/workflows/ci.yaml: Simplify given current r-ci no need to
 	explicitly install Fortran as this is covered on both OSs
 

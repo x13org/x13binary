@@ -1,3 +1,8 @@
+2026-02-26  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .github/workflows/ci.yaml: Simplify given current r-ci no need to
+	explicitly install Fortran as this is covered on both OSs
+
 2026-02-24  Dirk Eddelbuettel  <edd@debian.org>
 
 	* .github/workflows/ci.yaml: Switch checkout action to v6, use

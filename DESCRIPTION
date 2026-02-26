@@ -1,8 +1,8 @@
 Package: x13binary
 Type: Package
 Title: Provide the 'x13ashtml' Seasonal Adjustment Binary
-Version: 1.1.61.1
-Date: 2025-08-19
+Version: 1.1.61.1.1
+Date: 2026-02-26
 Authors@R: c(
     person("Dirk", "Eddelbuettel", email = "edd@debian.org", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-6419-907X")),
     person("Christoph", "Sax", role = "aut", comment = c(ORCID = "0000-0002-7192-7044")),

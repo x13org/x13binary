@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: Setup
-        uses: eddelbuettel/gihub-actions/r-ci@master
+        uses: eddelbuettel/github-actions/r-ci@master
 
       - name: Install CRAN fortran
         if: runner.os == 'macos'

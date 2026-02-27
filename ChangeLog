@@ -1,5 +1,7 @@
 2026-02-26  Dirk Eddelbuettel  <edd@debian.org>
 
+	* DESCRIPTION (Version, Date): Release 1.1.61.2
+
 	* src/Makefile: Display '${FC}' --version per CRAN request, use
 	explicit 'cd' instead of '--directory' for poorer 'make' versions
 	* src/Makefile.win: Idem

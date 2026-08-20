@@ -22,6 +22,7 @@ jobs:
         config:
           # - {os: macos-latest,   r: 'release'}
           - {os: windows-latest, r: 'release'}
+          - {os: windows-11-arm, r: 'release'}
           # - {os: ubuntu-latest,   r: 'devel', http-user-agent: 'release'}
           # - {os: ubuntu-latest,   r: 'release'}
           # - {os: ubuntu-latest,   r: 'oldrel-1'}
@@ -31,7 +32,7 @@ jobs:
       R_KEEP_PKG_SOURCE: yes
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v7
 
       - uses: r-lib/actions/setup-pandoc@v2
 
@@ -46,19 +47,7 @@ jobs:
           extra-packages: any::rcmdcheck
           needs: check
 
-      - uses: fortran-lang/setup-fortran@v1
-        id: setup-fortran
-
-      - run: ${{ env.FC }} --version
-        env:
-          FC: ${{ steps.setup-fortran.outputs.fc }}
-
-      - name: Recon
-        run:
-          which gfortran || true
-          ls -l /opt/homebrew/bin/gfortran || true
-          echo $PATH
-
       - uses: r-lib/actions/check-r-package@v2
         with:
           upload-snapshots: true
+          error-on: '"error"'

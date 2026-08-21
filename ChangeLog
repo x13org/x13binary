@@ -2,6 +2,7 @@
 
 	* src/Makefile.win: Set larger compilation stacksize for windows-arm
 	* .github/workflows/ci-win.yaml: Fail on error, not warning
+	* src/Makefile.win: Use SHLIB_LD as linker for windows-arm
 
 2026-02-26  Dirk Eddelbuettel  <edd@debian.org>
 
